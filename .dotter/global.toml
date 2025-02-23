@@ -1,0 +1,20 @@
+[helpers]
+
+[default]
+depends = []
+
+[default.files]
+ags = ""
+anyrun = ""
+fish = ""
+fuzzel = ""
+hypr = ""
+matugen = ""
+"starship.toml" = ""
+"touchpadToggle.sh" = ""
+zed = ""
+
+[default.variables]
+
+[settings]
+default_target_type = "automatic"
