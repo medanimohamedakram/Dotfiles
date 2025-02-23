@@ -4,15 +4,15 @@
 depends = []
 
 [default.files]
-ags = ""
-anyrun = ""
-fish = ""
-fuzzel = ""
-hypr = ""
-matugen = ""
-"starship.toml" = ""
-"touchpadToggle.sh" = ""
-zed = ""
+ags = "~/.config/ags"
+anyrun = "~/.config/anyrun/"
+fish = "~/.config/fish/"
+fuzzel = "~/.config/fuzzel/"
+hypr = "~/.config/hypr/"
+matugen = "~/.config/matugen/"
+"starship.toml" = "~/.config/starship.toml"
+zed = "~/.config/zed"
+"wezterm.lua" = "~/.wezterm.lua"
 
 [default.variables]
 
