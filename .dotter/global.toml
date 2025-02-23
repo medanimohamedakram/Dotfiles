@@ -17,4 +17,4 @@ zed = "~/.config/zed"
 [default.variables]
 
 [settings]
-default_target_type = "automatic"
+default_target_type = "symbolic"
