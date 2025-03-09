@@ -4,13 +4,14 @@
 depends = []
 
 [default.files]
-ags = "~/.config/ags"
+# ags = "~/.config/ags"
+eww = "~/.config/eww/"
 anyrun = "~/.config/anyrun/"
 fish = "~/.config/fish/"
 fuzzel = "~/.config/fuzzel/"
 hypr = "~/.config/hypr/"
 matugen = "~/.config/matugen/"
-"starship.toml" = "~/.config/starship.toml"
+starship = "~/.config/starship"
 zed = "~/.config/zed"
 "wezterm.lua" = "~/.wezterm.lua"
 
