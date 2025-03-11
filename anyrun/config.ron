@@ -7,10 +7,10 @@ Config(
   x: Fraction(0.5),
 
   // The vertical position, works the same as `x`
-  y: Absolute(15),
+  y: Absolute(0),
 
   // The width of the runner
-  width: Fraction(0.300000),
+  width: Absolute(800),
 
   // The minimum height of the runner, the runner will expand to fit all the entries
   height: Absolute(0),
@@ -28,22 +28,22 @@ Config(
   hide_plugin_info: true, 
 
   // Close window when a click outside the main box is received
-  close_on_click: true,
+  close_on_click: false,
 
   // Show search results immediately when Anyrun starts
-  show_results_immediately: true,
+  show_results_immediately: false,
 
   // Limit amount of entries shown in total
   max_entries: None,
   
-  // // List of plugins to be loaded by default, can be specified with a relative path to be loaded from the
-  // // `<anyrun config dir>/plugins` directory or with an absolute path to just load the file the path points to.
+  // List of plugins to be loaded by default, can be specified with a relative path to be loaded from the
+  // `<anyrun config dir>/plugins` directory or with an absolute path to just load the file the path points to.
   plugins: [
     "libapplications.so",
     "libsymbols.so",
-    "libdictionary.so",
     "libshell.so",
+    "libtranslate.so",
     "librink.so",
-    "libwebsearch.so",
+    "libwebsearch.so"
   ],
 )

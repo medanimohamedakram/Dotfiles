@@ -13,12 +13,3 @@ if status is-interactive
 end
 
 starship init fish | source
-# if test -f ~/.cache/ags/user/generated/terminal/sequences.txt
-    # cat ~/.cache/ags/user/generated/terminal/sequences.txt
-# end
-
-
-# function fish_prompt
-#   set_color cyan; echo (pwd)
-#   set_color green; echo '> '
-# end
