@@ -1,0 +1,131 @@
+
+.bar-widget {
+ 
+    background-color:$light-surface-container-highest;
+    padding: 0.8rem 0.8rem;
+    box-shadow: 0 0 0 0px;
+    margin-bottom: 0.0rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.topside-edge {
+  background-color:$light-surface-container-highest;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 700px;
+  padding-right: 700px;
+  
+  border-radius: 0%;
+  box-shadow: 2px 0px 1px 0px $light-surface-container-highest;
+}
+.leftside-edge {
+  background-color:$light-surface-container-highest;
+  padding-top: 400px;
+  padding-bottom: 400px;
+  padding-left: 10px;
+  padding-right: 10px;
+  
+  border-radius: 0%;
+  box-shadow: 2px 0px 1px 0px $light-surface-container-highest;
+}
+.rightside-edge {
+  background-color:$light-surface-container-highest;
+  padding-top: 400px;
+  padding-bottom: 400px;
+  padding-left: 10px;
+  padding-right: 10px;
+  
+  border-radius: 0%;
+  box-shadow: 2px 0px 1px 0px $light-surface-container-highest;
+}
+
+.topbgcorner {
+  background-color: transparent;
+  padding: 25px;
+  border-radius: 100%;
+
+  &.left {
+    box-shadow: -29px -25px 0px 0px $light-surface-container-highest;
+
+  }
+
+  &.right {
+    box-shadow: 29px -25px 0px 0px $light-surface-container-highest;
+  }
+}
+.corner {
+    background-color: transparent;
+    padding: 30px;
+    border-radius: 100%;
+  
+    &.left {
+      box-shadow: -25px 30px 0px 0px $light-surface-container-highest;
+
+    }
+  
+    &.right {
+      box-shadow: 25px 30px 0px 0px $light-surface-container-highest;
+    }
+  }
+
+  .bgcorner {
+    background-color: transparent;
+    padding: 25px;
+    border-radius: 100%;
+  
+    &.left {
+      box-shadow: -25px 30px 0px 0px $light-surface-container-highest;
+
+    }
+  
+    &.right {
+      box-shadow: 25px 30px 0px 0px $light-surface-container-highest;
+    }
+  }
+  .topcorner {
+    background-color: transparent;
+    padding: 30px;
+    border-radius: 100%;
+  
+    &.left {
+      box-shadow: -25px 30px 0px 0px $light-surface-container-highest;
+
+    }
+  
+    &.right {
+      box-shadow: 25px 30px 0px 0px $light-surface-container-highest;
+    }
+  }
+  .volcorner {
+    background-color: transparent;
+    padding: 30px;
+    border-radius: 100%;
+  
+    &.left {
+      box-shadow: -25px 30px 0px 0px $light-surface-container-highest;
+
+    }
+  
+    &.right {
+      box-shadow: 25px 30px 0px 0px $light-surface-container-highest;
+    }
+  }
+  .powercorner {
+    background-color: transparent;
+    padding: 35px;
+    border-radius: 100%;
+  
+    &.left {
+      box-shadow: 29px -25px 0px 0px $light-surface-container-highest;
+
+    }
+  
+    &.right {
+      box-shadow: -29px -25px 0px 0px $light-surface-container-highest;
+    }
+  }
