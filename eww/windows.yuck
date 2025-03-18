@@ -1,7 +1,7 @@
 (defwindow bar
     :monitor 0
     :geometry (geometry :width "100%"
-                        :anchor "bottom center"
+                        :anchor "top center"
                     )
     :exclusive true
     :namespace "eww"
