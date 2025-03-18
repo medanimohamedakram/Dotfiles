@@ -1,4 +1,4 @@
-@import "colors.scss";
+@import "/home/akram/.config/colors/colors.scss";
 * {
     all: unset;
     font-family: "Readex Pro SemiBold";
@@ -17,13 +17,13 @@
 
 
 
-@import "scss/dark/language.scss";
-@import "scss/dark/taskbar.scss";
+/* @import "scss/dark/language.scss"; */
+/* @import "scss/dark/taskbar.scss"; */
 @import "scss/dark/clock.scss";
 @import "scss/dark/calendar.scss";
 @import "scss/dark/logo.scss";
 @import "scss/dark/quick_settings.scss";
-@import "scss/dark/user.scss";
+/* @import "scss/dark/user.scss"; */
 @import "scss/dark/volume.scss";
 @import "scss/dark/workspaces.scss";
 @import "scss/dark/tray.scss";

@@ -12,11 +12,11 @@
     :monitor 0
     :stacking "fg"
     :geometry (geometry
-                    :anchor "bottom right"
-                    :x "-12"
-                    :y "-12"
-                    :width "2px"
-                    :height "2px"
+                    :anchor "top right"
+                    ; :x "1000"
+                    :y "5"
+                    :width "25%"
+                    :height "30%"
                 )
     :namespace "eww"
     (control_center)
@@ -54,7 +54,7 @@
     :stacking "overlay"
     :geometry (geometry 
                     :anchor "bottom center"
-                    :y  "-13"
+                    :y  "0"
                     :width "2px"
                     :height "2px"
                 )
@@ -65,10 +65,9 @@
     :monitor 0
     :stacking "fg"
     :geometry (geometry 
-    :y "300px"
                     :anchor "bottom center"
-                    :width "80%"
-                    :height "100%")
+                    :width "100%"
+                    :height "172%")
     :namespace "eww"
     (powermenu)
 )

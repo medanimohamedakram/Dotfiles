@@ -21,11 +21,11 @@
 
         (powermenu_entry    :label "Suspend" 
                             :icon "󰤄" 
-                            :onclick "sleep 0.1 && gtklock & systemctl suspend & eww close powermenu &")
+                            :onclick "sleep 0.1 && hyprlock & systemctl suspend & eww close powermenu &")
                                 
         (powermenu_entry    :label "Sign out" 
                             :icon "󰗼" 
-                            :onclick "hyprctl dispatch exit 0")
+                            :onclick "uwsm stop")
 
         (powermenu_entry    :label "Cancel" 
                             :icon "󰅖" 
