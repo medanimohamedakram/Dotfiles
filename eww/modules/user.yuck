@@ -4,8 +4,8 @@
 )
         (box :orientation "h" :space-evenly false :halign "end"
             (box :orientation "h" :space-evenly false
- (label :class "weather-error" :text "󰖪" :visible {weather == "null" ? true : false})
-    (label :class "weather-icon" :halign "start" :text {weather.icon})        (label :class "weather-temp" :halign "start" :text {weather.temp})
+ ; (label :class "weather-error" :text "󰖪" :visible {weather == "null" ? true : false})
+ ;    (label :class "weather-icon" :halign "start" :text {weather.icon})        (label :class "weather-temp" :halign "start" :text {weather.temp})
                 (label :class "user-clock-separator" :text "|")
                 (label :class "user-clock-date" :text {formattime(EWW_TIME, "%a, %b %d")})
             )

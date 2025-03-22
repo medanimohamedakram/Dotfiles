@@ -6,7 +6,7 @@
         (box :orientation "h" :space-evenly false :halign "start"
             (logo)
              (clock)
-             (weathery)
+             ; (weathery)
           
         )
 
@@ -17,9 +17,9 @@
 
         (box :orientation "h" :space-evenly false :halign "end"
        
-            (tray_button)
+            ; (tray_button)
       
-            (language)
+            ; (language)
             (expand)
             (indicator)
             (power)
