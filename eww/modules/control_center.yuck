@@ -7,13 +7,10 @@
     (box :orientation "v" 
          :space-evenly false 
          :class "control-center"
-            (pfp)
-
-;      (music)
-      (notifications)
-    (user)
+      (user)
       (volume_control_center)
       (quick_settings)
+      (notifications)
     
     )
   )

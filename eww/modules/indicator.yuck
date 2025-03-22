@@ -41,7 +41,7 @@
 
 (defwidget volume_icon []
     (state_icon :condition true
-                :text {volume == "muted" ? "󰸈" : volume < 33 ? "" : volume < 67 ? "" : ""}
+                :text {volume == "MUTED" ? "󰸈" : volume < 33 ? "" : volume < 67 ? "" : ""}
     
     )
 )

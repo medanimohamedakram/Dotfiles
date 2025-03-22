@@ -1,10 +1,10 @@
 
 (defvar open_control_center false)
 (defvar open_osd false)
-(defvar open_launcher false)
-(defvar open_tray false)
+; (defvar open_launcher false)
+; (defvar open_tray false)
 (defvar clipboard "[]")
-(defvar brightness false)
+; (defvar brightness false)
 (defvar ANIM_DURATION "500ms")
 
 (defvar recorder_audio false)
@@ -20,8 +20,8 @@
 (deflisten network :initial '{"essid": "lo", "signal": ""}'
 "scripts/network.sh")
 
-(deflisten kb_layout :initial "en"
-"scripts/get_kb_layout.sh")
+; (deflisten kb_layout :initial "en"
+; "scripts/get_kb_layout.sh")
 
 (deflisten volume :initial "0"
 "scripts/volume.sh")
@@ -29,11 +29,11 @@
 (deflisten current_workspace :initial "1"
 "scripts/get-active-workspace.sh")
 
-(deflisten mpris :initial "{}"
-"scripts/mpris.sh")
+; (deflisten mpris :initial "{}"
+; "scripts/mpris.sh")
 
-(deflisten mpris_positions :initial "{}"
-"scripts/positions.sh")
+; (deflisten mpris_positions :initial "{}"
+; "scripts/positions.sh")
 
 (deflisten do-not-disturb :initial false
 "scripts/notifications.sh getdnd")
@@ -41,8 +41,8 @@
 (deflisten workspaces :initial "[]" 
 "scripts/get-workspaces.sh")
 
-(deflisten weather :initial "null"
-"scripts/weather.py")
+; (deflisten weather :initial "null"
+; "scripts/weather.py")
 
 (deflisten current_theme :initial "dark" 
 "scripts/material.py --current")
@@ -50,6 +50,6 @@
 (deflisten notifications :initial '{"count": 0, "notifications": [], "popups": []}'
 "scripts/notifications.sh current")
 
-(deflisten apps :initial "{}"
-"scripts/apps.py")
+; (deflisten apps :initial "{}"
+; "scripts/apps.py")
 

@@ -11,18 +11,15 @@ error() {
 
 no_error || error
 
-# requieres pamixer
 
 case $1 in
 --up)
-  pamixer -u >/dev/null
-  pamixer -i 5 >/dev/null
+  wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
   ;;
 --down)
-  pamixer -u >/dev/null
-  pamixer -d 5 >/dev/null
+  wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
   ;;
 --toggle)
-  pamixer -t >/dev/null
+  wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
   ;;
 esac
