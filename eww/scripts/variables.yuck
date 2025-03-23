@@ -41,11 +41,11 @@
 (deflisten workspaces :initial "[{'window'}]"
 "scripts/workspaces.sh")
 
-(deflisten weather :initial "null"
-"scripts/weather.py")
+; (deflisten weather :initial "null"
+; "scripts/weather.py")
 
 (deflisten current_theme :initial "dark" 
-"scripts/material.py --current")
+"scripts/theme.sh --current")
 
 (deflisten notifications :initial '{"count": 0, "notifications": [], "popups": []}'
 "scripts/notifications.sh current")
