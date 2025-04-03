@@ -1,0 +1,47 @@
+hyprctl workspaces
+hyprctl workspaces select --help
+hyprctl workspaces select ID
+hyprctl workspaces | select ID
+wpctl get-volume @DEFAULT_AUDIO_SINK@
+wpctl get-volume @DEFAULT_AUDIO_SINK@ | rg -o '[+-]?([0-9]*[.])?[0-9]+'
+0.99+100
+bash
+man nu
+man nushell
+date now
+date now 
+wpctl get-volume @DEFAULT_AUDIO_SINK@ | rg -o "[+-]?([0-9]*[.])?[0-9]+"
+wpctl get-volume @DEFAULT_AUDIO_SINK@ | rg -o "[+-]?([0-9]*[.])?[0-9]+" | print $in
+wpctl get-volume @DEFAULT_AUDIO_SINK@ | rg -o "[+-]?([0-9]*[.])?[0-9]+" | print $in*100
+wpctl get-volume @DEFAULT_AUDIO_SINK@ | rg -o "[+-]?([0-9]*[.])?[0-9]+" | print "$in*100"
+wpctl get-volume @DEFAULT_AUDIO_SINK@ | rg -o "[+-]?([0-9]*[.])?[0-9]+" | print "$(in)*100"
+wpctl get-volume @DEFAULT_AUDIO_SINK@ | rg -o "[+-]?([0-9]*[.])?[0-9]+" | print $in 100
+wpctl get-volume @DEFAULT_AUDIO_SINK@ | rg -o "[+-]?([0-9]*[.])?[0-9]+" | print $in * 100
+wpctl get-volume @DEFAULT_AUDIO_SINK@ | rg -o "[+-]?([0-9]*[.])?[0-9]+" | print -n $in * 100
+wpctl get-volume @DEFAULT_AUDIO_SINK@ | rg -o "[+-]?([0-9]*[.])?[0-9]+" | print -n $in * 100 | calc -p
+wpctl get-volume @DEFAULT_AUDIO_SINK@ | rg -o "[+-]?([0-9]*[.])?[0-9]+" | print -n $in * 100 | bc
+wpctl get-volume @DEFAULT_AUDIO_SINK@ | rg -o "[+-]?([0-9]*[.])?[0-9]+" | print -n $in * 100 | print
+print 1.00*100
+print (1.00*100)
+print (1*100)
+print (1.00 * 100)
+wpctl get-volume @DEFAULT_AUDIO_SINK@ | rg -o "[+-]?([0-9]*[.])?[0-9]+" | print -n ($in * 100)
+wpctl get-volume @DEFAULT_AUDIO_SINK@ | rg -o "[+-]?([0-9]*[.])?[0-9]+" | print -n (($in into float) * 100)
+"1.00" into float
+into float
+echo "1.00"| into float
+wpctl get-volume @DEFAULT_AUDIO_SINK@ | rg -o "[+-]?([0-9]*[.])?[0-9]+" | into float | print -n ($in * 100)
+wpctl get-volume @DEFAULT_AUDIO_SINK@ | rg -o MUTED || wpctl get-volume @DEFAULT_AUDIO_SINK@ | rg -o "[+-]?([0-9]*[.])?[0-9]+" | into float | print -n ($in * 100)
+wpctl get-volume @DEFAULT_AUDIO_SINK@ | rg -o MUTED or wpctl get-volume @DEFAULT_AUDIO_SINK@ | rg -o "[+-]?([0-9]*[.])?[0-9]+" | into float | print -n ($in * 100)
+wpctl get-volume @DEFAULT_AUDIO_SINK@ | rg -o MUTED try wpctl get-volume @DEFAULT_AUDIO_SINK@ | rg -o "[+-]?([0-9]*[.])?[0-9]+" | into float | print -n ($in * 100)
+wpctl get-volume @DEFAULT_AUDIO_SINK@ | rg -o MUTED
+wpctl get-volume @DEFAULT_AUDIO_SINK@ | rg -o MUTED || wpctl get-volume @DEFAULT_AUDIO_SINK@ | rg -o "[+-]?([0-9]*[.])?[0-9]+" | into float | print -n ($in * 100)
+(wpctl get-volume @DEFAULT_AUDIO_SINK@ | rg -o MUTED) or (wpctl get-volume @DEFAULT_AUDIO_SINK@ | rg -o "[+-]?([0-9]*[.])?[0-9]+" | into float | print -n ($in * 100))
+(wpctl get-volume @DEFAULT_AUDIO_SINK@ | rg -o MUTED) or wpctl get-volume @DEFAULT_AUDIO_SINK@ | rg -o "[+-]?([0-9]*[.])?[0-9]+" | into float | print -n ($in * 100)
+(wpctl get-volume @DEFAULT_AUDIO_SINK@ | rg -o MUTED) or ((wpctl get-volume @DEFAULT_AUDIO_SINK@ | rg -o "[+-]?([0-9]*[.])?[0-9]+" | into float | print -n ($in * 100)))
+(wpctl get-volume @DEFAULT_AUDIO_SINK@ | rg -o MUTED) or or ((wpctl get-volume @DEFAULT_AUDIO_SINK@ | rg -o "[+-]?([0-9]*[.])?[0-9]+" | into float | print -n ($in * 100)))
+(wpctl get-volume @DEFAULT_AUDIO_SINK@ | rg -o MUTED) or (wpctl get-volume @DEFAULT_AUDIO_SINK@) | rg -o "[+-]?([0-9]*[.])?[0-9]+" | into float | print -n ($in * 100)
+(wpctl get-volume @DEFAULT_AUDIO_SINK@ | rg -o MUTED) or (wpctl get-volume @DEFAULT_AUDIO_SINK@ | rg -o "[+-]?([0-9]*[.])?[0-9]+" | into float | print -n ($in * 100))
+bash
+nu.config-path
+$nu.config-path
