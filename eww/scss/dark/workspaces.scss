@@ -1,21 +1,23 @@
 @import "../../colors"
 .workspaces {
     border-radius: 1rem;
-    padding: 0.9rem;
-    margin: 0 1rem;
+    padding: 0.4rem 0.8rem;
+    /* margin: 0.2rem; */
     background-color: $dark-on-secondary;
 }
 
 .workspace {
     border-radius: 1rem;
     background-color: $dark-inverse-primary;
-    margin: 0 0.25rem;
+    margin: 0.2rem;
     padding: 0 0.8rem;
-    transition: 0.3s;
+    transition: padding 0.4s;
+    font-size: 1.2rem;
 
     &.current {
         background-color: $dark-primary;
-        padding: 0 2.3rem;
+        padding: 0 2.8rem;
+        transition: padding 0.4s;
     }
 }
 

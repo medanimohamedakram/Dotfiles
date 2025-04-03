@@ -1,5 +1,6 @@
 
 .quick_settings_button {
+    @include window;
     transition: 500ms;
     background-color: $dark-on-secondary;
 

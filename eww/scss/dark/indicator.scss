@@ -3,15 +3,15 @@
 .indicator {
     background-color: $dark-on-secondary;
     border-radius: 1rem;
-    padding: 0rem 1.0rem;  // Corrected padding syntax
-    margin: 0 0.5rem;
+    padding: 0.4rem 0.8rem;  // Corrected padding syntax
+    margin: 0.2rem;
     margin-right: 0rem;
     transition: 0.3s;
 }
 
 .indicator-icon {
     margin: 0 0.6rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .indicator:hover {

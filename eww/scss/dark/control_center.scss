@@ -2,8 +2,9 @@
 
 .control-center {
     @include window;
-    /* box-shadow: 0 0 0 0rem; */
+    margin: 0;
+    box-shadow: 0 0 0 0rem;
     border-radius: 1.5rem;
     padding: 1.5rem;
-    background-color: rgba($color: $dark-background, $alpha: 0.7);
+    background-color: rgba($color: $dark-background, $alpha: 0.82);
 }

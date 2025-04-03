@@ -13,7 +13,7 @@ end
 -- This is where you actually apply your config choices
 
 -- For example, changing the color scheme:
-config.color_scheme = 'Ayu Dark (Gogh)'
+config.color_scheme = 'Edge Dark (base16)'
 config.window_decorations = "NONE"
 config.default_cursor_style = 'SteadyUnderline'
 config.hide_tab_bar_if_only_one_tab = true

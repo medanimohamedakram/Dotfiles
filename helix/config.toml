@@ -1,9 +1,19 @@
 
-theme = "onedark"
+theme = "edge_default"
 
 [editor]
 line-number = "relative"
 mouse = false
+color-modes = true
+
+[editor.statusline]
+left = ["mode", "spinner", "file-name"]
+center = []
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "|"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
 
 [editor.cursor-shape]
 insert = "bar"
@@ -12,3 +22,8 @@ select = "underline"
 
 [editor.file-picker]
 hidden = false
+
+[editor.lsp]
+# snippets = true
+display-progress-messages = true
+#display-color-swatches = true

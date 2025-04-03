@@ -4,40 +4,55 @@ set_wallpaper = true
 wallpaper_tool = 'Swww'
 swww_options = ['--transition-type', 'grow']
 
-[config.reload_apps_list]
-gtk_theme = true
+# [config.reload_apps_list]
+# gtk_theme = true
 
-[templates.material_colors] # Main file
-input_path = '~/.config/matugen/templates/_material_template.scss'
-output_path = '~/.cache/ags/user/generated/material_colors.scss'
+[templates.qt6ct]
+input_path = 'templates/qtct-theme.conf'
+output_path = '~/.config/qt6ct/colors/matugen.conf'
 
-[templates.primary_color] # Color source
-input_path = '~/.config/matugen/templates/_color.txt'
-output_path = '~/.cache/ags/user/colorsource.txt'
 
-[templates.hyprlock] # Hyprlock
-input_path = '~/.config/matugen/templates/hypr/hyprlock.conf'
-output_path = '~/.cache/ags/user/generated/hypr/hyprlock.conf'
+[templates.gtk3]
+input_path = 'templates/gtk-template.css'
+output_path = '~/.config/gtk-3.0/colors.css'
 
-[templates.hyprland_color] # Hyprland
-input_path = '~/.config/matugen/templates/hypr/hyprland/colors.conf'
-output_path = '~/.cache/ags/user/generated/hypr/hyprland/colors.conf'
+[templates.gtk4]
+input_path = 'templates/gtk-template.css'
+output_path = '~/.config/gtk-4.0/colors.css'
 
-[templates.lgtk3]
-input_path = '~/.config/matugen/templates/gtk_template.css'
-output_path = '~/.local/share/themes/adw-gtk3/gtk-3.0/colors.css'
 
-[templates.dgtk3]
-input_path = '~/.config/matugen/templates/gtk_template.css'
-output_path = '~/.local/share/themes/adw-gtk3-dark/gtk-3.0/colors.css'
 
-[templates.lgtk4]
-input_path = '~/.config/matugen/templates/gtk_template.css'
-output_path = '~/.local/share/themes/adw-gtk3/gtk-4.0/colors.css'
+# [templates.material_colors] # Main file
+# input_path = '~/.config/matugen/templates/_material_template.scss'
+# output_path = '~/.cache/ags/user/generated/material_colors.scss'
 
-[templates.dgtk4]
-input_path = '~/.config/matugen/templates/gtk_template.css'
-output_path = '~/.local/share/themes/adw-gtk3-dark/gtk-4.0/colors.css'
+# [templates.primary_color] # Color source
+# input_path = '~/.config/matugen/templates/_color.txt'
+# output_path = '~/.cache/ags/user/colorsource.txt'
+
+# [templates.hyprlock] # Hyprlock
+# input_path = '~/.config/matugen/templates/hypr/hyprlock.conf'
+# output_path = '~/.cache/ags/user/generated/hypr/hyprlock.conf'
+
+# [templates.hyprland_color] # Hyprland
+# input_path = '~/.config/matugen/templates/hypr/hyprland/colors.conf'
+# output_path = '~/.cache/ags/user/generated/hypr/hyprland/colors.conf'
+
+# [templates.lgtk3]
+# input_path = '~/.config/matugen/templates/gtk_template.css'
+# output_path = '~/.local/share/themes/adw-gtk3/gtk-3.0/colors.css'
+
+# [templates.dgtk3]
+# input_path = '~/.config/matugen/templates/gtk_template.css'
+# output_path = '~/.local/share/themes/adw-gtk3-dark/gtk-3.0/colors.css'
+
+# [templates.lgtk4]
+# input_path = '~/.config/matugen/templates/gtk_template.css'
+# output_path = '~/.local/share/themes/adw-gtk3/gtk-4.0/colors.css'
+
+# [templates.dgtk4]
+# input_path = '~/.config/matugen/templates/gtk_template.css'
+# output_path = '~/.local/share/themes/adw-gtk3-dark/gtk-4.0/colors.css'
 
 # [templates.lgtk4]
 # input_path = '~/.config/matugen/templates/gtk_template.css'

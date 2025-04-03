@@ -2,6 +2,8 @@
 
 
 .eventBox {
+
+  @include window;
   background:$dark-background;
 
   padding: 5px;
@@ -31,6 +33,7 @@
 
 // Calendar styles
 .weatherMainBox {
+    @include window;
   background:$dark-background;
   border: 0px solid $dark-inverse-on-surface;
   border-top-left-radius: 0px;

@@ -4,8 +4,6 @@
 depends = []
 
 [default.files]
-# ags = "~/.config/ags"
-eww = "~/.config/eww/"
 anyrun = "~/.config/anyrun/"
 fish = "~/.config/fish/"
 fontconfig = "~/.config/fontconfig/"
@@ -13,6 +11,7 @@ helix = "~/.config/helix/"
 hypr = "~/.config/hypr/"
 matugen = "~/.config/matugen/"
 starship = "~/.config/starship"
+qt6ct = "~/.config/qt6ct/"
 zed = "~/.config/zed"
 "wezterm.lua" = "~/.wezterm.lua"
 

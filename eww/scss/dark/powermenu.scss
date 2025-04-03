@@ -1,5 +1,5 @@
 .powermenu-box {
-
+    @include window;
     background-color: $dark-background;
     font-size: 1rem;
     box-shadow: 0 0 0 0px;
@@ -7,10 +7,8 @@
     padding-right: 1.5rem;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 3rem;
-    border-bottom-right-radius: 3rem;
+    border-radius: 3rem;
+    margin-top: 45rem;
 
 
 }
