@@ -1,0 +1,79 @@
+[global]
+    follow = keyboard
+    width = (0, 1500)
+    height = (0, 950)
+    origin = top-center
+    offset = (0, 8)
+    scale = 0
+    notification_limit = 10
+    progress_bar = true
+    progress_bar_height = 10
+    progress_bar_frame_width = 1
+    progress_bar_min_width = 150
+    progress_bar_max_width = 300
+    progress_bar_corner_radius = 0
+    icon_corner_radius = 0
+    indicate_hidden = yes
+    # transparency = 80
+    separator_height = 2
+    padding = 15
+    horizontal_padding = 15
+    text_icon_padding = 0
+    frame_width = 3
+    frame_color = "#aaaaaa"
+    gap_size = 0
+    separator_color = frame
+    sort = yes
+    idle_threshold = 120
+    font = Adwaita Sans 14
+    line_height = 10
+    markup = full
+    format = "<b>%s</b>\n%b\n"
+    alignment = left
+    vertical_alignment = top
+    show_age_threshold = 60
+    word_wrap = no
+    ellipsize = end
+    ignore_newline = no
+    stack_duplicates = true
+    hide_duplicate_count = false
+    show_indicators = yes
+    enable_recursive_icon_lookup = true
+    icon_theme = "Papirus"
+    icon_position = left
+    min_icon_size = 48
+    max_icon_size = 128
+    sticky_history = yes
+    history_length = 50
+    # dmenu = 
+    # browser = zen-browser
+    always_run_script = true
+    corner_radius = 9
+    ignore_dbusclose = false
+    force_xwayland = false
+    force_xinerama = false
+    mouse_left_click = close_current
+    mouse_middle_click = do_action, close_current
+    mouse_right_click = close_all
+
+[experimental]
+    per_monitor_dpi = false
+
+[urgency_low]
+    background = "#E5E9F0"
+    foreground = "#2E3440"
+    frame_color = "#2E3440"
+    timeout = 10
+
+[urgency_normal]
+    background = "#2E3440EF"
+    foreground = "#FFFFFF"
+    frame_color = "#BF616A"
+    highlight = "#BF616A"
+    timeout = 10
+
+[urgency_critical]
+    background = "#ffffff"
+    foreground = "#900000"
+    frame_color = "#900000"
+    timeout = 0

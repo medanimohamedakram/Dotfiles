@@ -14,31 +14,48 @@ output_path = '~/.config/qt6ct/colors/matugen.conf'
 input_path = 'templates/colors-hyprland'
 output_path = '~/.config/hypr/colors/colors-hyprland.conf'
 
-[templates.light_gtk3]
-input_path = 'templates/gtk_colors_light'
-output_path = '~/.local/share/themes/adw-gtk3/gtk-3.0/colors.css'
 
-[templates.dark_gtk3]
-input_path = 'templates/gtk_colors_dark'
-output_path = '~/.local/share/themes/adw-gtk3-dark/gtk-3.0/colors.css'
+[templates.waybar]
+input_path = 'templates/colors'
+output_path = '~/.config/waybar/matugen/matugen-waybar.css'
+post_hook = 'pkill -SIGUSR2 waybar'
 
-[templates.light_gtk4]
-input_path = 'templates/gtk_colors_light'
-output_path = '~/.local/share/themes/adw-gtk3/gtk-4.0/colors.css'
+[templates.dunst]
+input_path = 'templates/dunst_theme'
+output_path = '~/.config/dunst/dunstrc'
+post_hook = 'dunstctl reload'
 
-[templates.dark_gtk4]
-input_path = 'templates/gtk_colors_dark'
-output_path = '~/.local/share/themes/adw-gtk3-dark/gtk-4.0/colors.css'
+[config.custom_colors]
+red = { color = "#c01c28", blend = false }
+orange = { color = "#e66100", blend = false }
+brown = { color = "#865e3c", blend = false }
+yellow = { color = "#f5c211", blend = false }
+green = { color = "#2ec27e", blend = false }
+blue = { color = "#1c71d8", blend = false }
+purple = { color = "#813d9c", blend = false }
+light = { color = "#c0bfbc", blend = false }
+dark = { color = "#241f31", blend = false }
 
-# [templates.gtk3]
-# input_path = 'templates/gtk_colors'
-# output_path = '~/.config/gtk-3.0/colors.css'
+# [templates.light_gtk3]
+# input_path = 'templates/gtk_colors_light'
+# output_path = '~/.local/share/themes/adw-gtk3/gtk-3.0/colors.css'
 
-# [templates.gtk4]
-# input_path = 'templates/gtk_colors'
-# output_path = '~/.config/gtk-4.0/colors.css'
+# [templates.dark_gtk3]
+# input_path = 'templates/gtk_colors_dark'
+# output_path = '~/.local/share/themes/adw-gtk3-dark/gtk-3.0/colors.css'
 
-# [templates.material_colors] # Main file
-# input_path = '~/.config/matugen/templates/_material_template.scss'
-# output_path = '~/.cache/ags/user/generated/material_colors.scss'
+# [templates.light_gtk4]
+# input_path = 'templates/gtk_colors_light'
+# output_path = '~/.local/share/themes/adw-gtk3/gtk-4.0/colors.css'
 
+# [templates.dark_gtk4]
+# input_path = 'templates/gtk_colors_dark'
+# output_path = '~/.local/share/themes/adw-gtk3-dark/gtk-4.0/colors.css'
+
+# [templates.light_gtk4css]
+# input_path = 'templates/gtk_colors_light'
+# output_path = '~/.config/gtk-4.0/gtk.css'
+
+# [templates.dark_gtk4css]
+# input_path = 'templates/gtk_colors_dark'
+# output_path = '~/.config/gtk-4.0/gtk.css'

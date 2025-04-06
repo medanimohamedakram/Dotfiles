@@ -1,5 +1,5 @@
 
-theme = "edge_default"
+theme = "ayu_dark"
 
 [editor]
 line-number = "relative"

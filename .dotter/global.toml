@@ -7,6 +7,7 @@ depends = []
 anyrun = "~/.config/anyrun/"
 fish = "~/.config/fish/"
 fontconfig = "~/.config/fontconfig/"
+foot = "~/.config/foot/"
 helix = "~/.config/helix/"
 hypr = "~/.config/hypr/"
 matugen = "~/.config/matugen/"
