@@ -5,16 +5,18 @@ depends = []
 
 [default.files]
 anyrun = "~/.config/anyrun/"
+dunst = "~/.config/dunst/"
 fish = "~/.config/fish/"
 fontconfig = "~/.config/fontconfig/"
 foot = "~/.config/foot/"
 helix = "~/.config/helix/"
 hypr = "~/.config/hypr/"
 matugen = "~/.config/matugen/"
-nushell = "~/.config/nushell"
+nushell = "~/.config/nushell/"
 starship = "~/.config/starship"
 qt6ct = "~/.config/qt6ct/"
-zed = "~/.config/zed"
+waybar = "~/.config/waybar/"
+zed = "~/.config/zed/"
 "wezterm.lua" = "~/.wezterm.lua"
 
 [default.variables]
