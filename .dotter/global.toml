@@ -18,6 +18,7 @@ qt6ct = "~/.config/qt6ct/"
 waybar = "~/.config/waybar/"
 zed = "~/.config/zed/"
 "wezterm.lua" = "~/.wezterm.lua"
+"xdg-terminals.list" = "~/.config/xdg-terminals.list"
 
 [default.variables]
 

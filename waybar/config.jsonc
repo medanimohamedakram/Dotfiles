@@ -9,25 +9,36 @@
 	"layer": "top",
 	"position": "top",
 	"reload_style_on_change": true,
-	"modules-left": ["group/systeminfo", "clock","tray"],
-	"modules-center": ["hyprland/workspaces"],
+	"modules-left": ["hyprland/workspaces", "group/systeminfo","tray"],
+	"modules-center": [ "clock",],
 	"modules-right": ["group/tools", "group/quicksettings"],
 
 
+	"group/tools": {
+		"orientation": "horizontal",
+		"drawer": {
+		 "transition-duration": 600,
+		 "transition-to-left": true,
+		 "click-to-reveal": true
+		},
+		"modules": ["custom/expand","custom/colorpicker", "idle_inhibitor","power-profiles-daemon"]
+	},
+	"group/systeminfo": {
+		"orientation": "horizontal",
+		"modules": ["cpu","memory","temperature"]
+	},
+	"group/quicksettings": {
+		"orientation": "horizontal",
+		"modules": ["network", "pulseaudio", "battery",]
+		},
 	"hyprland/workspaces": {
 		"format": "",
 		"persistent-workspaces": {
 			"*": [ 1,2,3,4,5 ]
 		}
 	},
-	"custom/notification": {
-		"tooltip": false,
-		"format": "",
-		"on-click": "swaync-client -t -sw",
-		"escape": true
-	},
     "clock": {
-        "format": "{:%T}",
+        "format": "{:%a %d %B, %T}",
 				"interval": 1,   
         // "format-alt": "{:%A, %B %d, %Y (%R)}",
         "tooltip": false,
@@ -36,26 +47,28 @@
 	"idle_inhibitor": {
 	    "format": "{icon}",
 	    "format-icons": {
-	        "activated": "",
-	        "deactivated": ""
+	        "activated": "󱠂",
+	        "deactivated": "󱠃"
 	    },
 	    "tooltip-format-activated": "Caffeine On",
 	    "tooltip-format-deactivated": "Caffeine Off",
 	},
 	"network": {
-		"format-wifi": "󰖩",
+		"format-wifi": "{icon}",
 		"format-ethernet":"󰈀",
 		"format-disconnected": "",
-		"tooltip-format-disconnected": "Error",
-		"tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+		"tooltip-format-disconnected": "Disconnected",
+		"tooltip-format-wifi": "{essid} ({signalStrength}%)",
 		"tooltip-format-ethernet": "{ifname} 󰈀 ",
+		"format-icons": {
+			"wifi": ["󰤟", "󰤢", "󰤥", "󰤨"]
+		},
 		"on-click": "footclient --app-id=nmtui sh -c 'sleep 0.1; nmtui'"
 	},
 	"bluetooth": {
 		"format-on": "󰂯",
 		"format-off": "󰂲",
 		"format-disabled": "󰂲",
-		"format-connected-battery": "{device_battery_percentage}% 󰥉",
 		"tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
 		"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
 		"tooltip-format-enumerate-connected": "{device_alias}\n{device_address}",
@@ -65,17 +78,12 @@
 
 	"pulseaudio": {
 	    "format": "{icon}",
-	    "format-bluetooth": "{icon}",
-	    "format-muted": "",
+	    "format-muted": " ",
     "format-icons": {
-        "headphone": "",
+        "headphone": " ",
         // "hands-free": "  ",
-        "headset": "",
-        "phone": "",
-        "phone-muted": "",
-        // "portable": "",
-        // "car": "",
-        "default": ["", "", ""]
+        "headset": " ",
+        "default": [" ", " ", " "]
     },
     	"tooltip-format": "{volume}%",
 	    "on-click": "easyeffects",
@@ -90,7 +98,7 @@
 	  "tooltip": true,
 	  "format-icons": {
 	    "default": "",
-	    "performance": "",
+	    "performance": "",
 	    "balanced": "",
 	    "power-saver": ""
 	  }
@@ -109,13 +117,13 @@
     "tooltip-format": "{capacity}%",
 		"format-icons": {
 		"default": [
-			"󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂",
+			"󰁺","󰁻","󰁼","󰁽","󰁾","󰁾","󰂀","󰂁","󰂂","󰁹",
 		],
 		"charging": [
-			"󰁺󱐌","󰁻󱐌","󰁼󱐌","󰁽󱐌","󰁾󱐌","󰁿󱐌","󰂀󱐌","󰂁󱐌","󰂂󱐌",
+			"󰢜 ","󰂆","󰂇","󰂈","󰢝 ","󰂉","󰢞","󰂊","󰂋", "󰂅"
 		],
 		"plugged": [
-			"󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂",
+			"󰁺","󰁻","󰁼","󰁽","󰁾","󰁾","󰂀","󰂁","󰂂","󰁹",
 		],
 		}
 	},
@@ -123,25 +131,8 @@
 		"format": "",
 		"tooltip": false
 	},
-	"group/tools": {
-		"orientation": "horizontal",
-		"drawer": {
-		 "transition-duration": 600,
-		 "transition-to-left": true,
-		 "click-to-reveal": true
-		},
-		"modules": ["custom/expand","custom/colorpicker", "idle_inhibitor","power-profiles-daemon"]
-	},
-	"group/systeminfo": {
-		"orientation": "horizontal",
-		"modules": ["cpu","memory","temperature"]
-	},
-	"group/quicksettings": {
-		"orientation": "horizontal",
-		"modules": ["bluetooth", "network", "pulseaudio", "battery", "custom/notification"]
-		},
 	"custom/colorpicker": {
-		"format": "",
+		"format": " ",
 		"return-type": "json",
 		"interval": "once",
 		"exec": "~/.config/waybar/scripts/Colorpicker.sh -j",
@@ -153,11 +144,11 @@
 		"tooltip": true
 	},
 	"memory": {
-		"format": " {percentage}%"
+		"format": " {percentage}%"
 	},
 	"temperature": {
 		"critical-threshold": 80,
-		"format": " {temperatureC}°C"
+		"format": "{temperatureC}°C"
 	},
 	"tray": {
 		"icon-size": 24,

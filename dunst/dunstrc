@@ -1,79 +1,71 @@
+
 [global]
-    follow = keyboard
+    origin = top-center
     width = (0, 1500)
     height = (0, 950)
-    origin = top-center
     offset = (0, 8)
     scale = 0
     notification_limit = 10
     progress_bar = true
-    progress_bar_height = 10
+    progress_bar_height = 15
     progress_bar_frame_width = 1
-    progress_bar_min_width = 150
-    progress_bar_max_width = 300
-    progress_bar_corner_radius = 0
-    icon_corner_radius = 0
+    progress_bar_min_width = 250
+    progress_bar_max_width = 500
+    progress_bar_corner_radius = 7
+    icon_corner_radius = 2
     indicate_hidden = yes
-    # transparency = 80
-    separator_height = 2
+    separator_height = 0
     padding = 15
     horizontal_padding = 15
     text_icon_padding = 0
-    frame_width = 3
-    frame_color = "#aaaaaa"
-    gap_size = 0
-    separator_color = frame
+    frame_width = 0
+    gap_size = 3
     sort = yes
     idle_threshold = 120
-    font = Adwaita Sans 14
-    line_height = 10
-    markup = full
-    format = "<b>%s</b>\n%b\n"
-    alignment = left
-    vertical_alignment = top
+    font = Readex Pro 14
+    line_height = 0
     show_age_threshold = 60
     word_wrap = no
-    ellipsize = end
     ignore_newline = no
     stack_duplicates = true
     hide_duplicate_count = false
-    show_indicators = yes
     enable_recursive_icon_lookup = true
     icon_theme = "Papirus"
-    icon_position = left
-    min_icon_size = 48
-    max_icon_size = 128
+    min_icon_size = 32
+    max_icon_size = 96
     sticky_history = yes
     history_length = 50
-    # dmenu = 
-    # browser = zen-browser
     always_run_script = true
-    corner_radius = 9
+    corner_radius = 16
     ignore_dbusclose = false
     force_xwayland = false
     force_xinerama = false
     mouse_left_click = close_current
     mouse_middle_click = do_action, close_current
     mouse_right_click = close_all
+    separator_color = frame
+	enable_posix_regex = true
+	background = "#eaf5fccc"
+	foreground = "#354a53"
+	frame_color = "#006b59cc"
+	separator_color = "#657a85"
+	highlight = "#006b59"
 
 [experimental]
     per_monitor_dpi = false
 
 [urgency_low]
-    background = "#E5E9F0"
-    foreground = "#2E3440"
-    frame_color = "#2E3440"
-    timeout = 10
+	background = "#eaf5fc80"
+	max_icon_size = 48
+	set_stack_tag = synchronous
+	history_ignore = true
+	format = "<b>%s %n%%</b>"
+    timeout = 4
 
 [urgency_normal]
-    background = "#2E3440EF"
-    foreground = "#FFFFFF"
-    frame_color = "#BF616A"
-    highlight = "#BF616A"
-    timeout = 10
+    timeout = 8
 
 [urgency_critical]
-    background = "#ffffff"
-    foreground = "#900000"
-    frame_color = "#900000"
+	background = "#ba1a1a80"
+	foreground = "#e7f2f9"
     timeout = 0

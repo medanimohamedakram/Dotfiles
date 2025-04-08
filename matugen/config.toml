@@ -26,16 +26,16 @@ output_path = '~/.config/dunst/dunstrc'
 post_hook = 'dunstctl reload'
 
 [config.custom_colors]
-red = { color = "#c01c28", blend = false }
-orange = { color = "#e66100", blend = false }
-brown = { color = "#865e3c", blend = false }
-yellow = { color = "#f5c211", blend = false }
-green = { color = "#2ec27e", blend = false }
-blue = { color = "#1c71d8", blend = false }
-purple = { color = "#813d9c", blend = false }
-light = { color = "#c0bfbc", blend = false }
-dark = { color = "#241f31", blend = false }
-
+red = { color = "#c01c28", blend = true }
+orange = { color = "#e66100", blend = true }
+brown = { color = "#865e3c", blend = true }
+yellow = { color = "#f5c211", blend = true }
+green = { color = "#2ec27e", blend = true }
+blue = { color = "#1c71d8", blend = true }
+purple = { color = "#813d9c", blend = true }
+light = { color = "#c0bfbc", blend = true }
+dark = { color = "#241f31", blend = true }
+ 
 # [templates.light_gtk3]
 # input_path = 'templates/gtk_colors_light'
 # output_path = '~/.local/share/themes/adw-gtk3/gtk-3.0/colors.css'

@@ -181,6 +181,7 @@
 "waybar/themes/slanted-bubbles/config.jsonc" = "/home/akram/.config/waybar/themes/slanted-bubbles/config.jsonc"
 "waybar/themes/slanted-bubbles/style.css" = "/home/akram/.config/waybar/themes/slanted-bubbles/style.css"
 "wezterm.lua" = "/home/akram/.wezterm.lua"
+"xdg-terminals.list" = "/home/akram/.config/xdg-terminals.list"
 "zed/keymap.json" = "/home/akram/.config/zed/keymap.json"
 "zed/settings.json" = "/home/akram/.config/zed/settings.json"
 

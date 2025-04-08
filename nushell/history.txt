@@ -45,3 +45,9 @@ wpctl get-volume @DEFAULT_AUDIO_SINK@ | rg -o MUTED || wpctl get-volume @DEFAULT
 bash
 nu.config-path
 $nu.config-path
+clear
+cat .config/ayusequeces.txt
+echo "1.00"| into float
+echo hello\ World!
+echo hello  World!
+echo "hello  World!"

@@ -13,189 +13,90 @@
 
 
 * {
+  all: unset;
   border: none;
-  font-size: 1rem;
-  font-family: "Adwaita Sans", "Font Awesome 6 Free";
+  font-family: "CaskaydiaCove Nerd Font";
   font-weight: bold;
-  min-height: 0;
 }
 
 window#waybar {
   all: unset;
-  background: alpha(@background, .5);
-  border-radius: 1rem;
+  background: alpha(@surface, .6);
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  color: @on_surface;
   ;
 }
 
 /* .modules-left { */
-/* padding: 0.4rem; */
-/* margin: 0.6rem 0.6rem 0.3rem 0.6rem; */
+/* padding: 0.4px; */
+/* margin: 0.6px 0.6px 0.3px 0.6px; */
 /* border-radius: 10px; */
-/* background: alpha(@background, .6); */
+/* background: alpha(@surface, .6); */
 /* box-shadow: 0px 0px 2px rgba(0, 0, 0, .6); */
 /* } */
 
-.modules-center {
-  padding: 0.4rem;
-  margin: 0.4rem 0.4rem 0.2rem 0.4rem;
-  /* margin: 0.6rem 0.6rem 0.3rem 0.6rem; */
-  border-radius: 10px;
-  background: alpha(@background, .6);
-  box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
+/* .modules-center { */
+/* all: unset; */
+/* font-size: 0.4rem; */
+/* padding: 0.4px; */
+/* margin: 0.4px 0.4px 0.2px 0.4px; */
+/* margin: 0.6px 0.6px 0.3px 0.6px; */
+/* border-radius: 10px; */
+/* background: alpha(@surface, .6); */
+/* box-shadow: 0px 0px 2px rgba(0, 0, 0, .6); */
+/* } */
+
+.modules-right {
+  color: @on_surface;
+  font-size: 1.6rem;
 }
 
-/* .modules-right { */
-/* color: @on_surface; */
-/* padding: 0.4rem; */
-/* margin: 10px 10px 5px 0px; */
-/* margin: 0.6rem 0.6rem 0.3rem 0.6rem; */
-/* border-radius: 10px; */
-/* background: alpha(@background, .6); */
-/* box-shadow: 0px 0px 2px rgba(0, 0, 0, .6); */
-/* } */
-
 tooltip {
-  background: @background;
-  border: 2px solid @primary;
-  border-radius: 1rem;
+  font-size: 1.4rem;
+  background: alpha(@surface, 0.7);
+  border: 2px solid alpha(@primary, 0.7);
+  border-radius: 12px;
+  color: @on_surface;
+
 }
 
 tooltip-label {
-  color: @on_surface;
-  padding: 5px;
+  /* all: unset; */
+  /* margin: 28px; */
+  /* padding: 8px; */
 }
 
-#clock:hover,
-#custom-pacman:hover,
-#custom-notification:hover,
-#bluetooth:hover,
-#network:hover,
 #battery:hover,
+#pulseaudio:hover,
+#network:hover,
+#bluetooth:hover,
+#power-profiles-daemon:hover,
+#idle_inhibitor:hover,
+#idle_inhibitor.activated:hover,
+#idle_inhibitor.deactivated:hover,
+#custom-colorpicker:hover,
+#clock:hover,
 #cpu:hover,
 #memory:hover,
 #temperature:hover {
-  transition: all .3s ease;
-  color: @tertiary;
+  transition: background .3s ease-in-out;
+  text-shadow: 0px 0px 2px alpha(@secondary, 0.5);
 }
 
-#custom-notification {
-  padding: 0 0.4rem;
-  /* padding: 0px 5px; */
-  transition: all .3s ease;
-  color: @on_surface;
-}
-
-#clock {
-  padding: 0 0.4rem;
-  /* padding: 0px 5px; */
-  color: @on_surface;
-  transition: all .3s ease;
-}
-
-/* #custom-pacman { */
-/* padding: 0px 5px; */
-/* transition: all .3s ease; */
-/* color: @on_surface; */
-
-/* } */
-
-/*---------Workspaces-----------------*/
-#workspaces {
-  padding: 0.4rem;
-  border-radius: 2rem;
-  color: @on_surface;
-}
-
-#workspaces button {
+/*---------QuickSettings-----------------*/
+#quicksettings {
   all: unset;
-  min-width: 0.2rem;
-  padding: 0 0.6rem;
-  margin: 0 0.2rem;
-  border-radius: 2rem;
-  background: @on_surface_variant;
-  transition: all 0.3s ease-in-out;
-}
-
-#workspaces button.active {
-  background-color: @primary;
-  color: @scrim;
-  border-radius: 2rem;
-  min-width: 4rem;
-  background-size: 400% 400%;
-  transition: all 0.3s ease-in-out;
-}
-
-#workspaces button:hover {
-  font-weight: bold;
-  background-color: @tertiary;
-  color: @scrim;
+  padding: 0 8px;
+  margin: 3px 6px;
   border-radius: 16px;
-  min-width: 4rem;
-  background-size: 400% 400%;
-}
-
-#workspaces button.urgent {
-  font-weight: bold;
-  background-color: @error;
-  color: @scrim;
-  border-radius: 16px;
-  min-width: 50px;
-  background-size: 400% 400%;
-  transition: all 0.3s ease-in-out;
-}
-
-
-
-#power-profiles-daemon {
-  padding: 0 0.4rem;
-  transition: all .3s ease;
-  color: @on_surface;
-}
-
-#power-profiles-daemon.performance {
-  color: @red;
-}
-
-#power-profiles-daemon.power-saver {
-  color: @green;
-}
-
-#pulseaudio {
-  font-size: 1.2rem;
-  padding: 0 0.4rem;
-  padding-left: 0.6rem;
-  transition: all 1s ease;
-  color: @on_surface;
-}
-
-#bluetooth {
-  font-size: 1.4rem;
-  padding: 0 0.4rem;
-  transition: all .3s ease;
-  color: @on_surface;
-}
-
-#network {
-  font-size: 1.3rem;
-  padding: 0 0.4rem;
-  transition: all .3s ease;
-  color: @on_surface;
-}
-
-#idle_inhibitor {
-  padding: 0 0.4rem;
-  transition: all 1s ease;
-  color: @on_surface;
-}
-
-#idle_inhibitor.activated {
-  color: @brown;
+  background: alpha(@surface, .5);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
+  transition: all .3s ease-in-out;
 }
 
 #battery {
-  font-size: 1.4rem;
-  font-weight: normal;
-  padding: 0 0.4rem;
+  padding: 0 8px;
   transition: all .3s ease;
   color: @on_surface;
 }
@@ -217,26 +118,57 @@ tooltip-label {
   animation-direction: alternate;
 }
 
-#systeminfo {
-  padding: 0.4rem;
-  margin: 0.4rem 0.4rem 0.2rem 0.4rem;
-  border-radius: 1rem;
-  background: alpha(@background, .6);
-  box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
-  transition: all .3s ease;
+#pulseaudio {
+  padding: 0 4px;
+  transition: all .3s ease-in-out;
+  color: @on_surface;
 }
 
-#quicksettings {
-  padding: 0.4rem;
-  margin: 0.4rem 0.4rem 0.2rem 0.4rem;
-  border-radius: 1rem;
-  background: alpha(@background, .6);
-  box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
-  transition: all .3s ease;
+
+#network {
+  padding-left: 8px;
+  padding-right: 12px;
+  transition: all .3s ease-in-out;
+  color: @on_surface;
 }
+
+
+/* #bluetooth { */
+/* padding: 0 4px; */
+/* transition: all .3s ease; */
+/* color: @on_surface; */
+/* } */
+
+/*---------Tools-----------------*/
+#power-profiles-daemon {
+  transition: all .3s ease-in-out;
+}
+
+#power-profiles-daemon.performance {
+  color: @red;
+}
+
+#power-profiles-daemon.power-saver {
+  color: @green;
+}
+
+#idle_inhibitor {
+  font-size: 2rem;
+  padding-left: 6px;
+  padding-right: 12px;
+  transition: all .3s ease-in-out;
+}
+
+#idle_inhibitor.activated {
+  color: @brown;
+}
+
+/* #custom-colorpicker { */
+/* font-size: 1.6rem; */
+/* } */
 
 #custom-expand {
-  padding: 0 0.4rem;
+  padding: 0 8px;
   color: alpha(@on_surface, 2);
   text-shadow: 0px 0px 2px rgba(0, 0, 0, .7);
   transition: all .3s ease;
@@ -247,35 +179,102 @@ tooltip-label {
   text-shadow: 0px 0px 2px rgba(255, 255, 255, .5);
 }
 
-#custom-colorpicker {
-  padding: 0 0.4rem;
+
+/*---------Workspaces-----------------*/
+#workspaces {
+  font-size: 0.4rem;
+  padding: 12px;
+  margin: 3px 6px;
+  border-radius: 24px;
+  background: alpha(@surface, .6);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
+  transition: all .3s ease;
+}
+
+#workspaces button {
+  padding: 2px 6px;
+  margin: 0px 2px;
+  min-width: 1px;
+  border-radius: 16px;
+  background: @on_surface_variant;
+  transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.active {
+  background-color: @primary;
+  color: @scrim;
+  min-width: 48px;
+  background-size: 400% 400%;
+  transition: all 0.3s ease-in-out;
+}
+
+#workspaces button:hover {
+  font-weight: bold;
+  background-color: @tertiary;
+  color: @scrim;
+  border-radius: 16px;
+  min-width: 48px;
+  background-size: 400% 400%;
+}
+
+#workspaces button.urgent {
+  font-weight: bold;
+  background-color: @error;
+  color: @scrim;
+  border-radius: 16px;
+  min-width: 48px;
+  background-size: 400% 400%;
+  transition: all 0.3s ease-in-out;
+}
+
+/*---------SystemInfo-----------------*/
+
+#clock {
+  font-size: 1.2rem;
+  padding: 0 12px;
+  margin: 3px 6px;
+  border-radius: 16px;
+  background: alpha(@surface, .5);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
+  transition: all .3s ease;
+}
+
+#systeminfo {
+  font-size: 1.2rem;
+  padding: 0 8px;
+  margin: 3px 6px;
+  border-radius: 16px;
+  background: alpha(@surface, .5);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
+  transition: all .3s ease;
 }
 
 #cpu,
 #memory,
 #temperature {
-  padding: 0 0.5rem;
-  transition: all .3s ease;
-  color: @on_surface;
-
-}
-
-
-#tray {
-  padding: 0 0.4rem;
-  /* padding: 0px 5px; */
-  transition: all .3s ease;
-
-}
-
-#tray menu * {
-  padding: 0 0.4rem;
-  /* padding: 0px 5px; */
+  padding: 0 8px;
   transition: all .3s ease;
 }
 
+#tray,
+#tray menu *,
 #tray menu separator {
-  padding: 0 0.4rem;
-  /* padding: 0px 5px; */
+  padding: 0 8px;
   transition: all .3s ease;
+
+}
+
+/* #tray menu * { */
+/* transition: all .3s ease; */
+/* } */
+
+/* #tray menu separator { */
+/* transition: all .3s ease; */
+/* } */
+
+#clock:hover,
+#systeminfo:hover,
+#workspaces:hover,
+#quicksettings:hover {
+  background: alpha(@tertiary_container, 0.6);
 }
