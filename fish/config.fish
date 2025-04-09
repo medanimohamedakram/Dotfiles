@@ -13,3 +13,4 @@ if status is-interactive
 end
 
 starship init fish | source
+cat $XDG_CONFIG_HOME/colors/shell/colors

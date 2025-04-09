@@ -1,7 +1,7 @@
 /***
- *    ┓ ┏┏┓┓┏┳┓┏┓┳┓  ┳┳┓┳┳┓┳┳┳┓┏┓┓   ┏┓┏┓┳┓┏┓┳┏┓
- *    ┃┃┃┣┫┗┫┣┫┣┫┣┫━━┃┃┃┃┃┃┃┃┃┃┣┫┃ ━━┃ ┃┃┃┃┣ ┃┃┓
- *    ┗┻┛┛┗┗┛┻┛┛┗┛┗  ┛ ┗┻┛┗┻┛ ┗┛┗┗┛  ┗┛┗┛┛┗┻ ┻┗┛
+ *    ┓ ┏┏┓┓┏┳┓┏┓┳┓  ┏┓┏┓┳┓┏┓┳┏┓
+ *    ┃┃┃┣┫┗┫┣┫┣┫┣┫━━┃ ┃┃┃┃┣ ┃┃┓
+ *    ┗┻┛┛┗┗┛┻┛┛┗┛┗  ┗┛┗┛┛┗┻ ┻┗┛
  *                                              
  */
 
@@ -29,7 +29,16 @@
 	},
 	"group/quicksettings": {
 		"orientation": "horizontal",
-		"modules": ["network", "pulseaudio", "battery",]
+		"modules": ["group/audiovolume", "network", "battery",]
+		},
+	"group/audiovolume": {
+		"orientation": "horizontal",
+		"drawer": {
+		 "transition-duration": 600,
+		 "transition-to-left": false,
+		 "click-to-reveal": false,
+		},
+		"modules": ["pulseaudio", "pulseaudio/slider",]
 		},
 	"hyprland/workspaces": {
 		"format": "",
@@ -40,15 +49,14 @@
     "clock": {
         "format": "{:%a %d %B, %T}",
 				"interval": 1,   
-        // "format-alt": "{:%A, %B %d, %Y (%R)}",
         "tooltip": false,
-        "on-click": "overskride",
+        // "on-click": "overskride",
     },	
 	"idle_inhibitor": {
 	    "format": "{icon}",
 	    "format-icons": {
-	        "activated": "󱠂",
-	        "deactivated": "󱠃"
+	     "activated": "󰛊",
+	     "deactivated": "󰾫"
 	    },
 	    "tooltip-format-activated": "Caffeine On",
 	    "tooltip-format-deactivated": "Caffeine Off",
@@ -56,14 +64,14 @@
 	"network": {
 		"format-wifi": "{icon}",
 		"format-ethernet":"󰈀",
-		"format-disconnected": "",
+		"format-disconnected": "󰪎",
 		"tooltip-format-disconnected": "Disconnected",
 		"tooltip-format-wifi": "{essid} ({signalStrength}%)",
 		"tooltip-format-ethernet": "{ifname} 󰈀 ",
 		"format-icons": {
 			"wifi": ["󰤟", "󰤢", "󰤥", "󰤨"]
 		},
-		"on-click": "footclient --app-id=nmtui sh -c 'sleep 0.1; nmtui'"
+		"on-click": "uwsm app -- footclient --app-id=nmtui sh -c 'sleep 0.1; nmtui'"
 	},
 	"bluetooth": {
 		"format-on": "󰂯",
@@ -78,29 +86,32 @@
 
 	"pulseaudio": {
 	    "format": "{icon}",
-	    "format-muted": " ",
+	    "format-muted": "󰝟",
     "format-icons": {
-        "headphone": " ",
-        // "hands-free": "  ",
-        "headset": " ",
-        "default": [" ", " ", " "]
+        "default": ["󰕿", "󰖀", "󰕾"]
     },
     	"tooltip-format": "{volume}%",
-	    "on-click": "easyeffects",
+	    "on-click": "pwvucontrol",
+	    "on-click-right": "easyeffects",
 			"on-scroll-up": "wpctl set-volume @DEFAULT_SINK@ 5%+",
 			"on-scroll-down": "wpctl set-volume @DEFAULT_SINK@ 5%-",
 			"scroll-step": 5,
 	    "ignored-sinks": ["Easy Effects Sink"]
+	},
+	"pulseaudio/slider": {
+    "min": 0,
+    "max": 100,
+    "orientation": "horizontal"
 	},
 	"power-profiles-daemon": {
 	  "format": "{icon} ",
 	  "tooltip-format": "Power profile: {profile}",
 	  "tooltip": true,
 	  "format-icons": {
-	    "default": "",
-	    "performance": "",
-	    "balanced": "",
-	    "power-saver": ""
+	    "default": "󰾅",
+	    "performance": "󰓅",
+	    "balanced": "󰾅",
+	    "power-saver": "󰾆"
 	  }
 	},
 	"battery": {
@@ -129,10 +140,11 @@
 	},
 	"custom/expand": {
 		"format": "",
-		"tooltip": false
+		"tooltip": true,
+		"tooltip-format": "Tools"
 	},
 	"custom/colorpicker": {
-		"format": " ",
+		"format": "󰈊",
 		"return-type": "json",
 		"interval": "once",
 		"exec": "~/.config/waybar/scripts/Colorpicker.sh -j",
@@ -140,15 +152,15 @@
 		"signal": 1
 	},
 	"cpu": {
-		"format": " {usage}%",
+		"format": "  {usage}%",
 		"tooltip": true
 	},
 	"memory": {
-		"format": " {percentage}%"
+		"format": "  {percentage}%"
 	},
 	"temperature": {
 		"critical-threshold": 80,
-		"format": "{temperatureC}°C"
+		"format": "{temperatureC}°C"
 	},
 	"tray": {
 		"icon-size": 24,

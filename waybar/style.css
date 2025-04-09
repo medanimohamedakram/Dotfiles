@@ -9,13 +9,13 @@
 
 
 /*-----------IMPORTING MATUGEN COLORS----------*/
-@import "matugen/matugen-waybar.css";
+@import "../colors/waybar/colors.css";
 
 
 * {
   all: unset;
   border: none;
-  font-family: "CaskaydiaCove Nerd Font";
+  font-family: "Readex Pro SemiBold, CaskaydiaCove Nerd Font";
   font-weight: bold;
 }
 
@@ -53,18 +53,17 @@ window#waybar {
 }
 
 tooltip {
-  font-size: 1.4rem;
-  background: alpha(@surface, 0.7);
+  background: alpha(@surface, 0.8);
   border: 2px solid alpha(@primary, 0.7);
   border-radius: 12px;
   color: @on_surface;
 
 }
 
-tooltip-label {
-  /* all: unset; */
-  /* margin: 28px; */
-  /* padding: 8px; */
+tooltip label {
+  all: unset;
+  font-size: 1.4rem;
+  padding: 12px;
 }
 
 #battery:hover,
@@ -80,8 +79,8 @@ tooltip-label {
 #cpu:hover,
 #memory:hover,
 #temperature:hover {
-  transition: background .3s ease-in-out;
-  text-shadow: 0px 0px 2px alpha(@secondary, 0.5);
+  transition: all .3s ease-in-out;
+  text-shadow: 0px 0px 2px alpha(@inverse_surface, 0.6);
 }
 
 /*---------QuickSettings-----------------*/
@@ -97,7 +96,7 @@ tooltip-label {
 
 #battery {
   padding: 0 8px;
-  transition: all .3s ease;
+  transition: all .3s ease-in-out;
   color: @on_surface;
 }
 
@@ -118,19 +117,42 @@ tooltip-label {
   animation-direction: alternate;
 }
 
-#pulseaudio {
-  padding: 0 4px;
-  transition: all .3s ease-in-out;
-  color: @on_surface;
-}
-
-
 #network {
-  padding-left: 8px;
-  padding-right: 12px;
+  padding: 0 8px;
   transition: all .3s ease-in-out;
   color: @on_surface;
 }
+
+#pulseaudio {
+  padding: 0 8px;
+  transition: all .3s ease-in-out;
+  color: @on_surface;
+}
+
+
+#pulseaudio-slider slider {
+  min-height: 0px;
+  min-width: 0px;
+  opacity: 0;
+  background-image: none;
+  border: none;
+  box-shadow: none;
+}
+
+#pulseaudio-slider trough {
+  min-height: 10px;
+  min-width: 80px;
+  border-radius: 5px;
+  background: shade(alpha(@surface_variant, .6), 1.75);
+  box-shadow: 0px 0px 1px @inverse_surface;
+}
+
+#pulseaudio-slider highlight {
+  min-width: 10px;
+  border-radius: 5px;
+  background: alpha(shade(@tertiary, 0.9), .9);
+}
+
 
 
 /* #bluetooth { */
@@ -141,31 +163,35 @@ tooltip-label {
 
 /*---------Tools-----------------*/
 #power-profiles-daemon {
+  padding: 0 8px;
   transition: all .3s ease-in-out;
 }
 
 #power-profiles-daemon.performance {
-  color: @red;
+  color: shade(@red, 1.75);
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
+  transition: all .3s ease-in-out;
 }
 
 #power-profiles-daemon.power-saver {
-  color: @green;
+  color: shade(@green, 2);
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
+  transition: all .3s ease-in-out;
 }
 
 #idle_inhibitor {
-  font-size: 2rem;
-  padding-left: 6px;
-  padding-right: 12px;
+  padding: 0 8px;
   transition: all .3s ease-in-out;
 }
 
 #idle_inhibitor.activated {
-  color: @brown;
+  color: shade(@brown, 2);
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
 }
 
-/* #custom-colorpicker { */
-/* font-size: 1.6rem; */
-/* } */
+#custom-colorpicker {
+  padding: 0 8px;
+}
 
 #custom-expand {
   padding: 0 8px;
@@ -276,5 +302,7 @@ tooltip-label {
 #systeminfo:hover,
 #workspaces:hover,
 #quicksettings:hover {
-  background: alpha(@tertiary_container, 0.6);
+  background: shade(alpha(@surface, .5), 1.5);
+  box-shadow: 0px 0px 2px alpha(@inverse_surface , .4);
+  transition: all .3s ease-in-out;
 }

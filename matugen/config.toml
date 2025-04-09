@@ -1,4 +1,6 @@
-# config_directory/config.toml
+
+[config]
+version_check = false
 
 [config.wallpaper]
 command = "swww"
@@ -12,18 +14,28 @@ output_path = '~/.config/qt6ct/colors/matugen.conf'
 
 [templates.hyprland]
 input_path = 'templates/colors-hyprland'
-output_path = '~/.config/hypr/colors/colors-hyprland.conf'
+output_path = '$XDG_CONFIG_HOME/colors/hyprland/colors.conf'
 
+[templates.dunst]
+input_path = 'templates/dunst/dunst_dark'
+output_path = '~/.config/dunst/dunstrc'
+input_path_modes = { dark = 'templates/dunst/dunst_dark', light = 'templates/dunst/dunst_light' }
+post_hook = 'dunstctl reload'
+
+[templates.shell]
+input_path = 'templates/shell/shell-dark'
+input_path_modes = { dark = 'templates/shell/shell-dark', light = 'templates/shell/shell-light' }
+output_path = '~/.config/colors/shell/colors'
+post_hook = 'sh $XDG_CONFIG_HOME/matugen/templates/shell/applycol.sh'
 
 [templates.waybar]
 input_path = 'templates/colors'
-output_path = '~/.config/waybar/matugen/matugen-waybar.css'
+output_path = '~/.config/colors/waybar/colors.css'
 post_hook = 'pkill -SIGUSR2 waybar'
 
-[templates.dunst]
-input_path = 'templates/dunst_theme'
-output_path = '~/.config/dunst/dunstrc'
-post_hook = 'dunstctl reload'
+[templates.gtk]
+input_path = 'templates/gtk'
+output_path = '~/.config/colors/gtk/colors.css'
 
 [config.custom_colors]
 red = { color = "#c01c28", blend = true }
@@ -36,9 +48,6 @@ purple = { color = "#813d9c", blend = true }
 light = { color = "#c0bfbc", blend = true }
 dark = { color = "#241f31", blend = true }
  
-# [templates.light_gtk3]
-# input_path = 'templates/gtk_colors_light'
-# output_path = '~/.local/share/themes/adw-gtk3/gtk-3.0/colors.css'
 
 # [templates.dark_gtk3]
 # input_path = 'templates/gtk_colors_dark'

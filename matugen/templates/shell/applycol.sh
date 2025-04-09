@@ -3,7 +3,7 @@ apply_term() {
 
   for file in /dev/pts/*; do
     if [[ $file =~ ^/dev/pts/[0-9]+$ ]]; then
-      cat shell/ayu-dark >"$file"
+      cat $XDG_CONFIG_HOME/colors/shell/colors >"$file"
     fi
   done
 }

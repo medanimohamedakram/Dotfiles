@@ -22,7 +22,7 @@ config.initial_rows = 30
 config.hide_mouse_cursor_when_typing = false
 config.window_close_confirmation = 'NeverPrompt'
 config.enable_wayland = true
-config.font = wezterm.font('CaskaydiaCove Nerd Font')
+config.font = wezterm.font('tabler-icons')
 -- config.harfbuzz_features = { 'zero', 'cv17', 'ss05', 'ss03', 'cv16', 'cv31', 'cv30', 'ss09', 'cv25', 'cv26', 'cv32', 'cv27', 'cv28', 'ss06', 'ss07', }
 
 

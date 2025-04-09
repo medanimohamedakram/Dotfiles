@@ -1,13 +1,7 @@
-/*  ┳┳┓┏┓┏┳┓┳┳┏┓┏┓┳┓  ┓┏┓┏┏┓┳┓┓ ┏┓┳┓┳┓*/
-/*  ┃┃┃┣┫ ┃ ┃┃┃┓┣ ┃┃━━┣┫┗┫┃┃┣┫┃ ┣┫┃┃┃┃*/ 
-/*  ┛ ┗┛┗ ┻ ┗┛┗┛┗┛┛┗  ┛┗┗┛┣┛┛┗┗┛┛┗┛┗┻┛*/
-                                    
-
-
-
-/*-----Surface Transparent Background------*/
-@define-color surface-alpha rgba(16, 20, 23, 0.5);
-
+/*  ┳┳┓┏┓┏┳┓┳┳┏┓┏┓┳┓ */
+/*  ┃┃┃┣┫ ┃ ┃┃┃┓┣ ┃┃ */ 
+/*  ┛ ┗┛┗ ┻ ┗┛┗┛┗┛┛┗ */
+                                   
 <* for name, value in colors *>
 @define-color {{name}} {{value.default.hex}};
 <* endfor *>
