@@ -1,0 +1,38 @@
+[default_apps]
+terminal = "xdg-terminal-exec"
+
+[debug]
+try_suppress_errors     =   false                                   
+try_suppress_warnings   =   false
+app_paths               =   ["~/.local/share/applications/"]        
+
+[units]
+lengths                 =   "meter"
+weights                 =   "kg"
+volumes                 =   "l"
+
+[appearance]
+width                   = 900                                       
+height                  = 593                                       
+gsk_renderer            = "cairo"                                   
+recolor_icons           = true
+icon_size               = 48                                        
+search_icon             = true                                        
+use_base_css            = true
+
+[behavior]
+caching                 =   false  
+cache                   =   "~/.cache/sherlock_desktop_cache.json"  
+daemonize               =   false                                   
+animation               =   false                                   
+
+[binds]
+prev                    =   "None"                                  
+next                    =   "None"                                  
+modifier                =   "control"                               
+
+[files]
+fallback                =   "~/.config/sherlock/fallback.json"
+css                     =   "~/.config/sherlock/main.css"
+alias                   =   "~/.config/sherlock/sherlock_alias.json"
+ignore                  =   "~/.config/sherlock/sherlockignore"

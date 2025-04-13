@@ -9,7 +9,7 @@
 
 
 /*-----------IMPORTING MATUGEN COLORS----------*/
-@import "../colors/waybar/colors.css";
+@import "../colors/colors.css";
 
 
 * {
@@ -25,7 +25,6 @@ window#waybar {
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
   color: @on_surface;
-  ;
 }
 
 /* .modules-left { */
@@ -95,7 +94,7 @@ tooltip label {
 }
 
 #battery {
-  padding: 0 8px;
+  margin: 0 8px;
   transition: all .3s ease-in-out;
   color: @on_surface;
 }
@@ -118,13 +117,13 @@ tooltip label {
 }
 
 #network {
-  padding: 0 8px;
+  margin: 0 8px;
   transition: all .3s ease-in-out;
   color: @on_surface;
 }
 
 #pulseaudio {
-  padding: 0 8px;
+  margin: 0 4px;
   transition: all .3s ease-in-out;
   color: @on_surface;
 }
@@ -140,17 +139,18 @@ tooltip label {
 }
 
 #pulseaudio-slider trough {
+  margin: 0 4px;
   min-height: 10px;
   min-width: 80px;
-  border-radius: 5px;
-  background: shade(alpha(@surface_variant, .6), 1.75);
-  box-shadow: 0px 0px 1px @inverse_surface;
+  border: 1px solid alpha(@inverse_surface, 0.7);
+  border-radius: 8px;
+  background: alpha(@surface_variant, .7);
 }
 
 #pulseaudio-slider highlight {
   min-width: 10px;
   border-radius: 5px;
-  background: alpha(shade(@tertiary, 0.9), .9);
+  background: alpha(@tertiary, .9);
 }
 
 
@@ -162,39 +162,42 @@ tooltip label {
 /* } */
 
 /*---------Tools-----------------*/
+
+#tools {}
+
 #power-profiles-daemon {
-  padding: 0 8px;
+  margin: 0 8px;
   transition: all .3s ease-in-out;
 }
 
 #power-profiles-daemon.performance {
-  color: shade(@red, 1.75);
+  color: @red;
   text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
   transition: all .3s ease-in-out;
 }
 
 #power-profiles-daemon.power-saver {
-  color: shade(@green, 2);
+  color: @green;
   text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
   transition: all .3s ease-in-out;
 }
 
 #idle_inhibitor {
-  padding: 0 8px;
+  margin: 0 8px;
   transition: all .3s ease-in-out;
 }
 
 #idle_inhibitor.activated {
-  color: shade(@brown, 2);
+  color: @brown;
   text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
 }
 
 #custom-colorpicker {
-  padding: 0 8px;
+  margin: 0 8px;
 }
 
 #custom-expand {
-  padding: 0 8px;
+  margin: 0 8px;
   color: alpha(@on_surface, 2);
   text-shadow: 0px 0px 2px rgba(0, 0, 0, .7);
   transition: all .3s ease;
@@ -278,14 +281,14 @@ tooltip label {
 #cpu,
 #memory,
 #temperature {
-  padding: 0 8px;
+  margin: 0 8px;
   transition: all .3s ease;
 }
 
 #tray,
 #tray menu *,
 #tray menu separator {
-  padding: 0 8px;
+  margin: 0 8px;
   transition: all .3s ease;
 
 }

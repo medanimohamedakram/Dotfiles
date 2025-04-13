@@ -131,7 +131,7 @@
 			"󰁺","󰁻","󰁼","󰁽","󰁾","󰁾","󰂀","󰂁","󰂂","󰁹",
 		],
 		"charging": [
-			"󰢜 ","󰂆","󰂇","󰂈","󰢝 ","󰂉","󰢞","󰂊","󰂋", "󰂅"
+			"󰢜","󰂆","󰂇","󰂈","󰢝","󰂉","󰢞","󰂊","󰂋", "󰂅"
 		],
 		"plugged": [
 			"󰁺","󰁻","󰁼","󰁽","󰁾","󰁾","󰂀","󰂁","󰂂","󰁹",
@@ -147,8 +147,8 @@
 		"format": "󰈊",
 		"return-type": "json",
 		"interval": "once",
-		"exec": "~/.config/waybar/scripts/Colorpicker.sh -j",
-		"on-click": "~/.config/waybar/scripts/Colorpicker.sh",
+		"exec": "$XDG_CONFIG_HOME/scripts/color-picker -j",
+		"on-click": "$XDG_CONFIG_HOME/scripts/color-picker",
 		"signal": 1
 	},
 	"cpu": {

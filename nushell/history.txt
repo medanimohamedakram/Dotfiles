@@ -51,3 +51,4 @@ echo "1.00"| into float
 echo hello\ World!
 echo hello  World!
 echo "hello  World!"
+swww query

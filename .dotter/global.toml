@@ -4,8 +4,6 @@
 depends = []
 
 [default.files]
-anyrun = "~/.config/anyrun/"
-dunst = "~/.config/dunst/"
 fish = "~/.config/fish/"
 fontconfig = "~/.config/fontconfig/"
 foot = "~/.config/foot/"
@@ -14,10 +12,11 @@ hypr = "~/.config/hypr/"
 matugen = "~/.config/matugen/"
 nushell = "~/.config/nushell/"
 starship = "~/.config/starship"
+sherlock = "~/.config/sherlock"
 qt6ct = "~/.config/qt6ct/"
 waybar = "~/.config/waybar/"
+swaync = "~/.config/swaync"
 zed = "~/.config/zed/"
-"wezterm.lua" = "~/.wezterm.lua"
 "xdg-terminals.list" = "~/.config/xdg-terminals.list"
 
 [default.variables]

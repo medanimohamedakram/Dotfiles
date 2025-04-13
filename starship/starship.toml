@@ -2,7 +2,7 @@
 
 # Configures the format of the prompt.
 format = """
-[](color_red0)\
+ [](color_red0)\
 $os\
 $username\
 [](bg:color_orange fg:color_red0)\
@@ -34,8 +34,8 @@ $fill\
 ([ ](mono4)\
 $time\
 $battery\
-[](mono4))\
-$line_break$character"""
+[](mono4)) \
+$line_break $character """
 
 # Sets the palette to "one_dark".
 palette = 'one_dark'
@@ -225,9 +225,9 @@ symbol = " "
 # Module that displays the time.
 [time]
 disabled = false # Disabled by default
-use_12hr = true # Disable for 24h format without seconds
+use_12hr = false # Disable for 24h format without seconds
 style = "bg:mono4"
-format = '[[ 󰥔 $time ](fg:syntax_fg bg:mono4)]($style)'
+format = '[[ 󰥔 $time   ](fg:syntax_fg bg:mono4)]($style)'
 
 # Module that displays the battery level and status.
 [battery]
@@ -296,8 +296,8 @@ threshold = 100
 
 # New line character
 [character]
-success_symbol = '[󰅂](bold fg:syntax_accent)'
-error_symbol = '[](bold fg:color_red1)'
+success_symbol = '[• ](bold fg:syntax_accent)'
+error_symbol = '[• 󰅙](bold fg:color_red1)'
 vimcmd_symbol = '[󰅁](bold fg:syntax_accent)'
 vimcmd_replace_one_symbol = '[󰅁](bold fg:color_purple)'
 vimcmd_replace_symbol = '[󰅁](bold fg:color_purple)'

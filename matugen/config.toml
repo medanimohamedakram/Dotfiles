@@ -4,67 +4,41 @@ version_check = false
 
 [config.wallpaper]
 command = "swww"
-arguments = ["img", "--transition-type", "center"]
+arguments = ["img", "--transition-type", "random"]
 set = true
 # pre_hook = ""
 
-[templates.qt6ct]
-input_path = 'templates/qtct-theme.conf'
-output_path = '~/.config/qt6ct/colors/matugen.conf'
-
 [templates.hyprland]
 input_path = 'templates/colors-hyprland'
-output_path = '$XDG_CONFIG_HOME/colors/hyprland/colors.conf'
-
-[templates.dunst]
-input_path = 'templates/dunst/dunst_dark'
-output_path = '~/.config/dunst/dunstrc'
-input_path_modes = { dark = 'templates/dunst/dunst_dark', light = 'templates/dunst/dunst_light' }
-post_hook = 'dunstctl reload'
+output_path = "~/.config/colors/hyprland/colors.conf"
 
 [templates.shell]
-input_path = 'templates/shell/shell-dark'
+input_path = 'templates/shell/shell-light'
 input_path_modes = { dark = 'templates/shell/shell-dark', light = 'templates/shell/shell-light' }
 output_path = '~/.config/colors/shell/colors'
-post_hook = 'sh $XDG_CONFIG_HOME/matugen/templates/shell/applycol.sh'
+post_hook = 'sh $XDG_CONFIG_HOME/scripts/shell-colors'
 
 [templates.waybar]
 input_path = 'templates/colors'
-output_path = '~/.config/colors/waybar/colors.css'
+output_path = '~/.config/colors/colors.css'
 post_hook = 'pkill -SIGUSR2 waybar'
 
 [templates.gtk]
 input_path = 'templates/gtk'
 output_path = '~/.config/colors/gtk/colors.css'
 
+[templates.gtk4]
+input_path = 'templates/gtk'
+output_path = '~/.config/gtk-4.0/gtk.css'
+
 [config.custom_colors]
-red = { color = "#c01c28", blend = true }
-orange = { color = "#e66100", blend = true }
-brown = { color = "#865e3c", blend = true }
-yellow = { color = "#f5c211", blend = true }
-green = { color = "#2ec27e", blend = true }
-blue = { color = "#1c71d8", blend = true }
-purple = { color = "#813d9c", blend = true }
-light = { color = "#c0bfbc", blend = true }
-dark = { color = "#241f31", blend = true }
+red = "#c01c28"
+orange = "#e66100"
+brown = "#865e3c"
+yellow = "#f5c211"
+green = "#2ec27e"
+blue = "#1c71d8"
+purple = "#813d9c"
+light = "#c0bfbc"
+dark = "#241f31"
  
-
-# [templates.dark_gtk3]
-# input_path = 'templates/gtk_colors_dark'
-# output_path = '~/.local/share/themes/adw-gtk3-dark/gtk-3.0/colors.css'
-
-# [templates.light_gtk4]
-# input_path = 'templates/gtk_colors_light'
-# output_path = '~/.local/share/themes/adw-gtk3/gtk-4.0/colors.css'
-
-# [templates.dark_gtk4]
-# input_path = 'templates/gtk_colors_dark'
-# output_path = '~/.local/share/themes/adw-gtk3-dark/gtk-4.0/colors.css'
-
-# [templates.light_gtk4css]
-# input_path = 'templates/gtk_colors_light'
-# output_path = '~/.config/gtk-4.0/gtk.css'
-
-# [templates.dark_gtk4css]
-# input_path = 'templates/gtk_colors_dark'
-# output_path = '~/.config/gtk-4.0/gtk.css'
