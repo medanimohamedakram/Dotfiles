@@ -2,5 +2,4 @@
 zed/.*
 .dotter/local.toml
 .dotter/cache.toml
-.dotter/cache
 nushell/history.txt
