@@ -13,32 +13,28 @@ input_path = 'templates/colors-hyprland'
 output_path = "~/.config/colors/hyprland/colors.conf"
 
 [templates.shell]
-input_path = 'templates/shell/shell-light'
+input_path = 'templates/shell/shell-dark'
 input_path_modes = { dark = 'templates/shell/shell-dark', light = 'templates/shell/shell-light' }
 output_path = '~/.config/colors/shell/colors'
 post_hook = 'sh $XDG_CONFIG_HOME/scripts/shell-colors'
 
-[templates.waybar]
+[templates.colors]
 input_path = 'templates/colors'
 output_path = '~/.config/colors/colors.css'
-post_hook = 'pkill -SIGUSR2 waybar'
+post_hook = 'pkill -SIGUSR2 waybar && swaync-client -rs'
 
 [templates.gtk]
 input_path = 'templates/gtk'
 output_path = '~/.config/colors/gtk/colors.css'
 
-[templates.gtk4]
-input_path = 'templates/gtk'
-output_path = '~/.config/gtk-4.0/gtk.css'
-
 [config.custom_colors]
-red = "#c01c28"
-orange = "#e66100"
-brown = "#865e3c"
-yellow = "#f5c211"
-green = "#2ec27e"
-blue = "#1c71d8"
-purple = "#813d9c"
-light = "#c0bfbc"
-dark = "#241f31"
+red = {color="#c01c28", blend=false }
+orange = {color="#e66100", blend=false}
+brown = {color="#865e3c", blend=false}
+yellow = {color="#f5c211", blend=false}
+green = {color="#2ec27e", blend=false}
+blue = {color="#1c71d8", blend=false}
+purple = {color="#813d9c", blend=false}
+light = {color="#c0bfbc", blend=false}
+dark = {color="#241f31", blend=false}
  

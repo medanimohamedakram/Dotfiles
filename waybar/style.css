@@ -155,11 +155,11 @@ tooltip label {
 
 
 
-/* #bluetooth { */
-/* padding: 0 4px; */
-/* transition: all .3s ease; */
-/* color: @on_surface; */
-/* } */
+#bluetooth {
+  padding: 0 4px;
+  transition: all .3s ease;
+  color: @on_surface;
+}
 
 /*---------Tools-----------------*/
 

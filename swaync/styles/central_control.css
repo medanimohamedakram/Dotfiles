@@ -1,32 +1,8 @@
-@define-color rosewater #f5e0dc;
-@define-color flamingo #f2cdcd;
-@define-color pink #f5c2e7;
-@define-color mauve #cba6f7;
-@define-color red #f38ba8;
-@define-color maroon #eba0ac;
-@define-color peach #fab387;
-@define-color yellow #f9e2af;
-@define-color green #a6e3a1;
-@define-color teal #94e2d5;
-@define-color sky #89dceb;
-@define-color sapphire #74c7ec;
-@define-color blue #89b4fa;
-@define-color tertiary #b4befe;
-
-/* @define-color on_surface @on_surface; */
-
-/* @define-color base alpha(#000000, 0.1); */
-/* @define-color surface alpha(#ffffff, 0.1); */
-@define-color hover alpha(#ffffff, 0.2);
-@define-color active alpha(alpha(@tertiary, 0.5), 0.5);
-
 * {
-  /* color: @on_surface; */
-  /* all: unset; */
+  all: unset;
   font-size: 1rem;
-  font-weight: 900;
-  font-family: "Readex Pro";
-  transition: 200ms;
+  font-family: "Readex Pro SemiBold";
+  /* transition: background .2s ease-in-out; */
 }
 
 /* Avoid 'annoying' backgroud */
@@ -36,200 +12,210 @@
 
 /* CONTROL CENTER ------------------------------------------------------------------------ */
 
+label {
+  font-size: 1.2rem;
+  margin: 0 4px;
+  color: @on_surface;
+}
+
+progressbar,
+progress,
+trough {
+  border-radius: 24px;
+  box-shadow: 0 0 2px 0 alpha(@shadow, .6);
+}
+
+progressbar {
+  /* background-color: @red; */
+}
+
+trough {
+  background: @primary_container;
+  margin: 0 8px;
+}
+
+trough highlight {
+  padding: 12px 0;
+  background: @primary;
+  border-radius: 24px;
+}
+
+/* trough slider {} */
+
+/* trough slider:hover {} */
+
 /* WIDGETS --------------------------------------------------------------------------- */
 
-/* Buttons menu */
+.widget-label {
+  margin: 16px;
+}
+
+/* Brightness -------------------------------------------------------------------------- */
+.widget-backlight {
+  margin: 8px;
+}
+
+/* .widget-backlight label {} */
+
+/* .widget-backlight trough {} */
+
+/* .widget-backlight trough highlight {} */
+
+/* Volume -------------------------------------------------------------------------- */
+.widget-volume {
+  margin: 8px;
+}
+
+/* .widget-volume label {} */
+
+/* .widget-volume trough {} */
+
+/* .widget-volume trough highlight {} */
+
+.widget-volume button {
+  padding: 2px 8px;
+  border-radius: 16px;
+}
+
+.widget-volume button:hover {
+  padding: 2px 8px;
+  border-radius: 16px;
+  background: @secondary_container;
+  box-shadow: 0 0 2px 0 alpha(@shadow, .6);
+}
+
+.widget-volume button:hover label {
+  color: @on_secondary_container;
+}
+
+.per-app-volume {
+  margin: 8px 0;
+}
+
+/* Buttons menu *-------------------------------------------------------------------------- */
 .widget-buttons-grid {
-  margin: 0 0 8px 4px;
-  border-radius: 20px;
+  margin: 8px;
+  padding: 2px;
+  border-radius: 24px;
+  background: @surface_container;
+  box-shadow: 0 0 2px 0 alpha(@shadow, .6);
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button {
-  margin: 0 4px 4px 0;
-  padding: 1rem 4rem;
-  background: @surface;
-  /* color: @crust; */
-  border-radius: 999px;
+  font-size: 1.2rem;
+  padding: 1rem 0;
+  margin: 0 2px;
+  /* padding: 1rem 4rem; */
+  background: @surface_container;
+  box-shadow: 0 0 2px 0 alpha(@shadow, .6);
+  border-radius: 24px;
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button:hover {
-  background: @hover;
-  /* color: @crust; */
+  background: @secondary_container;
+}
+
+.widget-buttons-grid>flowbox>flowboxchild>button:hover label {
+  color: @on_secondary_container;
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button.toggle:checked {
-  background: @active;
-  /* color: @crust; */
+  background: @primary;
 }
 
-/* Brightness */
-.widget-backlight {
-  padding: 8px 16px;
-  margin: 0 0 8px 0;
-  border-radius: 20px;
-  background: @surface;
+.widget-buttons-grid>flowbox>flowboxchild>button.toggle:checked:hover {
+  background: shade(@primary, 1.2);
 }
 
-slider {}
-
-.widget-backlight label {}
-
-.widget-backlight trough {
-  background: @surface;
-  margin: 0 8px;
+.widget-buttons-grid>flowbox>flowboxchild>button.toggle:checked label {
+  color: @on_primary;
 }
 
-.widget-backlight trough highlight {
-  background: @active;
-  border: unset;
-}
-
-.widget-backlight button {
-  padding: 0 4px;
-}
-
-/* Volume */
-.widget-volume {
-  padding: 8px 16px;
-  margin: 0 0 8px 0;
-  border-radius: 20px;
-  background: @surface;
-}
-
-slider {}
-
-.widget-volume label {}
-
-.widget-volume trough {
-  background: @surface;
-  margin: 0 8px;
-}
-
-.widget-volume trough highlight {
-  background: @active;
-  border: unset;
-}
-
-.widget-volume button {
-  padding: 0 4px;
-}
-
-/* Music player */
-.widget-mpris {
-  background: @surface;
-  border-radius: 20px;
-  margin: 0 4px 8px 4px;
-}
-
-.widget-mpris-player {
-  border-radius: 20px;
-}
-
-.widget-mpris>box>button {
-  border-radius: 20px;
-  background: @surface;
-  border-radius: 20px;
-  padding: 2px;
-}
-
-.widget-mpris button {
-  background: @active;
-  border-radius: 20px;
-  padding: 2px;
-  margin: 0 0 8px 0;
-}
-
-.widget-mpris button:hover {
-  background: @hover;
-}
-
-.widget-mpris-album-art {
-  border-radius: 20px;
-  margin: 8px 0 0 8px;
-}
-
-.widget-mpris-title {
-  /* font-weight: 700; */
-  /* font-size: 1rem; */
-}
-
-.widget-mpris-subtitle {
-  /* font-weight: 500; */
-  /* font-size: 0.8rem; */
-}
-
-/* Notification clear button */
-.widget-title {
-  font-size: 1.5rem;
-  margin: 0 4px 0px 4px;
-}
-
-.widget-title button {
-  background: @surface;
-  border-radius: 20px;
-  padding: 4px 16px;
-}
-
-.widget-title button:hover {
-  background: @hover;
-}
-
-/* Do not disturb */
+/* Do not disturb *-------------------------------------------------------------------------- */
 .widget-dnd {
-  margin: 0 4px 8px 4px;
+  margin: 2px 4px;
+  padding: 4px;
 }
+
+/* .widget-dnd label {} */
 
 .widget-dnd>switch {
-  /* color: @on_surface; */
-  background: @surface;
-  border-radius: 20px;
-  box-shadow: none;
-  padding: 2px;
+  padding: 4px;
+  background: @surface_container;
+  color: @on_surface;
+  border-radius: 24px;
+  box-shadow: 0 0 8px 0 alpha(@shadow, .6);
 }
 
 .widget-dnd>switch:hover {
-  background: @hover;
-  /* color: @crust; */
-}
-
-.widget-dnd>switch:hover:checked {
-  background: @hover;
-  /* color: @crust; */
+  background: @secondary_container;
+  color: @on_secondary_container;
 }
 
 .widget-dnd>switch:checked {
-  background: @active;
-  /* color: @crust; */
+  background: @primary;
+  color: @on_primary;
+}
+
+.widget-dnd>switch:hover:checked {
+  background: shade(@primary, 1.2);
+  color: @on_primary;
 }
 
 .widget-dnd>switch slider {
-  /* color: @crust; */
-  background: @hover;
-  border-radius: 20px;
+  background: alpha(@secondary_container, 0.4);
+  border-radius: 24px;
   border: 2px solid @active;
+  color: @on_secondary_container;
 }
 
 .widget-dnd>switch:checked slider {
-  color: @tertiary;
-  background: @active;
+  border: 2px solid @active;
+  color: @on_primary;
 }
 
-/* Buttons */
+/* Notification clear button *-------------------------------------------------------------------------- */
+.widget-title {
+  margin: 2px 4px;
+}
+
+.widget-title button {
+  padding: 8px 16px;
+  background: @surface_container;
+  border-radius: 24px;
+  box-shadow: 0 0 8px 0 alpha(@shadow, .6);
+}
+
+.widget-title button label {
+  font-size: 1.2rem;
+}
+
+.widget-title button:hover {
+  background: @secondary_container;
+}
+
+.widget-title button:hover label {
+  color: @on_secondary_container;
+}
+
+
+/* Buttons *-------------------------------------------------------------------------- */
 
 .control-center {
-  background: @surface;
-  border-radius: 20px;
-  border: 2px solid @secondary;
+  background: alpha(@surface, 0.7);
+  border-radius: 24px;
   margin: 0;
   padding: 8px 8px 0 8px;
+  box-shadow: 0 0 8px 0 alpha(@shadow, .6);
 }
 
 /* Notifications  */
 .control-center .notification-row .notification-background,
 .control-center .notification-row .notification-background .notification.critical {
-  background-color: @surface;
-  border-radius: 20px;
+  background: @surface_container;
+  border-radius: 24px;
   margin: 4px 0;
+  box-shadow: 0 0 2px 0 alpha(@shadow, .6);
   padding: 8px 8px 8px 16px;
 }
 
@@ -246,52 +232,31 @@ slider {}
 }
 
 .control-center .notification-row .notification-background .notification>*:last-child>* .notification-action {
-  background-color: @surface;
-  border-radius: 20px;
+  background: @surface_container;
+  border-radius: 24px;
 }
 
 .control-center .notification-row .notification-background .notification>*:last-child>* .notification-action:hover {
-  background-color: @hover;
+  background: @secondary_container;
 }
 
 .control-center .notification-row .notification-background .close-button {
-  background: transparent;
-  border-radius: 20px;
+  /* background: transparent; */
+  /* border-radius: 24px; */
   /* color: @on_surface; */
-  background-color: @surface;
-  margin: 0px;
-  padding: 4px;
+  /* background-color: @surface; */
+  /* margin: 0px; */
+  /* padding: 4px; */
+  all: unset;
+  font-size: 0;
+  margin: 0;
+  padding: 0;
 }
 
-.control-center .notification-row .notification-background .close-button:hover {
-  background-color: @hover;
-}
+/* .control-center .notification-row .notification-background .close-button:hover { */
+/* background-color: @hover; */
+/* } */
 
-progressbar,
-progress,
-trough {
-  border-radius: 20px;
-}
-
-progressbar {
-  background-color: @red;
-}
-
-trough {}
-
-trough highlight {
-  padding: 8px;
-  background: @tertiary;
-  border: 2px solid @tertiary;
-  border-radius: 20px;
-}
-
-trough slider {
-  outline: none;
-  border: none;
-}
-
-trough slider:hover {}
 
 /* Notifications expanded-group */
 
@@ -301,7 +266,7 @@ trough slider:hover {}
 
 .notification-group-headers {
   font-weight: 900;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   letter-spacing: 2px;
 }
 
@@ -311,13 +276,15 @@ trough slider:hover {}
 
 .notification-group-collapse-button,
 .notification-group-close-all-button {
-  background: @surface;
+  background: @surface_container;
+  color: @on_surface;
   margin: 4px;
-  border-radius: 20px;
+  border-radius: 24px;
   padding: 8px;
+  box-shadow: 0 0 2px 0 alpha(@shadow, .6);
 }
 
 .notification-group-collapse-button:hover,
 .notification-group-close-all-button:hover {
-  background: @hover;
+  background: @secondary_container;
 }

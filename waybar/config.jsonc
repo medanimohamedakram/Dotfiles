@@ -29,7 +29,7 @@
 	},
 	"group/quicksettings": {
 		"orientation": "horizontal",
-		"modules": ["group/audiovolume", "network", "battery",]
+		"modules": ["group/audiovolume", "bluetooth", "network", "battery",]
 		},
 	"group/audiovolume": {
 		"orientation": "horizontal",
@@ -38,7 +38,7 @@
 		 "transition-to-left": false,
 		 "click-to-reveal": false,
 		},
-		"modules": ["pulseaudio", "pulseaudio/slider",]
+		"modules": ["pulseaudio"]
 		},
 	"hyprland/workspaces": {
 		"format": "",
@@ -71,16 +71,19 @@
 		"format-icons": {
 			"wifi": ["󰤟", "󰤢", "󰤥", "󰤨"]
 		},
-		"on-click": "uwsm app -- footclient --app-id=nmtui sh -c 'sleep 0.1; nmtui'"
+    "on-click": "swaync-client -t -sw",
+		"on-click-right": "nm-connection-editor",
+		// "on-click": "uwsm app -- footclient --app-id=nmtui sh -c 'sleep 0.1; nmtui'"
 	},
 	"bluetooth": {
-		"format-on": "󰂯",
-		"format-off": "󰂲",
-		"format-disabled": "󰂲",
+		"format-on": "",
+		"format-off": "",
+		"format-disabled": "",
 		"tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
 		"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
 		"tooltip-format-enumerate-connected": "{device_alias}\n{device_address}",
 		"tooltip-format-enumerate-connected-battery": "{device_alias}\n{device_address}\n{device_battery_percentage}%",
+    "on-click": "swaync-client -t -sw",
 		"on-click-right": "overskride"
 	}, 
 
@@ -91,8 +94,8 @@
         "default": ["󰕿", "󰖀", "󰕾"]
     },
     	"tooltip-format": "{volume}%",
-	    "on-click": "pwvucontrol",
-	    "on-click-right": "easyeffects",
+	    "on-click": "swaync-client -t -sw",
+	    "on-click-right": "pwvucontrol",
 			"on-scroll-up": "wpctl set-volume @DEFAULT_SINK@ 5%+",
 			"on-scroll-down": "wpctl set-volume @DEFAULT_SINK@ 5%-",
 			"scroll-step": 5,
@@ -126,6 +129,7 @@
 		"format-plugged": "{icon}",
 		"interval": 60,
     "tooltip-format": "{capacity}%",
+    "on-click": "swaync-client -t -sw",
 		"format-icons": {
 		"default": [
 			"󰁺","󰁻","󰁼","󰁽","󰁾","󰁾","󰂀","󰂁","󰂂","󰁹",
@@ -159,7 +163,8 @@
 		"format": "  {percentage}%"
 	},
 	"temperature": {
-		"critical-threshold": 80,
+		"critical-threshold": 75,
+    "hwmon-path": "/sys/class/hwmon/hwmon4/temp1_input",
 		"format": "{temperatureC}°C"
 	},
 	"tray": {
