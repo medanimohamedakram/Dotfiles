@@ -11,7 +11,7 @@ def main [] {
     gsettings set org.gnome.desktop.interface icon-theme Papirus-Light
     gsettings set org.gnome.desktop.interface cursor-theme Bibata-Modern-Classic
     hyprctl setcursor Bibata-Modern-Classic 24 | ignore
-    "exec-once = hyprctl setcursor Bibata-Modern-Classic 24" | save -a ~/.config/colors/hyprland/colors.conf 
+    "exec-once = hyprctl setcursor Bibata-Modern-Classic 24" | save -a $"($env.XDG_CACHE_HOME)/colors/hyprland/colors.conf" 
   } else {
     matugen image ...$image  --mode dark
     gsettings set org.gnome.desktop.interface color-scheme prefer-dark
@@ -19,10 +19,8 @@ def main [] {
     gsettings set org.gnome.desktop.interface icon-theme Papirus-Dark
     gsettings set org.gnome.desktop.interface cursor-theme Bibata-Modern-Ice
     hyprctl setcursor Bibata-Modern-Ice 24 | ignore
-    "exec-once = hyprctl setcursor Bibata-Modern-Ice 24" | save -a ~/.config/colors/hyprland/colors.conf 
+    "exec-once = hyprctl setcursor Bibata-Modern-Ice 24" | save -a $"($env.XDG_CACHE_HOME)/colors/hyprland/colors.conf" 
   }
-  pkill -USR2 waybar
+  # pkill -USR2 waybar
   swaync-client --reload-css -sw
 }
-
-# main

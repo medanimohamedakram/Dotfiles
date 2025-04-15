@@ -9,13 +9,13 @@ def main [] {
     matugen image $image --mode light
     gsettings set org.gnome.desktop.interface gtk-theme ''
     gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3
-    "exec-once = hyprctl setcursor Bibata-Modern-Classic 24" | save -a ~/.config/colors/hyprland/colors.conf 
+    "exec-once = hyprctl setcursor Bibata-Modern-Classic 24" | save -a $"($env.XDG_CACHE_HOME)/colors/hyprland/colors.conf" 
   } else {
     matugen image $image  --mode dark
     gsettings set org.gnome.desktop.interface gtk-theme ''
     gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-dark
-    "exec-once = hyprctl setcursor Bibata-Modern-Ice 24" | save -a ~/.config/colors/hyprland/colors.conf 
+    "exec-once = hyprctl setcursor Bibata-Modern-Ice 24" | save -a $"($env.XDG_CACHE_HOME)/colors/hyprland/colors.conf" 
   }
-  pkill -USR2 waybar
+  # pkill -USR2 waybar
   swaync-client --reload-css -sw
 }
