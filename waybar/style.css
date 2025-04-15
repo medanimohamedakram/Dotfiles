@@ -9,7 +9,7 @@
 
 
 /*-----------IMPORTING MATUGEN COLORS----------*/
-@import "../colors/colors.css";
+@import "../../.cache/colors/colors.css";
 
 
 * {

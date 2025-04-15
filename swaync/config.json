@@ -93,7 +93,7 @@
           "label": "󱎖",
           "type": "toggle",
           "active": true,
-          "command": "swaync-client -cp && ~/.local/bin/switch-darklight",
+          "command": "swaync-client -cp && ~/.local/bin/switchdarklight.nu",
           "update-command": "sh -c '[[ -n $(gsettings get org.gnome.desktop.interface color-scheme | rg -o dark) ]] && echo true || echo false'"
         },
         {
