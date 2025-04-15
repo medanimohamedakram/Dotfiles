@@ -16,16 +16,21 @@ output_path = "~/.config/colors/hyprland/colors.conf"
 input_path = 'templates/shell/shell-dark'
 input_path_modes = { dark = 'templates/shell/shell-dark', light = 'templates/shell/shell-light' }
 output_path = '~/.config/colors/shell/colors'
-post_hook = 'sh $XDG_CONFIG_HOME/scripts/shell-colors'
+post_hook = 'shell-colors'
+
+[templates.gtk3]
+input_path = 'templates/gtk3'
+output_path = '~/.config/colors/gtk/gtk3-colors.css'
+
+[templates.gtk4]
+input_path = 'templates/gtk4'
+output_path = '~/.config/colors/gtk/gtk4-colors.css'
+post_hook = 'switch-gtk'
 
 [templates.colors]
 input_path = 'templates/colors'
 output_path = '~/.config/colors/colors.css'
-post_hook = 'pkill -SIGUSR2 waybar && swaync-client -rs'
-
-[templates.gtk]
-input_path = 'templates/gtk'
-output_path = '~/.config/colors/gtk/colors.css'
+post_hook = 'pkill -USR2 waybar & swaync-client --reload-css'
 
 [config.custom_colors]
 red = {color="#c01c28", blend=false }

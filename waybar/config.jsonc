@@ -21,7 +21,7 @@
 		 "transition-to-left": true,
 		 "click-to-reveal": true
 		},
-		"modules": ["custom/expand","custom/colorpicker", "idle_inhibitor","power-profiles-daemon"]
+		"modules": ["custom/expand", "custom/colorpicker", "custom/darklight", "idle_inhibitor","power-profiles-daemon"]
 	},
 	"group/systeminfo": {
 		"orientation": "horizontal",
@@ -151,9 +151,17 @@
 		"format": "󰈊",
 		"return-type": "json",
 		"interval": "once",
-		"exec": "$XDG_CONFIG_HOME/scripts/color-picker -j",
-		"on-click": "$XDG_CONFIG_HOME/scripts/color-picker",
+		"exec": "~/.local/bin/color-picker -j",
+		"on-click": "~/.local/bin/color-picker ",
 		"signal": 1
+	},
+	"custom/darklight": {
+		"format": "󱎖",
+		"tooltip": false,
+		// "interval": "once",
+		// "exec": "",
+		"on-click": "fish -c '~/.local/bin/switch-darklight'",
+		// "signal": 1
 	},
 	"cpu": {
 		"format": "  {usage}%",

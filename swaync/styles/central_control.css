@@ -1,6 +1,5 @@
 * {
   all: unset;
-  font-size: 1rem;
   font-family: "Readex Pro SemiBold";
   /* transition: background .2s ease-in-out; */
 }
@@ -30,13 +29,13 @@ progressbar {
 }
 
 trough {
-  background: @primary_container;
+  background: @secondary_container;
   margin: 0 8px;
 }
 
 trough highlight {
   padding: 12px 0;
-  background: @primary;
+  background: @secondary;
   border-radius: 24px;
 }
 
@@ -63,6 +62,7 @@ trough highlight {
 
 /* Volume -------------------------------------------------------------------------- */
 .widget-volume {
+  -gtk-dpi: 108;
   margin: 8px;
 }
 
@@ -73,19 +73,15 @@ trough highlight {
 /* .widget-volume trough highlight {} */
 
 .widget-volume button {
-  padding: 2px 8px;
-  border-radius: 16px;
+  margin-right: 8px;
+  -gtk-dpi: 128;
+  text-shadow: 0 0 2px alpha(@shadow, .6);
 }
 
-.widget-volume button:hover {
-  padding: 2px 8px;
-  border-radius: 16px;
-  background: @secondary_container;
-  box-shadow: 0 0 2px 0 alpha(@shadow, .6);
-}
+/* .widget-volume button:hover {} */
 
 .widget-volume button:hover label {
-  color: @on_secondary_container;
+  color: @secondary;
 }
 
 .per-app-volume {
@@ -102,13 +98,17 @@ trough highlight {
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button {
-  font-size: 1.2rem;
-  padding: 1rem 0;
-  margin: 0 2px;
-  /* padding: 1rem 4rem; */
+  margin: 0 4px;
+  padding: 1rem 1rem;
   background: @surface_container;
   box-shadow: 0 0 2px 0 alpha(@shadow, .6);
-  border-radius: 24px;
+  border-radius: 2rem;
+}
+
+.widget-buttons-grid>flowbox>flowboxchild>button label {
+  font-size: 1rem;
+  font-weight: bolder;
+  -gtk-dpi: 132;
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button:hover {
@@ -120,15 +120,15 @@ trough highlight {
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button.toggle:checked {
-  background: @primary;
+  background: @secondary;
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button.toggle:checked:hover {
-  background: shade(@primary, 1.2);
+  background: shade(@secondary, 1.2);
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button.toggle:checked label {
-  color: @on_primary;
+  color: @on_secondary;
 }
 
 /* Do not disturb *-------------------------------------------------------------------------- */
@@ -153,25 +153,25 @@ trough highlight {
 }
 
 .widget-dnd>switch:checked {
-  background: @primary;
-  color: @on_primary;
+  background: @secondary;
+  color: @on_secondary;
 }
 
 .widget-dnd>switch:hover:checked {
-  background: shade(@primary, 1.2);
-  color: @on_primary;
+  background: shade(@secondary, 1.2);
+  color: @on_secondary;
 }
 
 .widget-dnd>switch slider {
   background: alpha(@secondary_container, 0.4);
   border-radius: 24px;
-  border: 2px solid @active;
+  border: 2px solid @on_secondary_container;
   color: @on_secondary_container;
 }
 
 .widget-dnd>switch:checked slider {
-  border: 2px solid @active;
-  color: @on_primary;
+  border: 2px solid @on_secondary_container;
+  color: @on_secondary;
 }
 
 /* Notification clear button *-------------------------------------------------------------------------- */
@@ -241,26 +241,20 @@ trough highlight {
 }
 
 .control-center .notification-row .notification-background .close-button {
-  /* background: transparent; */
-  /* border-radius: 24px; */
-  /* color: @on_surface; */
-  /* background-color: @surface; */
-  /* margin: 0px; */
-  /* padding: 4px; */
-  all: unset;
-  font-size: 0;
-  margin: 0;
-  padding: 0;
+  background: transparent;
+  border-radius: 24px;
+  color: @on_surface;
+  background-color: @surface;
+  margin: 0px;
+  padding: 4px;
 }
 
-/* .control-center .notification-row .notification-background .close-button:hover { */
-/* background-color: @hover; */
-/* } */
+.control-center .notification-row .notification-background .close-button:hover {
+  background-color: @secondary_container;
+}
 
 
-/* Notifications expanded-group */
-
-.notification-group {
+Notifications expanded-group .notification-group {
   margin: 0 4px 8px 4px;
 }
 

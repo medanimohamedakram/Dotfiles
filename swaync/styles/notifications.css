@@ -1,8 +1,7 @@
 * {
-  /* color: @on_surface; */
   all: unset;
   font-size: 1rem;
-  font-family: "Readex Pro SemiBold";
+  font-family: "Readex Pro SemiBold, CaskaydiaCove Nerd Font";
   /* transition: 200ms; */
 }
 
@@ -15,7 +14,7 @@
 .floating-notifications.background .notification-row .notification-background {
   background: alpha(@surface, .5);
   border-radius: 24px;
-  /* border: 2px solid @lavender; */
+  /* border: 2px solid @on_surface_container; */
   margin: 16px;
   padding: 8px;
   box-shadow: 0 0 2px 0 alpha(@shadow, .6);
@@ -46,12 +45,12 @@
 }
 
 .floating-notifications.background .notification-row .notification-background .notification>*:last-child>* .notification-action:hover {
-  background-color: @hover;
-  border: 1px solid @lavender;
+  background-color: @on_secondary_container;
+  border: 1px solid @on_surface_container;
 }
 
 .floating-notifications.background .notification-row .notification-background .notification>*:last-child>* .notification-action:active {
-  background-color: @lavender;
+  background-color: @on_surface_container;
   color: @on_surface;
 }
 
@@ -69,32 +68,28 @@
 }
 
 .floating-notifications.background .notification-row .notification-background .close-button {
-  /* background: transparent; */
-  /* border-radius: 20px; */
+  background: transparent;
+  border-radius: 20px;
   color: transparent;
-  /* background-color: alpha(#fff, 0.1); */
-  /* margin: 0px; */
-  /* padding: 4px; */
-  all: unset;
-  font-size: 0;
-  margin: 0;
-  padding: 0;
+  background-color: alpha(#fff, 0.1);
+  margin: 0px;
+  padding: 4px;
 }
 
 .floating-notifications.background .notification-row .notification-background .close-button:hover {
-  background-color: @lavender;
+  background-color: @on_surface_container;
 }
 
 .floating-notifications.background .notification-row .notification-background .close-button:active {
-  background-color: @lavender;
+  background-color: @on_surface_container;
   color: @on_surface;
 }
 
 .notification.critical progress {
-  background-color: @lavender;
+  background-color: @primary;
 }
 
 .notification.low progress,
 .notification.normal progress {
-  background-color: @lavender;
+  background-color: @primary;
 }

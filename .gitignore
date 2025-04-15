@@ -1,5 +1,6 @@
-#ignore zed dotfiles
-zed/.*
+ 
 .dotter/local.toml
 .dotter/cache.toml
 nushell/history.txt
+#ignore zed dotfiles
+zed/.*

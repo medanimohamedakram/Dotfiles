@@ -52,3 +52,45 @@ echo hello\ World!
 echo hello  World!
 echo "hello  World!"
 swww query
+swww query | head -1 | awk -F 'image: ' '{print $2}' 
+gsettings get org.gnome.desktop.interface color-scheme | rg -o dark      
+echo $XDG_CONFIG_HOME
+echo $env.XDG_CONFIG_HOME
+./switchdarklight
+let image = swww query | head -1 | awk -F 'image: ' '{print $2}'                                  <\n>
+let color_scheme = gsettings get org.gnome.desktop.interface color-scheme | rg -o dark
+let image = swww query | head -1 | awk -F 'image: ' '{print $2}'                                  <\n>
+let color_scheme = gsettings get org.gnome.desktop.interface color-scheme | rg -o dark
+./switchdarklight
+clear
+echo 'wrong'
+./.dotfiles/scripts/switchdarklight
+commandline 
+compile_et 
+compile_et ./.dotfiles/scripts/switchdarklight
+compile_et ~/.dotfiles/scripts/switchdarklight
+~/.dotfiles/scripts/switchdarklight
+gsettings get org.gnome.desktop.interface color-scheme
+swww --help
+batman swww
+batman swww-img
+swww query | lines | first | parse "image: {image}" | get image
+swww query | lines | first | parse "image: {image}" | get image.0
+swww query | lines | first | parse "image: {image}"
+swww query | lines | first 
+swww query | lines | first | parse "image: {image}"
+swww query |  parse "image: {image}"
+swww query |  parse "image"
+swww query | lines | first 
+swww query | lines | first | str replace "image: " ""
+swww query | lines | first | str replace "image: " "" | str trim
+swww query | lines | first | str replace ".* image: " ""
+swww query | lines | first | str replace ".* " ""
+swww query | lines | first | str replace "image: " "\nimage: " | str trim
+swww query | str replace "image: " "\nimage: " | str trim
+swww query | str replace "image: " "\nimage: " | lines
+swww query | str replace "image: " "\nimage: " | lines | first
+swww query | str replace "image: " "\nimage: " | lines | second
+swww query | str replace "image: " "\nimage: " | lines | first
+swww query | str replace "image: " "\nimage: " | lines | last
+swww query | str replace "image: " "\nimage: " | lines | last | parse "image: {image}" | get image

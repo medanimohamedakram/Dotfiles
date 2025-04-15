@@ -67,8 +67,8 @@
     },
     "volume": {
       "label": "󰕾",
-      "expand-button-label": "",
-      "collapse-button-label": "",
+      "expand-button-label": "󰁋",
+      "collapse-button-label": "󰁣",
       "show-per-app": true,
       "show-per-app-icon": true,
       "show-per-app-label": false
@@ -87,18 +87,33 @@
           "type": "toggle",
           "active": false,
           "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && rfkill unblock bluetooth || rfkill block bluetooth'",
-          "update-command": "sh -c '[[ -n $(rfkill list bluetooth | rg -oc yes ) ]] && echo false || echo true'"
+          "update-command": "sh -c '[[ -n $(rfkill list bluetooth | rg -o yes ) ]] && echo false || echo true'"
         },
         {
-          "label": "",
+          "label": "󱎖",
           "type": "toggle",
           "active": true,
-          "command": "amixer set Capture toggle",
-          "update-command": ""
+          "command": "swaync-client -cp && ~/.local/bin/switch-darklight",
+          "update-command": "sh -c '[[ -n $(gsettings get org.gnome.desktop.interface color-scheme | rg -o dark) ]] && echo true || echo false'"
         },
         {
-          "label": "",
+          "label": "󰍽",
           "command": "wlogout -b 4"
+        },
+        {
+          "label": "",
+          "type": "toggle",
+          "active": false,
+          "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == false ]] && hyprctl hyprsunset temperature 6000 || hyprctl hyprsunset temperature 3500'",
+          "update-command": "sh -c '[[ -n $(hyprctl hyprsunset temperature | rg -o 6000) ]] && echo false || echo true'"
+        }
+        ,
+        {
+          "label": "",
+          "type": "toggle",
+          "active": false,
+          "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && rfkill unblock bluetooth || rfkill block bluetooth'",
+          "update-command": "sh -c '[[ -n $(rfkill list bluetooth | rg -oc yes ) ]] && echo false || echo true'"
         }
       ]
     }

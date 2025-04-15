@@ -9,13 +9,13 @@ declare THEME=$(gsettings get org.gnome.desktop.interface gtk-theme)
 
 switch_matugen() {
   matugen image $IMAGE --mode $COLOR_SCHEME
-  gsettings set org.gnome.desktop.interface gtk-theme ''
-  gsettings set org.gnome.desktop.interface gtk-theme $THEME
-  echo "exec-once=hyprctl setcursor $CURSOR_THEME 24" | tee -a $XDG_CONFIG_HOME/colors/hyprland/colors.conf
+  # gsettings set org.gnome.desktop.interface gtk-theme ''
+  # gsettings set org.gnome.desktop.interface gtk-theme $THEME
+  # echo "exec-once=hyprctl setcursor $CURSOR_THEME 24" | tee -a $XDG_CONFIG_HOME/colors/hyprland/colors.conf
 }
 
 if [[ -z $IMAGE ]]; then
   exit 1
 else
-  switch_matugen &
+  switch_matugen && exit 0
 fi
