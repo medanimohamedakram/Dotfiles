@@ -94,7 +94,7 @@ tooltip label {
 }
 
 #battery {
-  margin: 0 8px;
+  margin: 0 4px;
   transition: all .3s ease-in-out;
   color: @on_surface;
 }
@@ -117,7 +117,7 @@ tooltip label {
 }
 
 #network {
-  margin: 0 8px;
+  margin: 0 4px;
   transition: all .3s ease-in-out;
   color: @on_surface;
 }
@@ -147,13 +147,11 @@ tooltip label {
   background: alpha(@surface_variant, .7);
 }
 
-#pulseaudio-slider highlight {
-  min-width: 10px;
-  border-radius: 5px;
-  background: alpha(@tertiary, .9);
-}
-
-
+/* #pulseaudio-slider highlight { */
+/* min-width: 10px; */
+/* border-radius: 5px; */
+/* background: alpha(@tertiary, .9); */
+/* } */
 
 #bluetooth {
   padding: 0 4px;

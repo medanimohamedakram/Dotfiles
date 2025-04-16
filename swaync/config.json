@@ -101,7 +101,7 @@
           "command": "wlogout -b 4"
         },
         {
-          "label": "",
+          "label": "󰽥",
           "type": "toggle",
           "active": false,
           "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == false ]] && hyprctl hyprsunset temperature 6000 || hyprctl hyprsunset temperature 3500'",
@@ -109,11 +109,11 @@
         }
         ,
         {
-          "label": "",
+          "label": "󰌪",
           "type": "toggle",
           "active": false,
-          "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && rfkill unblock bluetooth || rfkill block bluetooth'",
-          "update-command": "sh -c '[[ -n $(rfkill list bluetooth | rg -oc yes ) ]] && echo false || echo true'"
+          "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && (echo 1 | sudo tee /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode >/dev/null) || (echo 0 | sudo tee /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode >/dev/null)'",
+          "update-command": "sh -c '[[ $(cat /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode) == 0 ]] && echo false || echo true'"
         }
       ]
     }
