@@ -55,6 +55,7 @@ tooltip {
   background: alpha(@surface, 0.8);
   border: 2px solid alpha(@primary, 0.7);
   border-radius: 12px;
+  /* color: red; */
   color: @on_surface;
 
 }
@@ -268,6 +269,11 @@ tooltip label {
   background: alpha(@surface, .5);
   box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
   transition: all .3s ease;
+}
+
+#clock tooltip {
+  /* color: @on_surface; */
+  color: red;
 }
 
 #systeminfo {
