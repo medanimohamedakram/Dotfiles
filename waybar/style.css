@@ -35,16 +35,18 @@ window#waybar {
 /* box-shadow: 0px 0px 2px rgba(0, 0, 0, .6); */
 /* } */
 
-/* .modules-center { */
-/* all: unset; */
-/* font-size: 0.4rem; */
-/* padding: 0.4px; */
-/* margin: 0.4px 0.4px 0.2px 0.4px; */
-/* margin: 0.6px 0.6px 0.3px 0.6px; */
-/* border-radius: 10px; */
-/* background: alpha(@surface, .6); */
-/* box-shadow: 0px 0px 2px rgba(0, 0, 0, .6); */
-/* } */
+.modules-center {
+  color: @on_surface;
+  font-size: 1.6rem;
+  /* all: unset; */
+  /* font-size: 0.4rem; */
+  /* padding: 0.4px; */
+  /* margin: 0.4px 0.4px 0.2px 0.4px; */
+  /* margin: 0.6px 0.6px 0.3px 0.6px; */
+  /* border-radius: 10px; */
+  /* background: alpha(@surface, .6); */
+  /* box-shadow: 0px 0px 2px rgba(0, 0, 0, .6); */
+}
 
 .modules-right {
   color: @on_surface;
