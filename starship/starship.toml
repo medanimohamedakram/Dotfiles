@@ -1,11 +1,10 @@
 "$schema" = 'https://starship.rs/config-schema.json'
+# include = "~/.config/starship/palette.toml"
 
 # Configures the format of the prompt.
 format = """
- [](color_red0)\
-$os\
-$username\
-[](bg:color_orange fg:color_red0)\
+$cmd_duration\
+[](color_orange)\
 $directory\
 [](fg:color_orange bg:color_yellow)\
 $git_branch\
@@ -61,6 +60,9 @@ color_bg2 = '#665c54'
 syntax_gutter = '#647382'
 syntax_accent = '#528cff'
 
+[cmd_duration]
+min_time = 0
+format = " [](fg:color_orange)[ $duration](bold bg:color_orange fg:syntax_bg)[](fg:color_orange) •• "
 # Module that displays the current OS.
 [os]
 disabled = false # Disabled by default
@@ -107,10 +109,12 @@ format = '[ $user ]($style)'
 
 # Module that displays the current directory.
 [directory]
+home_symbol = "  "
+read_only = "  "
+truncation_length = 6
+truncation_symbol = "••/"
 style = "italic fg:syntax_bg bg:color_orange"
 format = "[ $path ]($style)"
-truncation_length = 3
-truncation_symbol = "…/"
 
 # Sets the custom symbols for directories.
 [directory.substitutions]
@@ -227,11 +231,12 @@ symbol = " "
 disabled = false # Disabled by default
 use_12hr = false # Disable for 24h format without seconds
 style = "bg:mono4"
-format = '[[ 󰥔 $time   ](fg:syntax_fg bg:mono4)]($style)'
+time_format = "%R"
+format = '[[ 󰥔 $time  ](fg:syntax_fg bg:mono4)]($style)'
 
 # Module that displays the battery level and status.
 [battery]
-format = '[$symbol $percentage ]($style)'
+format = '[$symbol$percentage ]($style)'
 
 # Battery symbols and colors for each threshold.
 [[battery.display]]

@@ -1,6 +1,6 @@
 * {
   all: unset;
-  font-family: "Readex Pro SemiBold";
+  font-family: "Readex Pro SemiBold, CaskaydiaCove Nerd Font Propo";
   /* transition: background .2s ease-in-out; */
 }
 
@@ -99,7 +99,7 @@ trough highlight {
 
 .widget-buttons-grid>flowbox>flowboxchild>button {
   margin: 0 4px;
-  padding: 1rem 1rem;
+  padding: 0.8rem 0.8rem;
   background: @surface_container;
   box-shadow: 0 0 2px 0 alpha(@shadow, .6);
   border-radius: 2rem;
