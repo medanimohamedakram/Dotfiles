@@ -79,7 +79,7 @@ tooltip label {
 #cpu:hover,
 #memory:hover,
 #temperature:hover {
-  transition: all .3s ease-in-out;
+  transition: all .3s ease;
   text-shadow: 0px 0px 2px alpha(@inverse_surface, 0.6);
 }
 
@@ -91,12 +91,12 @@ tooltip label {
   border-radius: 16px;
   background: alpha(@surface, .5);
   box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
-  transition: all .3s ease-in-out;
+  transition: all .3s ease;
 }
 
 #battery {
   margin: 0 4px;
-  transition: all .3s ease-in-out;
+  transition: all .3s ease;
   color: @on_surface;
 }
 
@@ -119,34 +119,33 @@ tooltip label {
 
 #network {
   margin: 0 4px;
-  transition: all .3s ease-in-out;
+  transition: all .3s ease;
   color: @on_surface;
 }
 
-#pulseaudio {
+#wireplumber {
   margin: 0 4px;
-  transition: all .3s ease-in-out;
+  transition: all .3s ease;
   color: @on_surface;
 }
 
+/* #pulseaudio-slider slider { */
+/* min-height: 0px; */
+/* min-width: 0px; */
+/* opacity: 0; */
+/* background-image: none; */
+/* border: none; */
+/* box-shadow: none; */
+/* } */
 
-#pulseaudio-slider slider {
-  min-height: 0px;
-  min-width: 0px;
-  opacity: 0;
-  background-image: none;
-  border: none;
-  box-shadow: none;
-}
-
-#pulseaudio-slider trough {
-  margin: 0 4px;
-  min-height: 10px;
-  min-width: 80px;
-  border: 1px solid alpha(@inverse_surface, 0.7);
-  border-radius: 8px;
-  background: alpha(@surface_variant, .7);
-}
+/* #pulseaudio-slider trough { */
+/* margin: 0 4px; */
+/* min-height: 10px; */
+/* min-width: 80px; */
+/* border: 1px solid alpha(@inverse_surface, 0.7); */
+/* border-radius: 8px; */
+/* background: alpha(@surface_variant, .7); */
+/* } */
 
 /* #pulseaudio-slider highlight { */
 /* min-width: 10px; */
@@ -165,25 +164,27 @@ tooltip label {
 #tools {}
 
 #power-profiles-daemon {
-  margin: 0 8px;
-  transition: all .3s ease-in-out;
+  all: unset;
+  transition: all .3s ease;
 }
 
 #power-profiles-daemon.performance {
+  margin: 0 4px;
   color: @red;
   text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
-  transition: all .3s ease-in-out;
+  transition: all .3s ease;
 }
 
 #power-profiles-daemon.power-saver {
+  margin: 0 4px;
   color: @green;
   text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
-  transition: all .3s ease-in-out;
+  transition: all .3s ease;
 }
 
 #idle_inhibitor {
   margin: 0 8px;
-  transition: all .3s ease-in-out;
+  transition: all .3s ease;
 }
 
 #idle_inhibitor.activated {
@@ -229,7 +230,7 @@ tooltip label {
   min-width: 1px;
   border-radius: 16px;
   background: @on_surface_variant;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease;
 }
 
 #workspaces button.active {
@@ -237,7 +238,7 @@ tooltip label {
   color: @scrim;
   min-width: 48px;
   background-size: 400% 400%;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease;
 }
 
 #workspaces button:hover {
@@ -256,7 +257,7 @@ tooltip label {
   border-radius: 16px;
   min-width: 48px;
   background-size: 400% 400%;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease;
 }
 
 /*---------SystemInfo-----------------*/
@@ -315,5 +316,5 @@ tooltip label {
 #quicksettings:hover {
   background: shade(alpha(@surface, .5), 1.5);
   box-shadow: 0px 0px 2px alpha(@inverse_surface , .4);
-  transition: all .3s ease-in-out;
+  transition: all .3s ease;
 }

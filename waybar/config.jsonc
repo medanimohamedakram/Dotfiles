@@ -18,10 +18,10 @@
 		"orientation": "horizontal",
 		"drawer": {
 		 "transition-duration": 600,
-		 "transition-to-left": true,
-		 "click-to-reveal": true
+		 "transition-left-to-right": false,
+		 "click-to-reveal": false
 		},
-		"modules": ["custom/expand", "custom/colorpicker", "idle_inhibitor","power-profiles-daemon"]
+		"modules": ["custom/expand", "custom/colorpicker", "idle_inhibitor"]
 	},
 	"group/systeminfo": {
 		"orientation": "horizontal",
@@ -29,17 +29,17 @@
 	},
 	"group/quicksettings": {
 		"orientation": "horizontal",
-		"modules": ["group/audiovolume", "bluetooth", "network", "battery",]
+		"modules": ["power-profiles-daemon", "wireplumber", "bluetooth", "network", "battery",]
 		},
-	"group/audiovolume": {
-		"orientation": "horizontal",
-		"drawer": {
-		 "transition-duration": 600,
-		 "transition-to-left": false,
-		 "click-to-reveal": false,
-		},
-		"modules": ["pulseaudio"]
-		},
+	// "group/audiovolume": {
+	// 	"orientation": "horizontal",
+	// 	"drawer": {
+	// 	 "transition-duration": 600,
+	// 	 "transition-to-left": false,
+	// 	 "click-to-reveal": false,
+	// 	},
+	// 	"modules": ["pulseaudio"]
+	// 	},
 	"hyprland/workspaces": {
 		"format": "",
 		"persistent-workspaces": {
@@ -70,11 +70,21 @@
 	"idle_inhibitor": {
 	    "format": "{icon}",
 	    "format-icons": {
-	     "activated": "󰛊",
-	     "deactivated": "󰾫"
+	     "activated": "󰅶",
+	     "deactivated": "󰾪"
 	    },
 	    "tooltip-format-activated": "Caffeine On",
 	    "tooltip-format-deactivated": "Caffeine Off",
+	},
+	"wireplumber": {
+	    "format": "{icon}",
+	    "format-muted": "󰝟",
+    "format-icons": {
+        "default": ["󰕿", "󰖀", "󰕾"]
+    },
+    	"tooltip-format": "{volume}%",
+	    "on-click": "swaync-client -t -sw",
+	    "on-click-right": "pwvucontrol",
 	},
 	"network": {
 		"format-wifi": "{icon}",
@@ -122,7 +132,7 @@
     "orientation": "horizontal"
 	},
 	"power-profiles-daemon": {
-	  "format": "{icon} ",
+	  "format": "{icon}",
 	  "tooltip-format": "Power profile: {profile}",
 	  "tooltip": true,
 	  "format-icons": {
