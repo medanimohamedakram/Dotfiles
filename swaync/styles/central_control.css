@@ -1,7 +1,7 @@
 * {
   all: unset;
   font-family: "Readex Pro SemiBold, CaskaydiaCove Nerd Font Propo";
-  /* transition: background .2s ease-in-out; */
+  transition: background .3s linear;
 }
 
 /* Avoid 'annoying' backgroud */
@@ -44,10 +44,69 @@ trough highlight {
 /* trough slider:hover {} */
 
 /* WIDGETS --------------------------------------------------------------------------- */
-
 .widget-label {
-  margin: 16px;
+  margin: 4px 0;
 }
+
+.widget-label label {
+  font-size: 1.4rem;
+  margin: 0 7rem;
+}
+
+.label {
+  font-size: 1.6rem;
+  margin: 6px 12px;
+  border: none;
+}
+
+.widget-menubar>box>.menu-button-bar>button {
+  -gtk-dpi: 128;
+  border: none;
+  margin: 0 2px;
+  padding: 8px;
+  background: @surface_container;
+  border-radius: 24px;
+}
+
+.widget-menubar>box>.menu-button-bar>button:hover {
+  background: @secondary_container;
+  border-radius: 24px;
+  box-shadow: 0 0 2px 0 alpha(@shadow, .6);
+  transition: background .3s linear;
+}
+
+.power-buttons,
+.powermode-buttons {
+  background: @secondary_container;
+  padding: 8px;
+  margin: 8px;
+  border-radius: 16px;
+}
+
+.power-buttons label,
+.powermode-buttons label {
+  padding: 2px;
+  margin: 2px;
+}
+
+.wallpaper-switcher button {
+  -gtk-dpi: 128;
+  /* border: none; */
+  /* margin: 0 2px; */
+  padding: 8px;
+  background: @surface_container;
+  border-radius: 24px;
+
+}
+
+.wallpaper-switcher button:hover {
+  background: @secondary_container;
+  border-radius: 24px;
+  box-shadow: 0 0 2px 0 alpha(@shadow, .6);
+  transition: background .3s linear;
+}
+
+
 
 /* Brightness -------------------------------------------------------------------------- */
 .widget-backlight {
@@ -62,7 +121,7 @@ trough highlight {
 
 /* Volume -------------------------------------------------------------------------- */
 .widget-volume {
-  -gtk-dpi: 108;
+  -gtk-dpi: 128;
   margin: 8px;
 }
 
@@ -73,8 +132,8 @@ trough highlight {
 /* .widget-volume trough highlight {} */
 
 .widget-volume button {
+  font-size: 1.6rem;
   margin-right: 8px;
-  -gtk-dpi: 128;
   text-shadow: 0 0 2px alpha(@shadow, .6);
 }
 
@@ -106,9 +165,9 @@ trough highlight {
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button label {
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-weight: bolder;
-  -gtk-dpi: 132;
+  /* -gtk-dpi: 108; */
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button:hover {
@@ -163,6 +222,7 @@ trough highlight {
 }
 
 .widget-dnd>switch slider {
+  padding: 2px;
   background: alpha(@secondary_container, 0.4);
   border-radius: 24px;
   border: 2px solid @on_secondary_container;
@@ -170,13 +230,13 @@ trough highlight {
 }
 
 .widget-dnd>switch:checked slider {
-  border: 2px solid @on_secondary_container;
+  border: 2px solid @on_secondary;
   color: @on_secondary;
 }
 
 /* Notification clear button *-------------------------------------------------------------------------- */
 .widget-title {
-  margin: 2px 4px;
+  margin: 2px 8px;
 }
 
 .widget-title button {
@@ -188,6 +248,7 @@ trough highlight {
 
 .widget-title button label {
   font-size: 1.2rem;
+  -gtk-dpi: 128;
 }
 
 .widget-title button:hover {

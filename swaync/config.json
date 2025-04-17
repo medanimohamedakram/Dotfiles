@@ -8,7 +8,7 @@
   "cssPriority": "user",
 
   "control-center-width": 360,
-  "control-center-height": 860,
+  "control-center-height": 982,
   "control-center-margin-top": 8,
   "control-center-margin-bottom": 8,
   "control-center-margin-right": 8,
@@ -39,7 +39,7 @@
     }
   },
   "widgets": [
-    "label",
+    "menubar#label",
     "backlight",
     "volume",
     "buttons-grid",
@@ -59,6 +59,57 @@
     "label": {
       "max-lines": 0,
       "text": "Quick Settings"
+    },
+    "menubar#label": {
+      "menu#power-buttons": {
+        "label": "⏻", 
+        "position": "right",
+        "actions": [ 
+          {
+            "label": " Reboot",
+            "command": "systemctl reboot"
+          },
+          {
+            "label": " Lock",
+            "command": "loginctl lock-session"
+          },
+          {
+            "label": " Logout",
+            "command": "uwsm stop"
+          },
+          {
+            "label": " Shut down",
+            "command": "systemctl poweroff"
+          }
+        ]
+      },
+      "menu#powermode-buttons": {
+        "label": "", 
+        "position": "right",
+        "actions": [ 
+          {
+            "label": "󰓅 Performance",
+            "command": "powerprofilesctl set performance"
+          },
+          {
+            "label": "󰾅 Balanced",
+            "command": "powerprofilesctl set balanced"
+          },
+          {
+            "label": "󰾆 Power Saver",
+            "command": "powerprofilesctl set power-saver"
+          }
+        ]
+      },
+      "buttons#wallpaper-switcher": {
+        "position": "left",
+        "actions": [
+          {
+            "label": "󱄄",
+            "command": "swaync-client -cp && ~/.local/bin/switchwallpaper.nu"
+          }
+        ]
+      }
     },
     "backlight": {
       "label": "󰃟",
