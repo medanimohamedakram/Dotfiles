@@ -97,11 +97,11 @@
           "update-command": "sh -c '[[ -n $(gsettings get org.gnome.desktop.interface color-scheme | rg -o dark) ]] && echo true || echo false'"
         },
         {
-          "label": "󰺵",
+          "label": "󰊗",
           "command": "wlogout -b 4"
         },
         {
-          "label": "󰖔",
+          "label": "󰤄",
           "type": "toggle",
           "active": false,
           "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == false ]] && (hyprctl hyprsunset temperature 6000; pkill -SIGRTMIN+16 waybar) || (hyprctl hyprsunset temperature 3500; pkill -SIGRTMIN+16 waybar)'",
@@ -109,7 +109,7 @@
         }
         ,
         {
-          "label": "󰌪",
+          "label": "󰹦",
           "type": "toggle",
           "active": false,
           "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && (echo 1 | sudo tee /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode >/dev/null) || (echo 0 | sudo tee /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode >/dev/null)'",

@@ -38,14 +38,6 @@ window#waybar {
 .modules-center {
   color: @on_surface;
   font-size: 1.6rem;
-  /* all: unset; */
-  /* font-size: 0.4rem; */
-  /* padding: 0.4px; */
-  /* margin: 0.4px 0.4px 0.2px 0.4px; */
-  /* margin: 0.6px 0.6px 0.3px 0.6px; */
-  /* border-radius: 10px; */
-  /* background: alpha(@surface, .6); */
-  /* box-shadow: 0px 0px 2px rgba(0, 0, 0, .6); */
 }
 
 .modules-right {
@@ -56,7 +48,7 @@ window#waybar {
 tooltip {
   background: alpha(@surface, 0.8);
   border: 2px solid alpha(@primary, 0.7);
-  border-radius: 12px;
+  border-radius: 16px;
   color: @on_surface;
 
 }
@@ -85,7 +77,17 @@ tooltip label {
   text-shadow: 0px 0px 2px alpha(@inverse_surface, 0.6);
 }
 
+#clock:hover,
+#systeminfo:hover,
+#workspaces:hover,
+#quicksettings:hover {
+  background: shade(alpha(@surface, .5), 1.5);
+  box-shadow: 0px 0px 2px alpha(@inverse_surface , .4);
+  transition: all .3s ease;
+}
+
 /*---------Left Module-----------------*/
+
 #quicksettings {
   all: unset;
   padding: 0 8px;
@@ -184,13 +186,20 @@ tooltip label {
   margin: 0 4px;
 }
 
+#tray,
+#tray menu *,
+#tray menu separator {
+  margin: 0 4px;
+  transition: all .3s ease;
+
+}
+
 /*---------Middle Module-----------------*/
 
-#tools {}
-
+/* #tools {} */
 
 #idle_inhibitor {
-  margin: 0 8px;
+  margin: 0 4px;
   transition: all .3s ease;
 }
 
@@ -200,22 +209,59 @@ tooltip label {
 }
 
 #custom-colorpicker {
-  margin: 0 8px;
+  margin: 0 4px;
 }
 
 #custom-expand {
-  margin: 0 8px;
+  margin: 0 4px;
   color: alpha(@on_surface, 2);
   text-shadow: 0px 0px 2px rgba(0, 0, 0, .7);
   transition: all .3s ease;
 }
 
-/*---------Workspaces-----------------*/
+#clock {
+  font-size: 1.2rem;
+  padding: 0 12px;
+  margin: 3px 6px;
+  border-radius: 16px;
+  background: alpha(@surface, .5);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
+  transition: all .3s ease;
+}
+
+#custom-notification {
+  margin: 0 4px;
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, .7);
+  transition: all .3s ease;
+}
+
+/*---------Left Module-----------------*/
+/*----SystemInfo----*/
+
+#systeminfo {
+  font-size: 1.2rem;
+  padding: 0 8px;
+  margin: 3px 6px;
+  border-radius: 16px;
+  background: alpha(@surface, .5);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
+  transition: all .3s ease;
+}
+
+#cpu,
+#memory,
+#temperature {
+  margin: 0 8px;
+  transition: all .3s ease;
+}
+
+/*----WorkSpaces----*/
+
 #workspaces {
   font-size: 0.3rem;
-  padding: 12px;
+  padding: 14px;
   margin: 3px 6px;
-  border-radius: 24px;
+  border-radius: 16px;
   background: alpha(@surface, .6);
   box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
   transition: all .3s ease;
@@ -255,63 +301,4 @@ tooltip label {
   min-width: 48px;
   background-size: 400% 400%;
   transition: all 0.3s ease;
-}
-
-/*---------SystemInfo-----------------*/
-
-#clock {
-  font-size: 1.2rem;
-  padding: 0 12px;
-  margin: 3px 6px;
-  border-radius: 16px;
-  background: alpha(@surface, .5);
-  box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
-  transition: all .3s ease;
-}
-
-#clock tooltip {
-  /* color: @on_surface; */
-  color: red;
-}
-
-#systeminfo {
-  font-size: 1.2rem;
-  padding: 0 8px;
-  margin: 3px 6px;
-  border-radius: 16px;
-  background: alpha(@surface, .5);
-  box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
-  transition: all .3s ease;
-}
-
-#cpu,
-#memory,
-#temperature {
-  margin: 0 8px;
-  transition: all .3s ease;
-}
-
-#tray,
-#tray menu *,
-#tray menu separator {
-  margin: 0 8px;
-  transition: all .3s ease;
-
-}
-
-/* #tray menu * { */
-/* transition: all .3s ease; */
-/* } */
-
-/* #tray menu separator { */
-/* transition: all .3s ease; */
-/* } */
-
-#clock:hover,
-#systeminfo:hover,
-#workspaces:hover,
-#quicksettings:hover {
-  background: shade(alpha(@surface, .5), 1.5);
-  box-shadow: 0px 0px 2px alpha(@inverse_surface , .4);
-  transition: all .3s ease;
 }
