@@ -65,6 +65,7 @@ trough highlight {
   margin: 0 2px;
   padding: 8px;
   background: @surface_container;
+  box-shadow: 0 0 2px 0 alpha(@shadow, .6);
   border-radius: 24px;
 }
 
@@ -91,10 +92,9 @@ trough highlight {
 
 .wallpaper-switcher button {
   -gtk-dpi: 128;
-  /* border: none; */
-  /* margin: 0 2px; */
   padding: 8px;
   background: @surface_container;
+  box-shadow: 0 0 2px 0 alpha(@shadow, .6);
   border-radius: 24px;
 
 }
@@ -260,10 +260,10 @@ trough highlight {
 }
 
 
-/* Buttons *-------------------------------------------------------------------------- */
+/* Control Center*-------------------------------------------------------------------------- */
 
 .control-center {
-  background: alpha(@surface, 0.7);
+  background: alpha(@surface, 0.88);
   border-radius: 24px;
   margin: 0;
   padding: 8px 8px 0 8px;
