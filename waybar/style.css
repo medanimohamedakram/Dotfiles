@@ -57,7 +57,6 @@ tooltip {
   background: alpha(@surface, 0.8);
   border: 2px solid alpha(@primary, 0.7);
   border-radius: 12px;
-  /* color: red; */
   color: @on_surface;
 
 }
@@ -69,15 +68,15 @@ tooltip label {
 }
 
 #battery:hover,
-#pulseaudio:hover,
 #network:hover,
 #bluetooth:hover,
+#wireplumber:hover,
 #power-profiles-daemon:hover,
+#custom-nightlight:hover,
 #idle_inhibitor:hover,
-#idle_inhibitor.activated:hover,
-#idle_inhibitor.deactivated:hover,
 #custom-colorpicker:hover,
 #clock:hover,
+#custom-notification:hover,
 #cpu:hover,
 #memory:hover,
 #temperature:hover {
@@ -125,6 +124,12 @@ tooltip label {
   color: @on_surface;
 }
 
+#bluetooth {
+  padding: 0 4px;
+  transition: all .3s ease;
+  color: @on_surface;
+}
+
 #wireplumber {
   margin: 0 4px;
   transition: all .3s ease;
@@ -155,16 +160,6 @@ tooltip label {
 /* background: alpha(@tertiary, .9); */
 /* } */
 
-#bluetooth {
-  padding: 0 4px;
-  transition: all .3s ease;
-  color: @on_surface;
-}
-
-/*---------Tools-----------------*/
-
-#tools {}
-
 #power-profiles-daemon {
   all: unset;
   transition: all .3s ease;
@@ -184,6 +179,15 @@ tooltip label {
   transition: all .3s ease;
 }
 
+#custom-nightlight {
+  margin: 0 4px;
+}
+
+/*---------Tools-----------------*/
+
+#tools {}
+
+
 #idle_inhibitor {
   margin: 0 8px;
   transition: all .3s ease;
@@ -192,10 +196,6 @@ tooltip label {
 #idle_inhibitor.activated {
   color: @brown;
   text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
-}
-
-#custom-darklight {
-  margin: 0 8px;
 }
 
 #custom-colorpicker {
