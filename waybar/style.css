@@ -75,6 +75,7 @@ tooltip label {
 #custom-nightlight:hover,
 #idle_inhibitor:hover,
 #custom-colorpicker:hover,
+#custom-expand:hover,
 #clock:hover,
 #custom-notification:hover,
 #cpu:hover,
@@ -84,7 +85,7 @@ tooltip label {
   text-shadow: 0px 0px 2px alpha(@inverse_surface, 0.6);
 }
 
-/*---------QuickSettings-----------------*/
+/*---------Left Module-----------------*/
 #quicksettings {
   all: unset;
   padding: 0 8px;
@@ -183,7 +184,7 @@ tooltip label {
   margin: 0 4px;
 }
 
-/*---------Tools-----------------*/
+/*---------Middle Module-----------------*/
 
 #tools {}
 
@@ -208,12 +209,6 @@ tooltip label {
   text-shadow: 0px 0px 2px rgba(0, 0, 0, .7);
   transition: all .3s ease;
 }
-
-#custom-expand:hover {
-  color: rgba(255, 255, 255, 1.2);
-  text-shadow: 0px 0px 2px rgba(255, 255, 255, .5);
-}
-
 
 /*---------Workspaces-----------------*/
 #workspaces {
