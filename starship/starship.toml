@@ -4,9 +4,9 @@
 # Configures the format of the prompt.
 format = """
 $cmd_duration\
-[](color_orange)\
+[](color_red1)\
 $directory\
-[](fg:color_orange bg:color_yellow)\
+[](fg:color_red1 bg:color_yellow)\
 $git_branch\
 $git_status\
 [](fg:color_yellow bg:color_green)\
@@ -62,7 +62,7 @@ syntax_accent = '#528cff'
 
 [cmd_duration]
 min_time = 0
-format = " [](fg:color_orange)[ $duration](bold bg:color_orange fg:syntax_bg)[](fg:color_orange) •• "
+format = " [](fg:color_green)[ $duration](bold bg:color_green fg:syntax_bg)[](fg:color_green) •• "
 # Module that displays the current OS.
 [os]
 disabled = false # Disabled by default
@@ -109,20 +109,11 @@ format = '[ $user ]($style)'
 
 # Module that displays the current directory.
 [directory]
-home_symbol = "  "
-read_only = "  "
 truncation_length = 6
 truncation_symbol = "••/"
-style = "italic fg:syntax_bg bg:color_orange"
+style = "italic fg:syntax_bg bg:color_red1"
 format = "[ $path ]($style)"
 
-# Sets the custom symbols for directories.
-[directory.substitutions]
-"Documents" = "󰈙 "
-"Downloads" = " "
-"Music" = "󰝚 "
-"Pictures" = " "
-"Developer" = "󰲋 "
 
 # Module that displays the current git branch.
 [git_branch]
@@ -236,7 +227,8 @@ format = '[[ 󰥔 $time  ](fg:syntax_fg bg:mono4)]($style)'
 
 # Module that displays the battery level and status.
 [battery]
-format = '[$symbol$percentage ]($style)'
+format = '[$symbol $percentage ]($style)'
+unknown_symbol = ''
 
 # Battery symbols and colors for each threshold.
 [[battery.display]]
@@ -294,10 +286,10 @@ discharging_symbol = "󰂂"
 charging_symbol = "󰂋"
 
 [[battery.display]]
+threshold = 100
 style = "bold bg:mono4 fg:color_green"
 discharging_symbol = "󰁹"
 charging_symbol = "󰂅"
-threshold = 100
 
 # New line character
 [character]

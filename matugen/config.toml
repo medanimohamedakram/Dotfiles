@@ -16,13 +16,9 @@ input_path = 'templates/shell/shell-dark'
 input_path_modes = { dark = 'templates/shell/shell-dark', light = 'templates/shell/shell-light' }
 output_path = '~/.cache/colors/shell/colors'
 
-[templates.gtk3]
-input_path = 'templates/gtk3'
-output_path = '~/.cache/colors/gtk/gtk3-colors.css'
-
-[templates.gtk4]
-input_path = 'templates/gtk4'
-output_path = '~/.cache/colors/gtk/gtk4-colors.css'
+[templates.gtk]
+input_path = 'templates/gtk'
+output_path = '~/.cache/colors/gtk/colors.css'
 
 [templates.colors]
 input_path = 'templates/colors'
