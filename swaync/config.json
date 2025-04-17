@@ -97,14 +97,14 @@
           "update-command": "sh -c '[[ -n $(gsettings get org.gnome.desktop.interface color-scheme | rg -o dark) ]] && echo true || echo false'"
         },
         {
-          "label": "󰍽",
+          "label": "󰺵",
           "command": "wlogout -b 4"
         },
         {
-          "label": "󰽥",
+          "label": "󰖔",
           "type": "toggle",
           "active": false,
-          "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == false ]] && hyprctl hyprsunset temperature 6000 || hyprctl hyprsunset temperature 3500'",
+          "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == false ]] && (hyprctl hyprsunset temperature 6000; pkill -SIGRTMIN+16 waybar) || (hyprctl hyprsunset temperature 3500; pkill -SIGRTMIN+16 waybar)'",
           "update-command": "sh -c '[[ -n $(hyprctl hyprsunset temperature | rg -o 6000) ]] && echo false || echo true'"
         }
         ,

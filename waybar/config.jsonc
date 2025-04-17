@@ -119,15 +119,10 @@
 	},
 	"custom/nightlight": {
 	"tooltip": false,
-	"format": "{icon}",
-	"format-icons": {
-		"day": "󰖨",
-		"night": "󰽥",
-	},
-	"return-type": "json",
-	"interval": 1,
-	"exec": "~/.local/bin/nightlight.nu",
-	"escape": true
+	"format": "{text}",
+	"interval": "once",
+	"exec": "sh -c '[[ -n $(hyprctl hyprsunset temperature | rg -o 6000) ]] && printf \"\" || printf 󰖔'",
+	"signal": 16,
 	},
 	"power-profiles-daemon": {
 	  "format": "{icon}",

@@ -212,7 +212,7 @@ tooltip label {
 
 /*---------Workspaces-----------------*/
 #workspaces {
-  font-size: 0.4rem;
+  font-size: 0.3rem;
   padding: 12px;
   margin: 3px 6px;
   border-radius: 24px;
@@ -222,7 +222,7 @@ tooltip label {
 }
 
 #workspaces button {
-  padding: 2px 6px;
+  padding: 2px 4px;
   margin: 0px 2px;
   min-width: 1px;
   border-radius: 16px;
