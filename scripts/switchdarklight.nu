@@ -4,7 +4,7 @@ let image = (swww query | str replace "image: " "\nimage: " | lines | last | par
 let is_dark = (gsettings get org.gnome.desktop.interface color-scheme | str contains "dark")
 
 def main [] {
-  if ($is_dark | into bool) {
+  if ($is_dark) {
     matugen image ...$image --mode light
     gsettings set org.gnome.desktop.interface color-scheme prefer-light
     gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3

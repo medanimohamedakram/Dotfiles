@@ -4,7 +4,7 @@ let color = (hyprpicker -n)
 let is_light = (gsettings get org.gnome.desktop.interface color-scheme | str contains "light")
 
 def main [] {
-  if ($is_light | into bool) {
+  if ($is_light) {
     matugen color hex $color --mode light
     gsettings set org.gnome.desktop.interface gtk-theme ''
     gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3

@@ -149,12 +149,15 @@
         },
         {
           "label": "󰊗",
-          "command": "wlogout -b 4"
+          "type": "toggle",
+          "active": false,
+          "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && ~/.local/bin/gamemode.nu || ~/.local/bin/gamemode.nu'",
+          "update-command": "sh -c '[[ -n $(hyprctl getoption animations:enabled | rg -o 1) ]] && echo false || echo true'"
         },
         {
           "label": "󰤄",
           "type": "toggle",
-          "active": false,
+          "active": true,
           "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == false ]] && (hyprctl hyprsunset temperature 6000; pkill -SIGRTMIN+16 waybar) || (hyprctl hyprsunset temperature 3500; pkill -SIGRTMIN+16 waybar)'",
           "update-command": "sh -c '[[ -n $(hyprctl hyprsunset temperature | rg -o 6000) ]] && echo false || echo true'"
         }

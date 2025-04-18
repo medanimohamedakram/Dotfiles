@@ -1,6 +1,6 @@
 #!/usr/bin/env nu
 
-let now = (/bin/date +'%d-%m-%Y::%T')
+let now = (^date +'%d-%m-%Y::%T')
 # let area = (slurp $SLURP_ARGS)
 
 def main [] {

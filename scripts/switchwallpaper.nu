@@ -5,7 +5,7 @@ let image = (zenity --width 1200 --height 800 --file-selection --title="Choose a
 let is_light = (gsettings get org.gnome.desktop.interface color-scheme | str contains "light")
 
 def main [] {
-  if ($is_light | into bool) {
+  if ($is_light) {
     matugen image $image --mode light
     gsettings set org.gnome.desktop.interface gtk-theme ''
     gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3
