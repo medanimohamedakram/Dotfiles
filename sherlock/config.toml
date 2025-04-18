@@ -3,8 +3,8 @@ terminal = "xdg-terminal-exec"
 
 [debug]
 try_suppress_errors     =   false                                   
-try_suppress_warnings   =   false
-app_paths               =   ["~/.local/share/applications/"]        
+try_suppress_warnings   =   true
+app_paths               =   [""]        
 
 [units]
 lengths                 =   "meter"
@@ -15,13 +15,13 @@ volumes                 =   "l"
 width                   = 900                                       
 height                  = 593                                       
 gsk_renderer            = "cairo"                                   
-recolor_icons           = true
+recolor_icons           = false
 icon_size               = 48                                        
-search_icon             = true                                        
+search_icon             = false                                        
 use_base_css            = true
 
 [behavior]
-caching                 =   false  
+caching                 =   true  
 cache                   =   "~/.cache/sherlock_desktop_cache.json"  
 daemonize               =   false                                   
 animation               =   false                                   

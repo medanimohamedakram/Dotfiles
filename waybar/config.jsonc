@@ -145,10 +145,11 @@
 	"wireplumber": {
 	    "format": "{icon}",
 	    "format-muted": "󰝟",
-    "format-icons": {
+	    "format-icons": {
         "default": ["󰕿", "󰖀", "󰕾"]
-    },
+	    },
     	"tooltip-format": "{volume}%",
+    	"scroll-step": 5.0,
 	    "on-click": "swaync-client -t -sw",
 	    "on-click-right": "pwvucontrol",
 	},

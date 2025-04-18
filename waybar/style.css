@@ -83,7 +83,7 @@ tooltip label {
 #workspaces:hover,
 #quicksettings:hover {
   background: alpha(@secondary_container, .7);
-  box-shadow: 0px 0px 2px alpha(@inverse_surface , .8);
+  /* box-shadow: 0px 0px 2px alpha(@inverse_surface , .8); */
   transition: all .3s ease;
 }
 

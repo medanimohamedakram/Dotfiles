@@ -62,7 +62,7 @@
     },
     "menubar#label": {
       "menu#power-buttons": {
-        "label": "⏻", 
+        "label": "", 
         "position": "right",
         "actions": [ 
           {
@@ -70,7 +70,7 @@
             "command": "systemctl reboot"
           },
           {
-            "label": " Lock",
+            "label": " Lock",
             "command": "loginctl lock-session"
           },
           {
@@ -84,7 +84,7 @@
         ]
       },
       "menu#powermode-buttons": {
-        "label": "", 
+        "label": "󱩘", 
         "position": "right",
         "actions": [ 
           {
