@@ -65,6 +65,8 @@ tooltip label {
 #power-profiles-daemon:hover,
 #custom-nightlight:hover,
 #idle_inhibitor:hover,
+#idle_inhibitor.activated:hover,
+#custom-screenshot:hover,
 #custom-colorpicker:hover,
 #custom-expand:hover,
 #clock:hover,
@@ -73,15 +75,15 @@ tooltip label {
 #memory:hover,
 #temperature:hover {
   transition: all .3s ease;
-  text-shadow: 0px 0px 2px alpha(@inverse_surface, 0.6);
+  text-shadow: 0px 0px 2px alpha(@inverse_surface, .7);
 }
 
 #clock:hover,
 #systeminfo:hover,
 #workspaces:hover,
 #quicksettings:hover {
-  background: shade(alpha(@surface, .5), 1.5);
-  box-shadow: 0px 0px 2px alpha(@inverse_surface , .4);
+  background: alpha(@secondary_container, .7);
+  box-shadow: 0px 0px 2px alpha(@inverse_surface , .8);
   transition: all .3s ease;
 }
 
@@ -171,14 +173,14 @@ tooltip label {
 #power-profiles-daemon.performance {
   margin: 0 6px;
   color: @red;
-  text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
+  text-shadow: 0px 0px 2px alpha(@surface, .7);
   transition: all .3s ease;
 }
 
 #power-profiles-daemon.power-saver {
   margin: 0 6px;
   color: @green;
-  text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
+  text-shadow: 0px 0px 2px alpha(@surface, .7);
   transition: all .3s ease;
 }
 
@@ -205,7 +207,13 @@ tooltip label {
 
 #idle_inhibitor.activated {
   color: @brown;
-  text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
+  text-shadow: 0px 0px 2px alpha(@surface, .7);
+}
+
+#custom-screenshot {
+  margin: 0 6px;
+  text-shadow: 0px 0px 2px alpha(@surface, .7);
+  transition: all .3s ease;
 }
 
 #custom-colorpicker {
@@ -215,7 +223,7 @@ tooltip label {
 #custom-expand {
   margin: 0 6px;
   color: alpha(@on_surface, 2);
-  text-shadow: 0px 0px 2px rgba(0, 0, 0, .7);
+  text-shadow: 0px 0px 2px alpha(@surface, .7);
   transition: all .3s ease;
 }
 
@@ -231,7 +239,7 @@ tooltip label {
 
 #custom-notification {
   margin: 0 6px;
-  text-shadow: 0px 0px 2px rgba(0, 0, 0, .7);
+  text-shadow: 0px 0px 2px alpha(@surface, .7);
   transition: all .3s ease;
 }
 

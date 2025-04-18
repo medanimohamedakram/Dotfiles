@@ -21,7 +21,7 @@
 		 "transition-left-to-right": false,
 		 "click-to-reveal": false
 		},
-		"modules": ["custom/expand", "custom/colorpicker", "idle_inhibitor"]
+		"modules": ["custom/expand", "custom/colorpicker", "custom/screenshot", "idle_inhibitor"]
 	},
 	"group/systeminfo": {
 		"orientation": "horizontal",
@@ -100,6 +100,15 @@
 		"exec": "~/.local/bin/colorpicker -j",
 		"on-click": "~/.local/bin/colorpicker",
 		"signal": 1
+	},
+	"custom/screenshot": {
+		"format": "󱣴",
+	  "tooltip-format": "Screenshot",
+		// "return-type": "json",
+		// "interval": "once",
+		// "exec": "~/.local/bin/screenshot.nu",
+		"on-click": "~/.local/bin/screenshot.nu",
+		// "signal": 1
 	},
 	"idle_inhibitor": {
 	    "format": "{icon}",
