@@ -24,6 +24,10 @@ output_path = '~/.cache/colors/gtk/colors.css'
 input_path = 'templates/colors'
 output_path = '~/.cache/colors/colors.css'
 
+[templates.greetd]
+input_path = 'templates/colors'
+output_path = '/etc/greetd/colors.css'
+
 [config.custom_colors]
 red = {color="#c01c28", blend=false }
 orange = {color="#e66100", blend=false}

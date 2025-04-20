@@ -1,0 +1,127 @@
+@import "colors.css";
+
+* {
+  all: unset;
+
+}
+
+picture {
+  filter: blur(1.2rem);
+  /* background-image: url("/usr/share/wallpapers/a_tree_with_pink_flowers.png"); */
+}
+
+frame.background {
+  background: alpha(@surface, .92);
+  color: @on_surface;
+  border-radius: 24px;
+  box-shadow: 0 0 8px 0 alpha(@shadow, .92);
+}
+
+frame.background.top {
+  font-size: 1.2rem;
+  padding: 8px;
+  background: @surface;
+  border-radius: 0;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+}
+
+box.horizontal>button.default.suggested-action.text-button {
+  background: @primary_container;
+  color: @on_primary_container;
+  padding: 12px;
+  margin: 0 8px;
+  border-radius: 12px;
+  transition: background .3s ease-in-out;
+}
+
+box.horizontal>button.default.suggested-action.text-button:hover {
+  background: shade(@primary_container, 1.2);
+}
+
+box.horizontal>button.text-button {
+  background: @surface;
+  color: @on_error_container;
+  padding: 12px;
+  border-radius: 12px;
+  transition: background .3s ease-in-out;
+}
+
+box.horizontal>button.text-button:hover {
+  background: @error;
+  color: @on_error;
+}
+
+combobox {
+  background: @surface_variant;
+  color: @on_surface;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 0 4px 0 alpha(@shadow, .6);
+}
+
+combobox:disabled {
+  background: @surface_dim;
+  color: alpha(@on_surface_variant, .6);
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 0 4px 0 alpha(@shadow, .6);
+}
+
+modelbutton.flat {
+  background: @surface_variant;
+  padding: 6px;
+  margin: 2px;
+  border-radius: 8px;
+  border-spacing: 6px;
+}
+
+modelbutton.flat:hover {
+  background: shade(@surface_variant, 1.2);
+}
+
+button.image-button.toggle {
+  margin-right: 36px;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+button.image-button.toggle:hover {
+  background: @surface;
+  box-shadow: 0 0 4px 0px alpha(@shadow, .6);
+}
+
+button.image-button.toggle:disabled {
+  background: @surface_dim;
+  color: alpha(@on_surface_variant, .6);
+  margin-right: 36px;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+combobox>popover {
+  background: @surface_variant;
+  color: @on_surface_variant;
+  border-radius: 8px;
+  border-spacing: 6px;
+  box-shadow: 0 0 4px 0 alpha(@shadow, .6);
+  padding: 6px 12px;
+}
+
+combobox>popover>contents {
+  padding: 2px;
+}
+
+combobox:hover {
+  background: shade(@surface_variant, 1.2);
+}
+
+entry.password {
+  border: 2px solid @primary;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+entry.password:hover {
+  border: 2px solid @primary;
+}
