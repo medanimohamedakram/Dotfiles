@@ -18,7 +18,7 @@ gsk_renderer            = "cairo"
 recolor_icons           = false
 icon_size               = 48                                        
 search_icon             = false                                        
-use_base_css            = true
+use_base_css            = false
 
 [behavior]
 caching                 =   true  

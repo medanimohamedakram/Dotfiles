@@ -1,5 +1,23 @@
-
 base-devel
 networkmanager dnsmasq
-hyprland hypridle hyprlock
-helix
+greetd greetd-regreet
+uwsm hyprland hypridle hyprlock hyprpicker hyprsunset hyprpolkitagent
+pipewire pipewire-alsa pipewire-pulse wireplumber
+xdg-users-dir xdg-users-dir-gtk
+xdg-desktop-portal-hyprland xdg-desktop-portal-gtk xdg-desktop-portal xdg-terminal-exec
+helix nemo zen-browser
+fish nushell socat
+ttf-readex-pro ttf-cascadia-code-nerd
+waybar swaync sherlock-launcher
+keymapper
+dotter-rs-bin
+starship
+swww
+brightnessctl
+grim slurp wf-recorder
+dconf-editor
+wl-clipboard
+python-gobject power-profiles-daemon
+adw-gtk-theme bibata-cursor-theme 
+playerctl
+ripgrep bat bat-extras eza fd 
