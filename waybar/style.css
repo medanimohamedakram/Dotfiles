@@ -17,10 +17,10 @@
   border: none;
   font-family: "Readex Pro SemiBold, CaskaydiaCove Nerd Font Propo";
   font-weight: bold;
+  transition: background .3s ease-in-out;
 }
 
 window#waybar {
-  all: unset;
   background: alpha(@surface, .6);
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
@@ -53,7 +53,7 @@ tooltip {
 }
 
 tooltip label {
-  all: unset;
+  font-family: "CaskaydiaCove Nerd Font Propo";
   font-size: 1.4rem;
   padding: 12px;
 }
@@ -74,8 +74,7 @@ tooltip label {
 #cpu:hover,
 #memory:hover,
 #temperature:hover {
-  transition: all .3s ease;
-  text-shadow: 0px 0px 2px alpha(@inverse_surface, .7);
+  text-shadow: 0 0 2px alpha(@tertiary, .8);
 }
 
 #clock:hover,
@@ -83,25 +82,20 @@ tooltip label {
 #workspaces:hover,
 #quicksettings:hover {
   background: alpha(@secondary_container, .7);
-  /* box-shadow: 0px 0px 2px alpha(@inverse_surface , .8); */
-  transition: all .3s ease;
 }
 
 /*---------Left Module-----------------*/
 
 #quicksettings {
-  all: unset;
   padding: 0 8px;
   margin: 3px 6px;
   border-radius: 16px;
   background: alpha(@surface, .5);
   box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
-  transition: all .5s ease-in;
 }
 
 #battery {
   margin: 0 6px;
-  transition: all .3s ease;
   color: @on_surface;
 }
 
@@ -124,20 +118,17 @@ tooltip label {
 
 #network {
   margin: 0 6px;
-  transition: all .3s ease;
   color: @on_surface;
 }
 
 #bluetooth {
-  padding: 0 6px;
-  transition: all .3s ease;
+  margin: 0 6px;
   color: @on_surface;
 }
 
 #wireplumber {
   font-size: 1.8rem;
   margin: 0 6px;
-  transition: all .3s ease;
   color: @on_surface;
 }
 
@@ -165,23 +156,18 @@ tooltip label {
 /* background: alpha(@tertiary, .9); */
 /* } */
 
-#power-profiles-daemon {
-  all: unset;
-  transition: all .3s ease;
-}
+#power-profiles-daemon {}
 
 #power-profiles-daemon.performance {
   margin: 0 6px;
   color: @red;
   text-shadow: 0px 0px 2px alpha(@surface, .7);
-  transition: all .3s ease;
 }
 
 #power-profiles-daemon.power-saver {
   margin: 0 6px;
   color: @green;
   text-shadow: 0px 0px 2px alpha(@surface, .7);
-  transition: all .3s ease;
 }
 
 #custom-nightlight {
@@ -191,9 +177,7 @@ tooltip label {
 #tray,
 #tray menu *,
 #tray menu separator {
-  margin: 0 4px;
-  transition: all .3s ease;
-
+  margin: 0 6px;
 }
 
 /*---------Middle Module-----------------*/
@@ -202,7 +186,6 @@ tooltip label {
 
 #idle_inhibitor {
   margin: 0 6px;
-  transition: all .3s ease;
 }
 
 #idle_inhibitor.activated {
@@ -213,7 +196,6 @@ tooltip label {
 #custom-screenshot {
   margin: 0 6px;
   text-shadow: 0px 0px 2px alpha(@surface, .7);
-  transition: all .3s ease;
 }
 
 #custom-colorpicker {
@@ -224,7 +206,6 @@ tooltip label {
   margin: 0 6px;
   color: alpha(@on_surface, 2);
   text-shadow: 0px 0px 2px alpha(@surface, .7);
-  transition: all .3s ease;
 }
 
 #clock {
@@ -234,13 +215,11 @@ tooltip label {
   border-radius: 16px;
   background: alpha(@surface, .5);
   box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
-  transition: all .3s ease;
 }
 
 #custom-notification {
   margin: 0 6px;
   text-shadow: 0px 0px 2px alpha(@surface, .7);
-  transition: all .3s ease;
 }
 
 /*---------Left Module-----------------*/
@@ -253,14 +232,12 @@ tooltip label {
   border-radius: 16px;
   background: alpha(@surface, .5);
   box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
-  transition: all .3s ease;
 }
 
 #cpu,
 #memory,
 #temperature {
   margin: 0 6px;
-  transition: all .3s ease;
 }
 
 /*----WorkSpaces----*/
@@ -272,7 +249,6 @@ tooltip label {
   border-radius: 16px;
   background: alpha(@surface, .6);
   box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
-  transition: all .3s ease;
 }
 
 #workspaces button {
@@ -289,7 +265,6 @@ tooltip label {
   color: @scrim;
   min-width: 48px;
   background-size: 400% 400%;
-  transition: all 0.3s ease;
 }
 
 #workspaces button:hover {
@@ -308,5 +283,4 @@ tooltip label {
   border-radius: 16px;
   min-width: 48px;
   background-size: 400% 400%;
-  transition: all 0.3s ease;
 }
