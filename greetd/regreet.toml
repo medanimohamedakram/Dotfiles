@@ -4,7 +4,7 @@ fit = "Fill"
 
 [GTK]
 application_prefer_dark_theme = true
-cursor_theme_name = "Bibata-Modern-Ice"
+cursor_theme_name = "Bibata-Modern-Amber"
 font_name = "Readex Pro"
 icon_theme_name = "Papirus"
 theme_name = "Adwaita"
@@ -23,6 +23,6 @@ poweroff = [
 greeting_msg = "Welcome back!"
 
 [widget.clock]
-format = "%a %H:%M"
+format = "%a %d %B, %R"
 resolution = "500ms"
 label_width = 150

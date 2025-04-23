@@ -1,7 +1,6 @@
 @import "../../.cache/colors/colors.css";
 
 * {
-
   all: unset;
 }
 
@@ -14,8 +13,8 @@ stack {
 }
 
 stack>box:first-child>box#search-bar-holder {
-  background: @secondary_container;
-  color: @on_secondary_container;
+  background: @surface_container;
+  color: @on_surface_container;
   padding: 12px 24px;
   border-bottom: .5px solid @tertiary;
   border-radius: 12px 12px 0 0;
@@ -26,21 +25,21 @@ stack>box:first-child>box#search-bar-holder>entry>text>placeholder {
 }
 
 stack>box.vertical>box.horizontal {
-  background: @secondary_container;
+  background: @surface_container;
   color: @on_secondary_container;
   padding: 6px;
   border-radius: 0px;
 }
 
 stack>box.vertical>box.horizontal:nth-child(2) {
-  background: @secondary_container;
+  background: @surface_container;
   color: alpha(@on_secondary_container, 0.5);
   padding: 6px 12px;
   border-radius: 0px;
 }
 
 stack>box.vertical>box:last-child {
-  background: @secondary_container;
+  background: @surface_container;
   color: alpha(@on_secondary_container, 0.5);
   padding: 6px 12px;
   border-top: .5px solid @tertiary;

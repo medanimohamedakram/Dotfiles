@@ -2,7 +2,6 @@
   all: unset;
   font-size: 1rem;
   font-family: "Readex Pro SemiBold, CaskaydiaCove Nerd Font";
-  /* transition: 200ms; */
 }
 
 .notification-row {
@@ -12,17 +11,16 @@
 }
 
 .floating-notifications.background .notification-row .notification-background {
-  background: alpha(@surface, .5);
-  border-radius: 24px;
-  /* border: 2px solid @on_surface_container; */
+  background: alpha(@surface, .6);
+  border-radius: 16px;
   margin: 16px;
   padding: 8px;
   box-shadow: 0 0 2px 0 alpha(@shadow, .6);
 }
 
 .floating-notifications.background .notification-row .notification-background .notification {
-  padding: 0.4rem;
-  border-radius: 0.8rem;
+  padding: 12px;
+  border-radius: 12px;
 }
 
 .floating-notifications.background .notification-row .notification-background .notification.critical {
@@ -30,23 +28,21 @@
 }
 
 .floating-notifications.background .notification-row .notification-background .notification .notification-content {
-  margin: 1rem;
+  /* margin: 8px; */
 }
 
 .floating-notifications.background .notification-row .notification-background .notification>*:last-child>* {
-  min-height: 3.4em;
+  min-height: 48px;
 }
 
 .floating-notifications.background .notification-row .notification-background .notification>*:last-child>* .notification-action {
-  border-radius: 0.5rem;
-  background-color: alpha(@surface_variant, .8);
-  margin: 0.4rem;
-  border: 1px solid transparent;
+  border-radius: 12px;
+  background-color: @surface_container;
+  margin: 2px;
 }
 
 .floating-notifications.background .notification-row .notification-background .notification>*:last-child>* .notification-action:hover {
-  background-color: @on_secondary_container;
-  border: 1px solid @on_surface_container;
+  background-color: @secondary_container;
 }
 
 .floating-notifications.background .notification-row .notification-background .notification>*:last-child>* .notification-action:active {
@@ -54,35 +50,38 @@
   color: @on_surface;
 }
 
-.image {
-  margin: 10px 20px 10px 0px;
+/* .image {} */
+
+.app-icon.bottom.right {
+  margin: 4px;
 }
 
 .summary {
+  margin-left: 16px;
   font-weight: 800;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .body {
-  font-size: 0.8rem;
+  margin-left: 16px;
+  font-size: 1rem;
 }
 
 .floating-notifications.background .notification-row .notification-background .close-button {
-  background: transparent;
-  border-radius: 20px;
-  color: transparent;
-  background-color: alpha(#fff, 0.1);
-  margin: 0px;
+  border-radius: 24px;
+  background-color: @surface;
+  color: @on_surface;
   padding: 4px;
 }
 
 .floating-notifications.background .notification-row .notification-background .close-button:hover {
-  background-color: @on_surface_container;
+  background-color: @secondary_container;
+  color: @on_secondary_container;
 }
 
 .floating-notifications.background .notification-row .notification-background .close-button:active {
-  background-color: @on_surface_container;
-  color: @on_surface;
+  background-color: @secondary_container;
+  color: @on_secondary;
 }
 
 .notification.critical progress {

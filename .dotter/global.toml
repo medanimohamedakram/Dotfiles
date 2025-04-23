@@ -18,6 +18,7 @@ waybar = "~/.config/waybar/"
 swaync = "~/.config/swaync"
 zed = "~/.config/zed/"
 "xdg-terminals.list" = "~/.config/xdg-terminals.list"
+"keymapper.conf" = "~/.config/keymapper.conf"
 
 [default.variables]
 

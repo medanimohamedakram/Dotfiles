@@ -1,12 +1,7 @@
 * {
   all: unset;
   font-family: "Readex Pro SemiBold, CaskaydiaCove Nerd Font Propo";
-  transition: background .3s linear;
-}
-
-/* Avoid 'annoying' backgroud */
-.blank-window {
-  background: transparent;
+  transition: background .3s ease-in-out;
 }
 
 /* CONTROL CENTER ------------------------------------------------------------------------ */
@@ -59,53 +54,59 @@ trough highlight {
   border: none;
 }
 
-.widget-menubar>box>.menu-button-bar>button {
-  -gtk-dpi: 128;
-  border: none;
+.menu-button-bar>button {
   margin: 0 2px;
-  padding: 8px;
+  padding: 12px;
   background: @surface_container;
-  box-shadow: 0 0 2px 0 alpha(@shadow, .6);
   border-radius: 24px;
+  box-shadow: 0 0 2px 0 alpha(@shadow, .6);
 }
 
-.widget-menubar>box>.menu-button-bar>button:hover {
+.menu-button-bar>button:hover {
   background: @secondary_container;
-  border-radius: 24px;
-  box-shadow: 0 0 2px 0 alpha(@shadow, .6);
-  transition: background .3s linear;
+}
+
+.menu-button-bar>button>label {
+  font-size: 1.4rem;
 }
 
 .power-buttons,
 .powermode-buttons {
   background: @secondary_container;
   padding: 8px;
-  margin: 8px;
+  margin: 8px 0;
   border-radius: 16px;
 }
 
-.power-buttons label,
-.powermode-buttons label {
-  padding: 2px;
-  margin: 2px;
+.powermode-buttons>button,
+.power-buttons>button {
+  padding: 8px;
+  border-radius: 8px;
 }
 
-.wallpaper-switcher button {
-  -gtk-dpi: 128;
-  padding: 8px;
+.powermode-buttons>button:hover,
+.power-buttons>button:hover {
+  background: alpha(@tertiary, .2);
+}
+
+.wallpaper-switcher>button {
+  padding: 12px;
   background: @surface_container;
   box-shadow: 0 0 2px 0 alpha(@shadow, .6);
   border-radius: 24px;
 
 }
 
-.wallpaper-switcher button:hover {
+.wallpaper-switcher>button:hover {
   background: @secondary_container;
   border-radius: 24px;
   box-shadow: 0 0 2px 0 alpha(@shadow, .6);
   transition: background .3s linear;
 }
 
+.wallpaper-switcher>button>label {
+  font-size: 1.4rem;
+}
 
 
 /* Brightness -------------------------------------------------------------------------- */
@@ -113,33 +114,23 @@ trough highlight {
   margin: 8px;
 }
 
-/* .widget-backlight label {} */
-
-/* .widget-backlight trough {} */
-
-/* .widget-backlight trough highlight {} */
-
 /* Volume -------------------------------------------------------------------------- */
 .widget-volume {
-  -gtk-dpi: 128;
   margin: 8px;
 }
 
-/* .widget-volume label {} */
+.widget-volume>box>label {
+  font-size: 1.4rem;
+}
 
-/* .widget-volume trough {} */
-
-/* .widget-volume trough highlight {} */
-
-.widget-volume button {
-  font-size: 1.6rem;
+.widget-volume>box>button>label {
+  font-size: 1.4rem;
   margin-right: 8px;
   text-shadow: 0 0 2px alpha(@shadow, .6);
 }
 
-/* .widget-volume button:hover {} */
 
-.widget-volume button:hover label {
+.widget-volume>box>button:hover>label {
   color: @secondary;
 }
 
@@ -167,7 +158,6 @@ trough highlight {
 .widget-buttons-grid>flowbox>flowboxchild>button label {
   font-size: 1.4rem;
   font-weight: bolder;
-  /* -gtk-dpi: 108; */
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button:hover {
@@ -195,8 +185,6 @@ trough highlight {
   margin: 2px 4px;
   padding: 4px;
 }
-
-/* .widget-dnd label {} */
 
 .widget-dnd>switch {
   padding: 4px;
@@ -247,8 +235,7 @@ trough highlight {
 }
 
 .widget-title button label {
-  font-size: 1.2rem;
-  -gtk-dpi: 128;
+  font-size: 1.6rem;
 }
 
 .widget-title button:hover {
@@ -265,8 +252,7 @@ trough highlight {
 .control-center {
   background: alpha(@surface, 0.88);
   border-radius: 24px;
-  margin: 0;
-  padding: 8px 8px 0 8px;
+  padding: 8px;
   box-shadow: 0 0 8px 0 alpha(@shadow, .6);
 }
 
@@ -274,10 +260,11 @@ trough highlight {
 .control-center .notification-row .notification-background,
 .control-center .notification-row .notification-background .notification.critical {
   background: @surface_container;
-  border-radius: 24px;
-  margin: 4px 0;
+  border-radius: 16px;
+  min-height: 24px;
+  margin: 2px 8px;
   box-shadow: 0 0 2px 0 alpha(@shadow, .6);
-  padding: 8px 8px 8px 16px;
+  padding: 12px;
 }
 
 .control-center .notification-row .notification-background .notification.critical {
@@ -289,12 +276,13 @@ trough highlight {
 .control-center .notification-row .notification-background .notification>*:first-child>* {}
 
 .control-center .notification-row .notification-background .notification>*:last-child>* {
-  min-height: 3.4em;
+  min-height: 48px;
 }
 
 .control-center .notification-row .notification-background .notification>*:last-child>* .notification-action {
   background: @surface_container;
-  border-radius: 24px;
+  margin: 2px;
+  border-radius: 16px;
 }
 
 .control-center .notification-row .notification-background .notification>*:last-child>* .notification-action:hover {
@@ -316,7 +304,7 @@ trough highlight {
 
 
 Notifications expanded-group .notification-group {
-  margin: 0 4px 8px 4px;
+  margin: 8px 4px;
 }
 
 .notification-group-headers {
