@@ -2,19 +2,22 @@
 
 * {
   all: unset;
-
 }
 
 picture {
-  filter: blur(1.2rem);
-  /* background-image: url("/usr/share/wallpapers/a_tree_with_pink_flowers.png"); */
+  filter: blur(2rem);
 }
 
 frame.background {
   background: alpha(@surface, .92);
   color: @on_surface;
   border-radius: 24px;
-  box-shadow: 0 0 8px 0 alpha(@shadow, .92);
+  box-shadow: 0 0 12px 2px alpha(@shadow, .9);
+}
+
+frame.background>grid>label:first-child {
+  font-size: 1.2rem;
+  padding: 6px;
 }
 
 frame.background.top {
@@ -32,15 +35,17 @@ box.horizontal>button.default.suggested-action.text-button {
   padding: 12px;
   margin: 0 8px;
   border-radius: 12px;
+  box-shadow: 0 0 2px 1px alpha(@shadow, .6);
   transition: background .3s ease-in-out;
 }
 
 box.horizontal>button.default.suggested-action.text-button:hover {
-  background: shade(@primary_container, 1.2);
+  background: @primary;
+  color: @on_primary;
 }
 
 box.horizontal>button.text-button {
-  background: @surface;
+  background: alpha(@error, .1);
   color: @on_error_container;
   padding: 12px;
   border-radius: 12px;
@@ -48,6 +53,18 @@ box.horizontal>button.text-button {
 }
 
 box.horizontal>button.text-button:hover {
+  background: alpha(@error, .3);
+}
+
+box.bottom.vertical>box.horizontal>button.destructive-action.text-button {
+  background: @surface_variant;
+  color: @on_error_container;
+  padding: 12px;
+  border-radius: 12px;
+  transition: background .3s ease-in-out;
+}
+
+box.bottom.vertical>box.horizontal>button.destructive-action.text-button:hover {
   background: @error;
   color: @on_error;
 }
@@ -57,7 +74,7 @@ combobox {
   color: @on_surface;
   border-radius: 12px;
   padding: 12px;
-  box-shadow: 0 0 4px 0 alpha(@shadow, .6);
+  box-shadow: 0 0 0 1px alpha(@shadow, .6);
 }
 
 combobox:disabled {
@@ -65,7 +82,7 @@ combobox:disabled {
   color: alpha(@on_surface_variant, .6);
   border-radius: 12px;
   padding: 12px;
-  box-shadow: 0 0 4px 0 alpha(@shadow, .6);
+  box-shadow: none;
 }
 
 modelbutton.flat {
@@ -77,7 +94,7 @@ modelbutton.flat {
 }
 
 modelbutton.flat:hover {
-  background: shade(@surface_variant, 1.2);
+  background: alpha(@tertiary, .2);
 }
 
 button.image-button.toggle {
@@ -88,7 +105,6 @@ button.image-button.toggle {
 
 button.image-button.toggle:hover {
   background: @surface;
-  box-shadow: 0 0 4px 0px alpha(@shadow, .6);
 }
 
 button.image-button.toggle:disabled {
@@ -102,10 +118,9 @@ button.image-button.toggle:disabled {
 combobox>popover {
   background: @surface_variant;
   color: @on_surface_variant;
-  border-radius: 8px;
-  border-spacing: 6px;
-  box-shadow: 0 0 4px 0 alpha(@shadow, .6);
-  padding: 6px 12px;
+  border-radius: 12px;
+  border: 1px solid @tertiary;
+  padding: 2px 12px;
 }
 
 combobox>popover>contents {
@@ -113,7 +128,7 @@ combobox>popover>contents {
 }
 
 combobox:hover {
-  background: shade(@surface_variant, 1.2);
+  background: alpha(@tertiary, .2);
 }
 
 entry.password {
@@ -124,4 +139,11 @@ entry.password {
 
 entry.password:hover {
   border: 2px solid @primary;
+}
+
+tooltip {
+  background: @surface;
+  color: @on_surface;
+  padding: 12px;
+  border-radius: 12px;
 }

@@ -10,6 +10,7 @@ stack {
   color: @on_surface;
   padding: 12px;
   border-radius: 24px;
+  box-shadow: 0 0 8px 0 alpha(@shadow, .6);
 }
 
 stack>box:first-child>box#search-bar-holder {
