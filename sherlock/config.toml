@@ -4,7 +4,7 @@ terminal = "xdg-terminal-exec"
 [debug]
 try_suppress_errors     =   false                                   
 try_suppress_warnings   =   true
-app_paths               =   [""]        
+app_paths               =   ["~/.local/share/applications"]        
 
 [units]
 lengths                 =   "meter"
