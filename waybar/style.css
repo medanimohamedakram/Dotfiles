@@ -174,10 +174,26 @@ tooltip label {
   margin: 0 6px;
 }
 
-#tray,
-#tray menu *,
-#tray menu separator {
+#tray {
   margin: 0 6px;
+}
+
+#tray menu {
+  font-size: 1.2rem;
+  background: @surface;
+  padding: 12px;
+  border-radius: 16px;
+  box-shadow: 0px 0px 2px alpha(@shadow, .8);
+}
+
+#tray menu * {
+  margin: 2px;
+  padding: 2px;
+  border-radius: 8px;
+}
+
+#tray menu *:hover {
+  background: @surface_container;
 }
 
 /*---------Middle Module-----------------*/
