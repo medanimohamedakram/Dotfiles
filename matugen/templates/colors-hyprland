@@ -7,3 +7,5 @@ $image = {{image}}
 # All Colors
 <* for name, value in colors *>
 ${{name}} = rgba({{value.default.hex_stripped}}ff)<* endfor *>
+$password_entry_bg = {{colors.inverse_surface.default.rgba | set_alpha: 0.4}}
+$password_entry_fg = {{colors.inverse_on_surface.default.rgba | set_alpha: 0.6}}

@@ -1,6 +1,6 @@
 @define-color accent_color {{colors.primary.default.hex}};
-@define-color accent_bg_color {{colors.primary.default.hex}};
-@define-color accent_fg_color {{colors.on_primary.default.hex}};
+@define-color accent_bg_color {{colors.primary_container.default.hex}};
+@define-color accent_fg_color {{colors.on_primary_container.default.hex}};
 @define-color destructive_color #ff7b63;
 @define-color destructive_bg_color #c01c28;
 @define-color destructive_fg_color #ffffff;
@@ -98,7 +98,7 @@
   --accent-pink: #d56199;
   --accent-purple: #9141ac;
   --accent-slate: #6f8396;
-  --accent-bg-color: @accent_bg_color;
+  --accent-bg-color: @accent_color;
   --accent-fg-color: @accent_fg_color;
   --destructive-bg-color: @destructive_bg_color;
   --destructive-fg-color: @destructive_fg_color;
