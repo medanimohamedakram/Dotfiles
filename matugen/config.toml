@@ -37,15 +37,28 @@ input_path = 'templates/colors'
 output_path = '/etc/greetd/colors.css'
 
 [config.custom_colors]
-black = {color="#131721", blend=false}
-red = {color="#211313", blend=false}
-green = {color="#132113", blend=false}
-yellow = {color="#211c13", blend=false}
-blue = {color="#131521", blend=false}
-magenta = {color="#211321", blend=false}
-cyan = {color="#1d312a", blend=false}
-brown = {color="#865e3c", blend=false}
-orange = {color="#31251d", blend=false}
+black = "#e7eaed"
+white = "#fcfcfc"
+blue = "#399ee6"
+light_blue = "#55b4d4"
+cyan = "#14c8aa"
+dark_gray = "#d8d8d7"
+gray = "#828c9a"
+green = "#39e659"
+magenta = "#0b0218"
+orange = "#fa8d3e"
+red = "#652424"
+yellow = "#eba448"
+
+# black = {color="#131721", blend=false}
+# red = {color="#211313", blend=false}
+# green = {color="#132113", blend=false}
+# yellow = {color="#211c13", blend=false}
+# blue = {color="#131521", blend=false}
+# magenta = {color="#211321", blend=false}
+# cyan = {color="#1d312a", blend=false}
+# brown = {color="#865e3c", blend=false}
+# orange = {color="#31251d", blend=false}
 
 # [config.custom_colors]
 # red = {color="#ff0000", blend=false}
