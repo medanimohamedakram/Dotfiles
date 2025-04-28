@@ -12,9 +12,17 @@ input_path = 'templates/colors-hyprland'
 output_path = "~/.cache/colors/hyprland/colors.conf"
 
 [templates.shell]
-input_path = 'templates/shell/shell-dark'
-input_path_modes = { dark = 'templates/shell/shell-dark', light = 'templates/shell/shell-light' }
+input_path = 'templates/colors-shell'
+# input_path_modes = { dark = 'templates/shell/shell-dark', light = 'templates/shell/shell-light' }
 output_path = '~/.cache/colors/shell/colors'
+
+[templates.foot]
+input_path = 'templates/foot'
+output_path = '~/.config/foot/foot.ini'
+
+[templates.helix]
+input_path = 'templates/helix'
+output_path = '~/.config/helix/themes/materialyou.toml'
 
 [templates.gtk]
 input_path = 'templates/gtk'
@@ -29,13 +37,21 @@ input_path = 'templates/colors'
 output_path = '/etc/greetd/colors.css'
 
 [config.custom_colors]
-red = {color="#c01c28", blend=false }
-orange = {color="#e66100", blend=false}
+black = {color="#131721", blend=false}
+red = {color="#211313", blend=false}
+green = {color="#132113", blend=false}
+yellow = {color="#211c13", blend=false}
+blue = {color="#131521", blend=false}
+magenta = {color="#211321", blend=false}
+cyan = {color="#1d312a", blend=false}
 brown = {color="#865e3c", blend=false}
-yellow = {color="#f5c211", blend=false}
-green = {color="#2ec27e", blend=false}
-blue = {color="#1c71d8", blend=false}
-purple = {color="#813d9c", blend=false}
-light = {color="#c0bfbc", blend=false}
-dark = {color="#241f31", blend=false}
- 
+orange = {color="#31251d", blend=false}
+
+# [config.custom_colors]
+# red = {color="#ff0000", blend=false}
+# orange = {color="#ffa500", blend=false}
+# green = {color="#00ff00", blend=false}
+# yellow = {color="#ffff00", blend=false}
+# blue = {color="#0000ff", blend=false}
+# magenta = {color="#ff00ff", blend=false}
+# cyan = {color="#00ffff", blend=false}

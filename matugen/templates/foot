@@ -1,0 +1,46 @@
+# -*- conf -*-
+
+font=CaskaydiaCove Nerd Font Propo:size=9
+font-bold=CaskaydiaCove Nerd Font Propo:style=Bold:size=9
+font-italic=CaskaydiaCove Nerd Font Propo:style=Italic:size=9
+font-bold-italic=CaskaydiaCove Nerd Font Propo:style=Bold Italic:size=9
+dpi-aware=yes
+bold-text-in-bright=yes
+
+[key-bindings]
+pipe-visible=[sh -c "xurls | fuzzel | xargs -r firefox"] none
+pipe-scrollback=[sh -c "xurls | fuzzel | xargs -r firefox"] none
+pipe-selected=[xargs -r firefox] none
+pipe-command-output=[wl-copy] Control+Shift+g # Copy last command's output to the clipboard
+show-urls-launch=Control+Shift+l
+prompt-prev=Control+Shift+z
+prompt-next=Control+Shift+x
+unicode-input=Control+Shift+u
+
+[colors]
+ alpha=1.0
+ background={{colors.surface.default.hex_stripped}}
+ foreground={{colors.on_surface.default.hex_stripped}}
+ flash={{colors.tertiary.default.hex_stripped}}
+ flash-alpha=0.5
+
+# Normal/regular colors (color palette 0-7)
+ regular0={{colors.surface.default.hex_stripped | auto_lightness: -5.0}}  # black
+ regular1={{colors.red.default.hex_stripped | auto_lightness: 20.0}}  # red
+ regular2={{colors.green.default.hex_stripped | auto_lightness: 20.0}}  # green
+ regular3={{colors.yellow.default.hex_stripped | auto_lightness: 20.0}}  # yellow
+ regular4={{colors.blue.default.hex_stripped | auto_lightness: 20.0}}  # blue
+ regular5={{colors.magenta.default.hex_stripped | auto_lightness: 20.0}}  # magenta
+ regular6={{colors.cyan.default.hex_stripped | auto_lightness: 20.0}}  # cyan
+ regular7={{colors.on_surface.default.hex_stripped | auto_lightness: 5.0}}  # white
+
+# Bright colors (color palette 8-15)
+ bright0={{colors.surface.default.hex_stripped | auto_lightness: 10.0}}     # bright black
+ bright1={{colors.red.default.hex_stripped | auto_lightness: 15.0}}   # bright red
+ bright2={{colors.green.default.hex_stripped | auto_lightness: 15.0}}   # bright green
+ bright3={{colors.yellow.default.hex_stripped | auto_lightness: 15.0}}   # bright yellow
+ bright4={{colors.blue.default.hex_stripped | auto_lightness: 15.0}}   # bright blue
+ bright5={{colors.magenta.default.hex_stripped | auto_lightness: 15.0}}   # bright magenta
+ bright6={{colors.cyan.default.hex_stripped | auto_lightness: 15.0}}   # bright cyan
+ bright7={{colors.on_surface.default.hex_stripped | auto_lightness: 10.0}}   # bright white
+

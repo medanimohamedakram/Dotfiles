@@ -202,11 +202,13 @@ tooltip label {
 
 #idle_inhibitor {
   margin: 0 6px;
+  transition: background .3s ease-in-out;
 }
 
 #idle_inhibitor.activated {
-  color: @brown;
+  color: @purple;
   text-shadow: 0px 0px 2px alpha(@surface, .7);
+  transition: background .3s ease-in-out;
 }
 
 #custom-screenshot {
