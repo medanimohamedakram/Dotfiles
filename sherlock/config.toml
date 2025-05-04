@@ -12,12 +12,12 @@ weights                 =   "kg"
 volumes                 =   "l"
 
 [appearance]
-width                   = 900                                       
+width                   = 600                                       
 height                  = 593                                       
 gsk_renderer            = "cairo"                                   
 recolor_icons           = false
 icon_size               = 48                                        
-search_icon             = false                                        
+search_icon             = true                                        
 use_base_css            = false
 
 [behavior]

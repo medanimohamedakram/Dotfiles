@@ -6,13 +6,12 @@
  */
 
 {
-	"layer": "top",
+	"layer": "bottom",
 	"position": "top",
 	"reload_style_on_change": true,
 	"modules-left": ["hyprland/workspaces", "group/systeminfo"],
 	"modules-center": ["custom/notification", "clock", "group/tools"],
 	"modules-right": ["tray", "group/quicksettings"],
-
 
 	"group/tools": {
 		"orientation": "horizontal",

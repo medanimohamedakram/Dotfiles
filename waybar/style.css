@@ -206,7 +206,7 @@ tooltip label {
 }
 
 #idle_inhibitor.activated {
-  color: @purple;
+  color: @orange-color;
   text-shadow: 0px 0px 2px alpha(@surface, .7);
   transition: background .3s ease-in-out;
 }
