@@ -21,7 +21,7 @@ search_icon             = true
 use_base_css            = false
 
 [behavior]
-caching                 =   true  
+caching                 =   false  
 cache                   =   "~/.cache/sherlock_desktop_cache.json"  
 daemonize               =   false                                   
 animation               =   false                                   
