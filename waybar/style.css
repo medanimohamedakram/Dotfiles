@@ -47,7 +47,7 @@ window#waybar {
 
 tooltip {
   background: alpha(@surface, 0.8);
-  border: 2px solid alpha(@primary, 0.7);
+  border: 2px solid alpha(@primary, 0.9);
   border-radius: 16px;
   color: @on_surface;
 }
@@ -65,7 +65,6 @@ tooltip label {
 #power-profiles-daemon:hover,
 #custom-nightlight:hover,
 #idle_inhibitor:hover,
-#idle_inhibitor.activated:hover,
 #custom-screenshot:hover,
 #custom-colorpicker:hover,
 #custom-expand:hover,
@@ -74,7 +73,7 @@ tooltip label {
 #cpu:hover,
 #memory:hover,
 #temperature:hover {
-  text-shadow: 0 0 2px alpha(@tertiary, .8);
+  color: @secondary;
 }
 
 #clock:hover,
@@ -82,6 +81,22 @@ tooltip label {
 #workspaces:hover,
 #quicksettings:hover {
   background: alpha(@secondary_container, .7);
+}
+
+#idle_inhibitor.activated:hover {
+  color: shade(@orange-color, 1.1);
+}
+
+#battery.charging:hover {
+  color: shade(@green-color, 1.1);
+}
+
+#battery.warning:not(.charging):hover {
+  color: shade(@yellow-color, 1.1);
+}
+
+#battery.critical:not(.charging):hover {
+  color: shade(@error_container, 1.1);
 }
 
 /*---------Left Module-----------------*/
@@ -100,11 +115,11 @@ tooltip label {
 }
 
 #battery.charging {
-  color: @green;
+  color: @green-color;
 }
 
 #battery.warning:not(.charging) {
-  color: @yellow;
+  color: @yellow-color;
 }
 
 #battery.critical:not(.charging) {

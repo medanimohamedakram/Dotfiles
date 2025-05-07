@@ -62,7 +62,7 @@ syntax_accent = '#528cff'
 
 [cmd_duration]
 min_time = 0
-format = " [](fg:color_green)[ $duration](bold bg:color_green fg:syntax_bg)[](fg:color_green) •• "
+format = " [](fg:green)[ $duration](bold bg:green fg:white)[](fg:green) •• "
 # Module that displays the current OS.
 [os]
 disabled = false # Disabled by default

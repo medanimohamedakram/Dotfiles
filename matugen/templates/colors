@@ -5,12 +5,10 @@
 <* for name, value in colors *>
 @define-color {{name}} {{value.default.hex}};<* endfor *>
 @define-color black-color {{colors.surface_container.default.hex}};
-@define-color gray-color {{colors.surface.default.hex | auto_lightness: 20.0}};
-@define-color dark_gray-color {{colors.surface.default.hex | auto_lightness: 10.0}};
-@define-color blue-color {{colors.blue_container.default.hex | auto_lightness: 30.0}};
-@define-color cyan-color {{colors.cyan_container.default.hex | auto_lightness: 30.0}};
-@define-color green-color {{colors.green_container.default.hex | auto_lightness: 30.0}};
-@define-color magenta-color {{colors.magenta_container.default.hex | auto_lightness: 30.0}};
-@define-color orange-color {{colors.orange_container.default.hex | auto_lightness: 30.0}};
-@define-color red-color {{colors.red_container.default.hex | auto_lightness: 30.0}};
-@define-color yellow-color {{colors.yellow_container.default.hex | auto_lightness: 30.0}};
+@define-color red-color     {{"#EF233C" | auto_lightness: 5.0}};
+@define-color green-color   {{"#2FBF71" | auto_lightness: -5.0}};
+@define-color yellow-color  {{"#f5bd1f" | auto_lightness: 5.0}};
+@define-color blue-color    {{"#01bfff" | auto_lightness: 5.0}};
+@define-color magenta-color {{"#bc00dd" | auto_lightness: 5.0}};
+@define-color cyan-color    {{"#20bac5" | auto_lightness: 5.0}};
+@define-color orange-color  {{"#F24B04" | auto_lightness: 5.0}};
