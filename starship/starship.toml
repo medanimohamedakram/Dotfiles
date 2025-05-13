@@ -9,7 +9,7 @@ $directory\
 [](fg:color_red1 bg:color_yellow)\
 $git_branch\
 $git_status\
-[](fg:color_yellow bg:color_green)\
+[](fg:color_yellow bg:green)\
 $c\
 $dotnet\
 $rust\
@@ -26,7 +26,7 @@ $gradle\
 $julia\
 $nim\
 $scala\
-[](fg:color_green bg:color_cyan)\
+[](fg:green bg:color_cyan)\
 $docker_context\
 [ ](color_cyan)\
 $fill\
@@ -123,89 +123,89 @@ format = '[[ $symbol $branch ](fg:syntax_bg bg:color_yellow)]($style)'
 
 # Module that displays the current git status.
 [git_status]
-style = "bg:color_green"
+style = "bg:green"
 format = '[[($all_status$ahead_behind )](fg:syntax_bg bg:color_yellow)]($style)'
 
 # Language specific modules
 [nodejs]
 symbol = ""
-style = "bg:color_green"
-format = '[[ $symbol( $version) ](fg:syntax_bg bg:color_green)]($style)'
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:syntax_bg bg:green)]($style)'
 
 [c]
 symbol = " "
-style = "bg:color_green"
-format = '[[ $symbol( $version) ](fg:syntax_bg bg:color_green)]($style)'
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:syntax_bg bg:green)]($style)'
 
 [dotnet]
 symbol = "󰪮"
-style = "bg:color_green"
-format = '[[ $symbol( $version) ](fg:syntax_bg bg:color_green)]($style)'
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:syntax_bg bg:green)]($style)'
 
 [rust]
 symbol = ""
-style = "bg:color_green"
-format = '[[ $symbol( $version) ](fg:syntax_bg bg:color_green)]($style)'
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:syntax_bg bg:green)]($style)'
 
 [golang]
 symbol = ""
-style = "bg:color_green"
-format = '[[ $symbol( $version) ](fg:syntax_bg bg:color_green)]($style)'
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:syntax_bg bg:green)]($style)'
 
 [php]
 symbol = " "
-style = "bg:color_green"
-format = '[[ $symbol( $version) ](fg:syntax_bg bg:color_green)]($style)'
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:syntax_bg bg:green)]($style)'
 
 [java]
 symbol = " "
-style = "bg:color_green"
-format = '[[ $symbol( $version) ](fg:syntax_bg bg:color_green)]($style)'
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:syntax_bg bg:green)]($style)'
 
 [kotlin]
 symbol = " "
-style = "bg:color_green"
-format = '[[ $symbol( $version) ](fg:syntax_bg bg:color_green)]($style)'
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:syntax_bg bg:green)]($style)'
 
 [haskell]
 symbol = " "
-style = "bg:color_green"
-format = '[[ $symbol( $version) ](fg:syntax_bg bg:color_green)]($style)'
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:syntax_bg bg:green)]($style)'
 
 [python]
 symbol = " "
-style = "bg:color_green"
-format = '[[ $symbol( $version) ](fg:syntax_bg bg:color_green)]($style)'
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:syntax_bg bg:green)]($style)'
 
 [elixir]
 symbol = " "
-style = "bg:color_green"
-format = '[[ $symbol ($version) ](fg:syntax_bg bg:color_green)]($style)'
+style = "bg:green"
+format = '[[ $symbol ($version) ](fg:syntax_bg bg:green)]($style)'
 
 [elm]
 symbol = " "
-style = "bg:color_green"
-format = '[[ $symbol ($version) ](fg:syntax_bg bg:color_green)]($style)'
+style = "bg:green"
+format = '[[ $symbol ($version) ](fg:syntax_bg bg:green)]($style)'
 
 [gradle]
 symbol = " "
-style = "bg:color_green"
-format = '[[ $symbol ($version) ](fg:syntax_bg bg:color_green)]($style)'
+style = "bg:green"
+format = '[[ $symbol ($version) ](fg:syntax_bg bg:green)]($style)'
 
 [julia]
 symbol = " "
-style = "bg:color_green"
-format = '[[ $symbol ($version) ](fg:syntax_bg bg:color_green)]($style)'
+style = "bg:green"
+format = '[[ $symbol ($version) ](fg:syntax_bg bg:green)]($style)'
 
 [nim]
 symbol = "󰆥 "
-style = "bg:color_green"
-format = '[[ $symbol ($version) ](fg:syntax_bg bg:color_green)]($style)'
+style = "bg:green"
+format = '[[ $symbol ($version) ](fg:syntax_bg bg:green)]($style)'
 
 [scala]
 symbol = " "
-style = "bg:color_green"
-format = '[[ $symbol ($version) ](fg:syntax_bg bg:color_green)]($style)'
+style = "bg:green"
+format = '[[ $symbol ($version) ](fg:syntax_bg bg:green)]($style)'
 
 # Module that displays the docker context.
 [docker_context]
@@ -263,31 +263,31 @@ charging_symbol = "󰢝"
 
 [[battery.display]]
 threshold = 60
-style = "bold bg:mono4 fg:color_green"
+style = "bold bg:mono4 fg:green"
 discharging_symbol = "󰁿"
 charging_symbol = "󰂉"
 
 [[battery.display]]
 threshold = 70
-style = "bold bg:mono4 fg:color_green"
+style = "bold bg:mono4 fg:green"
 discharging_symbol = "󰂀"
 charging_symbol = "󰢞"
 
 [[battery.display]]
 threshold = 80
-style = "bold bg:mono4 fg:color_green"
+style = "bold bg:mono4 fg:green"
 discharging_symbol = "󰂁"
 charging_symbol = "󰂊"
 
 [[battery.display]]
 threshold = 90
-style = "bold bg:mono4 fg:color_green"
+style = "bold bg:mono4 fg:green"
 discharging_symbol = "󰂂"
 charging_symbol = "󰂋"
 
 [[battery.display]]
 threshold = 100
-style = "bold bg:mono4 fg:color_green"
+style = "bold bg:mono4 fg:green"
 discharging_symbol = "󰁹"
 charging_symbol = "󰂅"
 

@@ -26,21 +26,21 @@ unicode-input=Control+Shift+u
 
 # Normal/regular colors (color palette 0-7)
  regular0={{colors.surface.default.hex_stripped | auto_lightness: 5.0}}     # bright black
- regular1={{"EF233C" | auto_lightness: 10.0}}   # regular red
- regular2={{"26a96c" | auto_lightness: 0.0}}   # regular green
- regular3={{"f5bd1f" | auto_lightness: 10.0}}   # regular yellow
- regular4={{"01bfff" | auto_lightness: 10.0}}   # regular blue
- regular5={{"bc00dd" | auto_lightness: 0.0}}   # regular magenta
- regular6={{"20bac5" | auto_lightness: 0.0}}   # regular cyan
+ regular1={{"bd1f36" | auto_lightness: 10.0}}   # regular red
+ regular2={{"248277" | auto_lightness: 10.0}}   # regular green
+ regular3={{"eeba0b" | auto_lightness: 10.0}}   # regular yellow
+ regular4={{"1565c0" | auto_lightness: 10.0}}   # regular blue
+ regular5={{"871c84" | auto_lightness: 10.0}}   # regular magenta
+ regular6={{"22a9d6" | auto_lightness: 10.0}}   # regular cyan
  regular7={{colors.on_surface.default.hex_stripped | auto_lightness: 5.0}}   # bright white
 
 # Bright colors (color palette 8-15)
  bright0={{colors.surface.default.hex_stripped | auto_lightness: 10.0}}     # bright black
- bright1={{"EF233C" | auto_lightness: 5.0}}   # bright red
- bright2={{"26a96c" | auto_lightness: 5.0}}   # bright green
- bright3={{"f5bd1f" | auto_lightness: 5.0}}   # bright yellow
- bright4={{"01bfff" | auto_lightness: 5.0}}   # bright blue
- bright5={{"bc00dd" | auto_lightness: 5.0}}   # bright magenta
- bright6={{"20bac5" | auto_lightness: 5.0}}   # bright cyan
+ bright1={{"bd1f36" | auto_lightness: 5.0}}   # bright red
+ bright2={{"248277" | auto_lightness: 5.0}}   # bright green
+ bright3={{"eeba0b" | auto_lightness: 5.0}}   # bright yellow
+ bright4={{"1565c0" | auto_lightness: 5.0}}   # bright blue
+ bright5={{"871c84" | auto_lightness: 5.0}}   # bright magenta
+ bright6={{"22a9d6" | auto_lightness: 5.0}}   # bright cyan
  bright7={{colors.on_surface.default.hex_stripped | auto_lightness: 10.0}}   # bright white
 

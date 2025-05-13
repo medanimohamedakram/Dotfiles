@@ -90,3 +90,14 @@ blue    = "{{"#01bfff" | auto_lightness: 5.0}}"
 magenta = "{{"#bc00dd" | auto_lightness: 5.0}}"
 cyan    = "{{"#20bac5" | auto_lightness: 5.0}}"
 orange  = "{{"#F24B04" | auto_lightness: 5.0}}"
+
+
+
+
+# red     = "{{"#bd1f36" | auto_lightness: 5.0}}"
+# green   = "{{"#248277" | auto_lightness: 5.0}}"
+# yellow  = "{{"#eeba0b" | auto_lightness: 5.0}}"
+# blue    = "{{"#1565c0" | auto_lightness: 5.0}}"
+# magenta = "{{"#871c84" | auto_lightness: 5.0}}"
+# cyan    = "{{"#22a9d6" | auto_lightness: 5.0}}"
+# orange  = "{{"#F24B04" | auto_lightness: 5.0}}"
