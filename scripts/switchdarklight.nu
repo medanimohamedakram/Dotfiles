@@ -21,7 +21,7 @@ def main [] {
     # hyprctl setcursor Bibata-Modern-Ice 24 | ignore
     # "exec-once = hyprctl setcursor Bibata-Modern-Ice 24" | save -a $"($env.XDG_CACHE_HOME)/colors/hyprland/colors.conf" 
   }
-  (/home/akram/.local/bin/shell-colors)
-  pkill -USR1 helix
   swaync-client --reload-css -sw
+  pkill -USR1 helix
+  sh $"($env.HOME)/.local/bin/shell-colors"
 }

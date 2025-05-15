@@ -18,7 +18,7 @@ def main [] {
     # "exec-once = hyprctl setcursor Bibata-Modern-Ice 24" | save -a $"($env.XDG_CACHE_HOME)/colors/hyprland/colors.conf" 
     open /etc/greetd/regreet.toml | upsert background.path $"($image)" | save -f /etc/greetd/regreet.toml
   }
-  (/home/akram/.local/bin/shell-colors)
-  pkill -USR1 helix
   swaync-client --reload-css -sw
+  sh $"($env.HOME)/.local/bin/shell-colors"
+  pkill -USR1 helix
 }
