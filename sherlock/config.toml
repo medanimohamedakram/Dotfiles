@@ -23,8 +23,8 @@ use_base_css            = false
 [behavior]
 caching                 =   false  
 cache                   =   "~/.cache/sherlock_desktop_cache.json"  
-daemonize               =   false                                   
-animation               =   false                                   
+daemonize               =   true                                   
+animation               =   true                                   
 
 [binds]
 prev                    =   "None"                                  
