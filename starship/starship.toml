@@ -26,9 +26,9 @@ $gradle\
 $julia\
 $nim\
 $scala\
-[](fg:green bg:color_cyan)\
+[](fg:green bg:blue)\
 $docker_context\
-[ ](color_cyan)\
+[ ](blue)\
 $fill\
 ([ ](mono4)\
 $time\

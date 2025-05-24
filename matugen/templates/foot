@@ -10,7 +10,7 @@
 # Normal/regular colors (color palette 0-7)
  regular0={{colors.surface.default.hex_stripped | auto_lightness: 5.0}}     # bright black
  regular1={{"bd1f36" | auto_lightness: 10.0}}   # regular red
- regular2={{"248277" | auto_lightness: 10.0}}   # regular green
+ regular2={{"2fbf71" | auto_lightness: 10.0}}   # regular green
  regular3={{"eeba0b" | auto_lightness: 10.0}}   # regular yellow
  regular4={{"1565c0" | auto_lightness: 10.0}}   # regular blue
  regular5={{"871c84" | auto_lightness: 10.0}}   # regular magenta
@@ -20,7 +20,7 @@
 # Bright colors (color palette 8-15)
  bright0={{colors.surface.default.hex_stripped | auto_lightness: 10.0}}     # bright black
  bright1={{"bd1f36" | auto_lightness: 5.0}}   # bright red
- bright2={{"248277" | auto_lightness: 5.0}}   # bright green
+ bright2={{"2fbf71" | auto_lightness: 5.0}}   # bright green
  bright3={{"eeba0b" | auto_lightness: 5.0}}   # bright yellow
  bright4={{"1565c0" | auto_lightness: 5.0}}   # bright blue
  bright5={{"871c84" | auto_lightness: 5.0}}   # bright magenta
