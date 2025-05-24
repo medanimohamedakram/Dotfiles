@@ -4,6 +4,7 @@
 depends = []
 
 [default.files]
+btop = "~/.config/btop/"
 fastfetch = "~/.config/fastfetch/"
 fish = "~/.config/fish/"
 fontconfig = "~/.config/fontconfig/"

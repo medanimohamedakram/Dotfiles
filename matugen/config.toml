@@ -11,6 +11,10 @@ set = true
 input_path = 'templates/colors-hyprland'
 output_path = "~/.cache/colors/hyprland/colors.conf"
 
+[templates.btop]
+input_path = 'templates/btop'
+output_path = "~/.config/btop/themes/matugen.theme"
+
 [templates.shell]
 input_path = 'templates/colors-shell'
 output_path = '~/.cache/colors/shell/colors'
