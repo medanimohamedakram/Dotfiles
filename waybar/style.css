@@ -84,15 +84,15 @@ tooltip label {
 }
 
 #idle_inhibitor.activated:hover {
-  color: shade(@orange-color, 1.1);
+  color: shade(@orange, 1.1);
 }
 
 #battery.charging:hover {
-  color: shade(@green-color, 1.1);
+  color: shade(@green, 1.1);
 }
 
 #battery.warning:not(.charging):hover {
-  color: shade(@yellow-color, 1.1);
+  color: shade(@yellow, 1.1);
 }
 
 #battery.critical:not(.charging):hover {
@@ -111,15 +111,16 @@ tooltip label {
 
 #battery {
   margin: 0 6px;
+  min-width: 16px;
   color: @on_surface;
 }
 
 #battery.charging {
-  color: @green-color;
+  color: @green;
 }
 
 #battery.warning:not(.charging) {
-  color: @yellow-color;
+  color: @yellow;
 }
 
 #battery.critical:not(.charging) {
@@ -133,16 +134,19 @@ tooltip label {
 
 #network {
   margin: 0 6px;
+  min-width: 16px;
   color: @on_surface;
 }
 
 #bluetooth {
   margin: 0 6px;
+  min-width: 16px;
   color: @on_surface;
 }
 
 #wireplumber {
   font-size: 1.8rem;
+  min-width: 16px;
   margin: 0 6px;
   color: @on_surface;
 }
@@ -175,17 +179,20 @@ tooltip label {
 
 #power-profiles-daemon.performance {
   margin: 0 6px;
+  min-width: 16px;
   color: @red;
   text-shadow: 0px 0px 2px alpha(@surface, .7);
 }
 
 #power-profiles-daemon.power-saver {
   margin: 0 6px;
+  min-width: 16px;
   color: @green;
   text-shadow: 0px 0px 2px alpha(@surface, .7);
 }
 
 #custom-nightlight {
+  min-width: 16px;
   margin: 0 6px;
 }
 
@@ -221,7 +228,7 @@ tooltip label {
 }
 
 #idle_inhibitor.activated {
-  color: @orange-color;
+  color: @orange;
   text-shadow: 0px 0px 2px alpha(@surface, .7);
   transition: background .3s ease-in-out;
 }

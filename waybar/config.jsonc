@@ -128,16 +128,14 @@
 	"format": "{text}",
 	"interval": "once",
 	"exec": "sh -c '[[ -n $(hyprctl hyprsunset temperature | rg -o 6000) ]] && printf \"\" || printf 󰤄'",
+  "on-click": "swaync-client -t -sw",
 	"signal": 16,
 	},
 	"power-profiles-daemon": {
 	  "format": "{icon}",
-	  "tooltip-format": "Power profile: {profile}",
-	  "tooltip": true,
+	  "tooltip": false,
 	  "format-icons": {
-	    "default": "",
 	    "performance": "󰓅",
-	    "balanced": "",
 	    "power-saver": "󰾆"
 	  }
 	},

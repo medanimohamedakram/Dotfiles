@@ -4,11 +4,11 @@
                                    
 <* for name, value in colors *>
 @define-color {{name}} {{value.default.hex}};<* endfor *>
-@define-color black-color {{colors.surface_container.default.hex}};
-@define-color red-color     {{"#EF233C" | auto_lightness: 5.0}};
-@define-color green-color   {{"#2FBF71" | auto_lightness: -5.0}};
-@define-color yellow-color  {{"#f5bd1f" | auto_lightness: 5.0}};
-@define-color blue-color    {{"#01bfff" | auto_lightness: 5.0}};
-@define-color magenta-color {{"#bc00dd" | auto_lightness: 5.0}};
-@define-color cyan-color    {{"#20bac5" | auto_lightness: 5.0}};
-@define-color orange-color  {{"#F24B04" | auto_lightness: 5.0}};
+@define-color black {{colors.surface_container.default.hex}};
+@define-color red     {{"#BD1F36" | auto_lightness: 5.0}};
+@define-color green   {{"#2FBF71" | auto_lightness: -5.0}};
+@define-color yellow  {{"#F5BD1F" | auto_lightness: 5.0}};
+@define-color blue    {{"#01BFFF" | auto_lightness: 5.0}};
+@define-color magenta {{"#BC00DD" | auto_lightness: 5.0}};
+@define-color cyan    {{"#20BAC5" | auto_lightness: 5.0}};
+@define-color orange  {{"#F24B04" | auto_lightness: 5.0}};
