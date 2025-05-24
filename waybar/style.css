@@ -46,7 +46,7 @@ window#waybar {
 }
 
 tooltip {
-  background: alpha(@surface, 0.8);
+  background: alpha(@surface, 0.89);
   border: 2px solid alpha(@primary, 0.9);
   border-radius: 16px;
   color: @on_surface;
@@ -107,6 +107,7 @@ tooltip label {
   border-radius: 16px;
   background: alpha(@surface, .5);
   box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
+  transition: all .3s ease-in-out;
 }
 
 #battery {
@@ -136,19 +137,22 @@ tooltip label {
   margin: 0 6px;
   min-width: 16px;
   color: @on_surface;
+  transition: all .3s ease-in-out;
 }
 
 #bluetooth {
   margin: 0 6px;
   min-width: 16px;
   color: @on_surface;
+  transition: all .3s ease-in-out;
 }
 
 #wireplumber {
   font-size: 1.8rem;
-  min-width: 16px;
   margin: 0 6px;
+  min-width: 16px;
   color: @on_surface;
+  transition: all .3s ease-in-out;
 }
 
 /* #pulseaudio-slider slider { */
@@ -175,13 +179,17 @@ tooltip label {
 /* background: alpha(@tertiary, .9); */
 /* } */
 
-#power-profiles-daemon {}
+#power-profiles-daemon {
+  transition: all .3s ease-in-out;
+
+}
 
 #power-profiles-daemon.performance {
   margin: 0 6px;
   min-width: 16px;
   color: @red;
   text-shadow: 0px 0px 2px alpha(@surface, .7);
+  transition: background .3s ease-in-out;
 }
 
 #power-profiles-daemon.power-saver {
@@ -189,15 +197,18 @@ tooltip label {
   min-width: 16px;
   color: @green;
   text-shadow: 0px 0px 2px alpha(@surface, .7);
+  transition: background .3s ease-in-out;
 }
 
 #custom-nightlight {
-  min-width: 16px;
   margin: 0 6px;
+  min-width: 16px;
+  transition: all .3s ease-in-out;
 }
 
 #tray {
   margin: 0 6px;
+  transition: all .3s ease-in-out;
 }
 
 #tray menu {
@@ -224,13 +235,12 @@ tooltip label {
 
 #idle_inhibitor {
   margin: 0 6px;
-  transition: background .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 #idle_inhibitor.activated {
   color: @orange;
   text-shadow: 0px 0px 2px alpha(@surface, .7);
-  transition: background .3s ease-in-out;
 }
 
 #custom-screenshot {
@@ -260,6 +270,7 @@ tooltip label {
 #custom-notification {
   margin: 0 6px;
   text-shadow: 0px 0px 2px alpha(@surface, .7);
+  transition: all .3s ease-in-out;
 }
 
 /*---------Left Module-----------------*/
