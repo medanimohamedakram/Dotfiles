@@ -1,22 +1,5 @@
 # -*- conf -*-
 
-font=CaskaydiaCove Nerd Font Propo:size=9
-font-bold=CaskaydiaCove Nerd Font Propo:style=Bold:size=9
-font-italic=CaskaydiaCove Nerd Font Propo:style=Italic:size=9
-font-bold-italic=CaskaydiaCove Nerd Font Propo:style=Bold Italic:size=9
-dpi-aware=yes
-bold-text-in-bright=yes
-
-[key-bindings]
-pipe-visible=[sh -c "xurls | fuzzel | xargs -r firefox"] none
-pipe-scrollback=[sh -c "xurls | fuzzel | xargs -r firefox"] none
-pipe-selected=[xargs -r firefox] none
-pipe-command-output=[wl-copy] Control+Shift+g # Copy last command's output to the clipboard
-show-urls-launch=Control+Shift+l
-prompt-prev=Control+Shift+z
-prompt-next=Control+Shift+x
-unicode-input=Control+Shift+u
-
 [colors]
  alpha=1.0
  background={{colors.surface.default.hex_stripped}}

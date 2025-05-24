@@ -20,5 +20,5 @@ def main [] {
   }
   swaync-client --reload-css -sw
   sh $"($env.HOME)/.local/bin/shell-colors"
-  pkill -USR1 helix
+  killall -SIGUSR1 helix
 }

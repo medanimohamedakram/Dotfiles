@@ -17,7 +17,7 @@ output_path = '~/.cache/colors/shell/colors'
 
 [templates.foot]
 input_path = 'templates/foot'
-output_path = '~/.config/foot/foot.ini'
+output_path = '~/.cache/colors/foot/colors.ini'
 
 [templates.helix]
 input_path = 'templates/helix'
@@ -34,14 +34,3 @@ output_path = '~/.cache/colors/colors.css'
 [templates.greetd]
 input_path = 'templates/colors'
 output_path = '/etc/greetd/colors.css'
-
-[config.custom_colors]
-black = {color="#131721", blend=false}
-red = {color="#211313", blend=false}
-green = {color="#132113", blend=false}
-yellow = {color="#211c13", blend=false}
-blue = "#399ee6"
-magenta = {color="#211321", blend=false}
-cyan = {color="#1d312a", blend=false}
-brown = {color="#865e3c", blend=false}
-orange = {color="#31251d", blend=false}

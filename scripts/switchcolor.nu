@@ -16,6 +16,6 @@ def main [] {
     # "exec-once = hyprctl setcursor Bibata-Modern-Ice 24" | save -a $"($env.XDG_CACHE_HOME)/colors/hyprland/colors.conf" 
   }
   swaync-client --reload-css -sw
-  pkill -USR1 helix
   sh $"($env.HOME)/.local/bin/shell-colors"
+  killall -SIGUSR1 helix
 }
