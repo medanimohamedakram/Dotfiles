@@ -1,0 +1,13 @@
+/*
+* GTK4 Colors
+*/
+
+@define-color accent_color {{colors.primary_fixed_dim.default.hex}};
+@define-color accent_fg_color {{colors.on_primary_fixed.default.hex}};
+@define-color accent_bg_color {{colors.primary_fixed_dim.default.hex}};
+
+:root {
+  --accent-bg-color: @accent_color;
+  --accent-fg-color: @accent_fg_color;
+}
+

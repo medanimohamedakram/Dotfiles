@@ -31,6 +31,10 @@ output_path = '~/.config/helix/themes/matugen.toml'
 input_path = 'templates/gtk'
 output_path = '~/.cache/colors/gtk/colors.css'
 
+[templates.gtk4]
+input_path = 'templates/gtk4'
+output_path = '~/.config/gtk-4.0/gtk.css'
+
 [templates.colors]
 input_path = 'templates/colors'
 output_path = '~/.cache/colors/colors.css'
