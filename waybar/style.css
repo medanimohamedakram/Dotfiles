@@ -287,32 +287,31 @@ tooltip label {
 #workspaces button {
   padding: 2px 4px;
   margin: 0px 2px;
-  min-width: 1px;
   border-radius: 16px;
   background: @on_surface_variant;
   transition: all 0.3s ease;
 }
 
 #workspaces button.active {
+  margin: 0px 4px;
   background-color: @primary;
-  color: @scrim;
   min-width: 48px;
   background-size: 400% 400%;
+  box-shadow: 0 0 0 2px @primary;
 }
 
 #workspaces button:hover {
   font-weight: bold;
   background-color: @tertiary;
-  color: @scrim;
   border-radius: 16px;
   min-width: 48px;
   background-size: 400% 400%;
+  box-shadow: 0 0 0 2px @tertiary;
 }
 
 #workspaces button.urgent {
   font-weight: bold;
   background-color: @error;
-  color: @scrim;
   border-radius: 16px;
   min-width: 48px;
   background-size: 400% 400%;
