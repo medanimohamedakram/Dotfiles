@@ -3,7 +3,7 @@
 */
 
 @define-color accent_color {{colors.primary_fixed_dim.default.hex}};
-@define-color accent_fg_color {{colors.on_primary_fixed.default.hex}};
+@define-color accent_fg_color {{colors.on_primary_fixed_variant.default.hex | auto_lightness: 10.0}};
 @define-color accent_bg_color {{colors.primary_fixed_dim.default.hex}};
 
 :root {
