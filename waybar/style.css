@@ -25,6 +25,7 @@ window#waybar {
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
   color: @on_surface;
+  transition: all .3s ease-in-out;
 }
 
 /* .modules-left { */
@@ -265,6 +266,7 @@ tooltip label {
   border-radius: 16px;
   background: alpha(@surface, .5);
   box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
+  transition: all .3s ease-in-out;
 }
 
 #custom-notification {
@@ -283,6 +285,7 @@ tooltip label {
   border-radius: 16px;
   background: alpha(@surface, .5);
   box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
+  transition: all .3s ease-in-out;
 }
 
 #cpu,
