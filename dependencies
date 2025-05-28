@@ -18,6 +18,6 @@ grim slurp wf-recorder
 dconf-editor
 wl-clipboard
 python-gobject power-profiles-daemon
-adw-gtk-theme bibata-cursor-theme 
+bibata-cursor-theme 
 playerctl
 ripgrep bat bat-extras eza fd 
