@@ -1,4 +1,5 @@
 base-devel
+clipse
 networkmanager dnsmasq
 greetd greetd-regreet
 uwsm hyprland hypridle hyprlock hyprpicker hyprsunset hyprpolkitagent
