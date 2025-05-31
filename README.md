@@ -49,10 +49,13 @@ This should be whole pre-setup.
 
 **Do backup to your config**
 
-Now just clone the repo if you didn't already the `cd` to the file then run:
-    dotter -fy deploy
+Run this for permissions to the greetd configuration directory
+    sudo setfacl -Rm u:$(whoaim):rwx /etc/greetd
 
-🎉🎊Voila!!!🎉🎊
+Then copy the files from `greetd` to `/etc/greetd`
+
+Now just clone the repo if you didn't already then `cd` to the repo directory then run:
+    dotter -fy deploy
 
 Check the `hypr/modules/autostart.conf` file and setup the desired systemd services.
 
