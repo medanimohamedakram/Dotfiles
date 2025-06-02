@@ -22,4 +22,5 @@ def main [] {
   sh $"($env.HOME)/.local/bin/shell-colors"
   do -i { pkill -USR2 btop }
   do -i { pkill -USR1 helix }
+  do -i { pkill -USR2 sherlock }
 }
