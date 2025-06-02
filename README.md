@@ -34,7 +34,7 @@
   
   You can check the dependencies file to see what should be installed but there is some needed software for the whole setup to work properly, start with this: 
 
-    paru -S uwsm dotter-rs-bin fish nushell base-devel greetd greetd-regreet starship waybar swaync swww ripgrep xdg-terminal-exec
+    paru -S uwsm hyprland hyprlock hyprpicker hyprsunset dotter-rs-bin fish nushell base-devel greetd greetd-regreet starship waybar swaync swww ripgrep xdg-terminal-exec
 
   then install [adw-gtk-theme](https://github.com/lassekongo83/adw-gtk3) manually in `~/.local/share/themes` then enter nushell with `nu` then run this:
 
@@ -50,11 +50,13 @@ This should be whole pre-setup.
 **Do backup to your config**
 
 Run this for permissions to the greetd configuration directory
-    sudo setfacl -Rm u:$(whoaim):rwx /etc/greetd
+    
+    sudo setfacl -Rm u:$(whoami):rwx /etc/greetd
 
 Then copy the files from `greetd` to `/etc/greetd`
 
 Now just clone the repo if you didn't already then `cd` to the repo directory then run:
+    
     dotter -fy deploy
 
 Check the `hypr/modules/autostart.conf` file and setup the desired systemd services.
