@@ -184,4 +184,14 @@ textbox {
 
 //@theme "/home/akram/.config/rofi/themes/style_8.rasi"
 
-@theme "/home/akram/.config/rofi/themes/style_8.rasi"
+//@theme "/home/akram/.config/rofi/themes/style_8.rasi"
+
+//@theme "/home/akram/.config/rofi/themes/launchpad.rasi"
+
+//@theme "/home/akram/.config/rofi/themes/quickapps.rasi"
+
+//@theme "/home/akram/.config/rofi/themes/selector.rasi"
+
+//@theme "/home/akram/.config/rofi/themes/wallbash.rasi"
+
+@theme "/home/akram/.config/rofi/themes/style_9.rasi"

@@ -32,7 +32,6 @@ window {
     border:                      1em;
     border-color:                #00000003;
     background-color:            @main-bg;
-    background-image:            url("~/.local/share/hyde/rofi/assets/wallbash_mode.png",width);
     border-radius:               16px;
 
 }
@@ -81,7 +80,7 @@ element selected.normal {
     text-color:                  @select-fg;
 }
 element-icon {
-    enabled:                     false;
+    enabled:                     true;
 }
 element-text {
     vertical-align:              0.5;

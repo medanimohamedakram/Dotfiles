@@ -1,17 +1,10 @@
-/**
- * ROFI Layout 
- *
- * HyDE's Global Seletor Style
- * User: The HyDE Project [  HyDE's Global Selector Style  ]
- * Copyright: The HyDE Project
- */
 
 // Config //
 configuration {
     modi:                        "drun";
     show-icons:                  true;
     drun-display-format:         "{name}";
-    font:                        "JetBrainsMono Nerd Font 10";
+    font:                        "CaskaydiaCove Nerd Font Propo 10";
 }
 
 @theme "~/.cache/colors/rofi/theme.rasi"
@@ -21,74 +14,82 @@ configuration {
 window {
     enabled:                     true;
     fullscreen:                  false;
+    width:                       96%;
     transparency:                "real";
     cursor:                      "default";
-    spacing:                     0em;
-    padding:                     0em;
-    border:                      0em;
-    border-radius:               0em;
+    spacing:                     0px;
+    padding:                     0px;
+    border:                      0px;
+    border-radius:               24px;
     border-color:                transparent;
-    background-color:            @main-bg;
-}
+    background-color:            transparent;
+    }
+
+//----- Main Box -----//
+
 mainbox {
     enabled:                     true;
-    orientation:                 horizontal;
-    children:                    [ "dummy", "frame", "dummy" ];
-    background-color:            transparent;
-}
-frame {
     children:                    [ "listview" ];
-    background-color:            transparent;
+    background-color:            @main-bg;
 }
 
+//----- Listview -----//
 
-// Lists //
 listview {
     enabled:                     true;
-    spacing:                     4em;
-    padding:                     4em;
-    columns:                     10;
+    columns:                     6;
     lines:                       1;
+    spacing:                     24px;
+    padding:                     24px 32px;
+    cycle:                       true;
     dynamic:                     false;
-    fixed-height:                false;
-    fixed-columns:               true;
+    scrollbar:                   false;
+    layout:                      vertical;
     reverse:                     true;
+    fixed-height:                true;
+    fixed-columns:               true;
     cursor:                      "default";
     background-color:            transparent;
     text-color:                  @main-fg;
 }
-dummy {
-    width:                       2em;
-    expand:                      false;
-    background-color:            transparent;
-}
 
+//----- Elements -----//
 
-// Elements //
 element {
     enabled:                     true;
-    spacing:                     0em;
-    padding:                     0em;
+    orientation:                 horizontal;
+    spacing:                     0px;
+    padding:                     0px;
+    border-radius:               16px;
     cursor:                      pointer;
     background-color:            transparent;
     text-color:                  @main-fg;
 }
+
+@media(max-aspect-ratio: 1.8) {
+    element {
+        orientation:             vertical;
+    }
+}
+
 element selected.normal {
     background-color:            @select-bg;
     text-color:                  @select-fg;
 }
+
 element-icon {
+    size:                        33%;
     cursor:                      inherit;
-    size:                        10em;
-    background-color:            transparent;
-    text-color:                  inherit;
-    expand:                      false;
-}
-element-text {
-    vertical-align:              0.5;
-    horizontal-align:            0.5;
-    cursor:                      inherit;
+    border-radius:               0px;
     background-color:            transparent;
     text-color:                  inherit;
 }
 
+element-text {
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+    padding:                     24px;
+    cursor:                      inherit;
+    background-color:            transparent;
+    text-color:                  inherit;
+}

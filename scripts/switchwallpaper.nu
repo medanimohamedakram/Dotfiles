@@ -1,5 +1,6 @@
 #!/usr/bin/env nu
 
+# for a in *; do echo -en "$a\0icon\x1f$a\n" ; done | rofi -dmenu -show-icons -theme selector ## this is for choosing images instead of zenity just switch to nu script not bash
 let wallpaper_folder = "/usr/share/wallpapers/" #choose wallpaper folder; and don't remove the trailing slash
 let image = (zenity --width 1200 --height 800 --file-selection --title="Choose a Wallpaper" --filename $wallpaper_folder)
 let is_light = (gsettings get org.gnome.desktop.interface color-scheme | str contains "light")
