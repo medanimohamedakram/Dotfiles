@@ -11,6 +11,10 @@ set = true
 input_path = 'templates/colors-hyprland'
 output_path = "~/.cache/colors/hyprland/colors.conf"
 
+[templates.rofi]
+input_path = 'templates/rofi'
+output_path = "~/.cache/colors/rofi/theme.rasi"
+
 [templates.btop]
 input_path = 'templates/btop'
 output_path = "~/.config/btop/themes/matugen.theme"

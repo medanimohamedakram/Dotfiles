@@ -13,7 +13,7 @@ configuration {
     show-icons:                  false;
 }
 
-@theme "~/.config/rofi/theme.rasi"
+@theme "~/.cache/colors/rofi/theme.rasi"
 
 
 // Main //
@@ -43,7 +43,7 @@ wallbox {
     expand:                      false;
     orientation:                 horizontal;
     background-color:            transparent;
-    background-image:            url("~/.cache/hyde/wall.blur", width);
+    background-image:            url("~/.cache/wall/wall.blur", width);
     children:                    [ "wallframe" , "inputbar" ];
 }
 wallframe {
@@ -52,7 +52,7 @@ wallframe {
     padding:                     0em;
     expand:                      false;
     background-color:            @main-bg;
-    background-image:            url("~/.cache/hyde/wall.quad", width);
+    background-image:            url("~/.cache/wall/wall.quad", width);
 }
 
 

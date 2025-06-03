@@ -19,10 +19,9 @@ configuration {
     drun-display-format:         "{name}";
     window-format:               "{w}{t}";
     font:                        "JetBrainsMono Nerd Font 10";
-    icon-theme:                  "Tela-circle-dracula";
 }
 
-@theme "~/.config/rofi/theme.rasi"
+@theme "~/.cache/colors/rofi/theme.rasi"
 
 
 // Main //
@@ -55,7 +54,7 @@ listbox {
     orientation:                 horizontal;
     children:                    [ "listview" ];
     background-color:            transparent;
-    background-image:            url("~/.cache/hyde/wall.blur", width);
+    background-image:            url("~/.cache/wall/wall.blur", width);
 }
 listview {
     padding:                     0.5em;

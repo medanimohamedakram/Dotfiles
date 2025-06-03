@@ -23,7 +23,7 @@ configuration {
     icon-theme:                  "Papirus";
 }
 
-//@theme "~/.config/rofi/theme.rasi"
+@theme "~/.cache/colors/rofi/theme.rasi"
 
 
 // Main //

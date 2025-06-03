@@ -15,7 +15,7 @@ configuration {
 }
 
 /*****----- Global Properties -----*****/
-@theme "~/.config/rofi/theme.rasi"
+@theme "~/.cache/colors/rofi/theme.rasi"
 
 /*****----- Main Window -----*****/
 window {
