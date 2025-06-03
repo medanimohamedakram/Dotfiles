@@ -120,6 +120,7 @@ element {
 element selected.normal {
     background-color:            @select-bg;
     text-color:                  @select-fg;
+    border-radius:               12px;
 }
 element-icon {
     size:                        5.5em;
