@@ -1,19 +1,9 @@
-/**
- * ROFI Layout 
- *
- * Wallbash Mode Selector.
- * 
- * User: The HyDE Project [ Wallbash mode Selector ]
- * Copyright: https://github.com/prasanthrangan/hyprdots/
- */
-
-
-// Config //
+// Config
 configuration {
     modi:                        "drun";
     show-icons:                  true;
     drun-display-format:         "{name}";
-    font:                        "JetBrainsMono Nerd Font 9";
+    font:                        "CaskaydiaCove Nerd Font Propo 9";
 }
 
 @theme "~/.cache/colors/rofi/theme.rasi"

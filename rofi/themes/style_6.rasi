@@ -1,26 +1,3 @@
-/**
- * ROFI Layout 
- *
- * Style 6: Straightforward vertical text and modes over a background.
- * Attribute: rofilaunch,launcher
- * User: The HyDE Project [ SimpleStack ]
- * Copyright: https://github.com/prasanthrangan/hyprdots/
- */
-
-
-// Config //
-configuration {
-    modi:                        "drun,filebrowser,window,run";
-    show-icons:                  true;
-    display-drun:                " ";
-    display-run:                 " ";
-    display-filebrowser:         " ";
-    display-window:              " ";
-    drun-display-format:         "{name}";
-    window-format:               "{w}{t}";
-    font:                        "JetBrainsMono Nerd Font 10";
-}
-
 @theme "~/.cache/colors/rofi/theme.rasi"
 
 
