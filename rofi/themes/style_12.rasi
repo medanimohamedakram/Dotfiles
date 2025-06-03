@@ -36,6 +36,7 @@ window {
     padding:                     0em;
     border-color:                transparent;
     background-color:            transparent;
+    border-radius:               16px;
 }
 mainbox {
     enabled:                     true;

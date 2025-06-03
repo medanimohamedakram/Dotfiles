@@ -36,6 +36,7 @@ window {
     padding:                     0em;
     border-color:                @main-br;
     background-color:            transparent;
+    border-radius:               16px;
 }
 mainbox {
     enabled:                     true;
@@ -43,7 +44,8 @@ mainbox {
     padding:                     0.8em;
     orientation:                 horizontal;
     children:                    [ "inputbar" , "listbox" ];
-    background-color:            #00000003;
+    background-color:            #00000007;
+    border-radius:               24px;
 }
 
 

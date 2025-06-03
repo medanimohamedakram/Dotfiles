@@ -10,14 +10,17 @@ def main [] {
     gsettings set org.gnome.desktop.interface gtk-theme ''
     gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3
     # "exec-once = hyprctl setcursor Bibata-Modern-Classic 24" | save -a $"($env.XDG_CACHE_HOME)/colors/hyprland/colors.conf" 
-    open /etc/greetd/regreet.toml | upsert background.path $"($image)" | save -f /etc/greetd/regreet.toml
   } else {
     matugen image $image  --mode dark
     gsettings set org.gnome.desktop.interface gtk-theme ''
     gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-dark
     # "exec-once = hyprctl setcursor Bibata-Modern-Ice 24" | save -a $"($env.XDG_CACHE_HOME)/colors/hyprland/colors.conf" 
-    open /etc/greetd/regreet.toml | upsert background.path $"($image)" | save -f /etc/greetd/regreet.toml
   }
+  open /etc/greetd/regreet.toml | upsert background.path $"($image)" | save -f /etc/greetd/regreet.toml
+  magick $image -strip -resize 120% -gravity center -extent 800 -quality 100 $"($env.XDG_CACHE_HOME)/wall/wall.quad"
+  magick $image -strip -resize 1000 -gravity center -extent 1000 -quality 100 $"($env.XDG_CACHE_HOME)/wall/wall.thmb"
+  magick $image -strip -scale 10% -blur 0x3 -resize 100% $"($env.XDG_CACHE_HOME)/wall/wall.blur"
+  magick $image -strip -resize 60% -gravity center -extent 800 -quality 100 $"($env.XDG_CACHE_HOME)/wall/wall.sqre"
   swaync-client --reload-css -sw
   sh $"($env.HOME)/.local/bin/shell-colors"
   do -i { pkill -USR2 btop }

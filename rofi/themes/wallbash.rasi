@@ -30,10 +30,10 @@ window {
     spacing:                     0em;
     padding:                     0em;
     border:                      1em;
-    border-radius:               0em;
     border-color:                #00000003;
     background-color:            @main-bg;
     background-image:            url("~/.local/share/hyde/rofi/assets/wallbash_mode.png",width);
+    border-radius:               16px;
 
 }
 mainbox {

@@ -23,7 +23,7 @@ configuration {
     icon-theme:                  "Papirus";
 }
 
-@theme "~/.cache/colors/rofi/theme.rasi"
+//@theme "~/.cache/colors/rofi/theme.rasi"
 
 
 // Main //
@@ -168,4 +168,12 @@ textbox {
 
 //@theme "/home/akram/.config/rofi/themes/style_2.rasi"
 
-@theme "/home/akram/.config/rofi/themes/style_12.rasi"
+//@theme "/home/akram/.config/rofi/themes/style_12.rasi"
+
+//@theme "/home/akram/.config/rofi/themes/style_11.rasi"
+
+//@theme "/home/akram/.config/rofi/themes/style_9.rasi"
+
+//@theme "/home/akram/.config/rofi/themes/style_6.rasi"
+
+@theme "/home/akram/.config/rofi/themes/style_9.rasi"
