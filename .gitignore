@@ -1,4 +1,5 @@
  
+rofi/config.rasi
 .dotter/local.toml
 .dotter/cache.toml
 nushell/history.txt
