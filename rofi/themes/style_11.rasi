@@ -34,7 +34,7 @@ inputbar {
     children:                    [ "entry" ];
     expand:                      false;
     background-color:            @main-bg;
-    background-image:            url("~/.cache/wall/wall.quad", width);
+    background-image:            url("~/.cache/wall/wall.sqre", width);
     border-radius:               1em 0em 0em 1em;
 }
 entry {

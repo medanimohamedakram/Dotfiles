@@ -1,26 +1,33 @@
+configuration {
+    modi:                        "drun,filebrowser,window,run";
+    show-icons:                  false;
+    drun-display-format:         "{name}";
+    window-format:               "{w}{t}";
+    font:                        "CaskaydiaCove Nerd Font Propo 16";
+}
 @theme "~/.cache/colors/rofi/theme.rasi"
 
 
 // Main //
 window {
-    height:                      30em;
-    width:                       60em;
+    height:                      60%;
+    width:                       30%;
     transparency:                "real";
     fullscreen:                  false;
     enabled:                     true;
     cursor:                      "default";
     spacing:                     0em;
     padding:                     0em;
-    border-color:                transparent;
-    background-color:            transparent;
+    border-color:                @main-br;
+    background-color:            @main-bg;
     border-radius:               16px;
 }
 mainbox {
     enabled:                     true;
     spacing:                     0em;
-    padding:                     0em;
-    orientation:                 horizontal;
-    children:                    [ "listbox" , "inputbar" ];
+    padding:                     1em;
+    orientation:                 vertical;
+    children:                    [ "inputbar" , "listbox" ];
     background-color:            transparent;
 }
 
@@ -28,34 +35,37 @@ mainbox {
 // Inputs //
 inputbar {
     enabled:                     true;
-    width:                       30em;
     spacing:                     0em;
-    padding:                     0em;
+    padding:                     1em 2em;
     children:                    [ "entry" ];
-    expand:                      false;
-    background-color:            transparent;
-    background-image:            url("~/.cache/wall/wall.sqre", width);
+    background-color:            @main-bg;
 }
 entry {
-    enabled:                     false;
+    enabled:                     true;
+    spacing:                     1em;
+    padding:                     0.4em;
+    text-color:                  @main-fg;
+    background-color:            @main-bg;
+    border:                      0 0 1px 0;
+    border-color:                @main-fg;
 }
+
 
 
 // Lists //
 listbox {
     spacing:                     0em;
     padding:                     0em;
-    children:                    [ "dummy" , "listview" , "dummy" ];
+    children:                    ["listview"];
     background-color:            @main-bg;
-    expand:                      false;
-    width:                       27em;
+    border-radius:               0em 0em 1em 1em;
 }
 listview {
     enabled:                     true;
-    spacing:                     0em;
-    padding:                     1em 2em 1em 2em;
+    spacing:                     0.4em;
+    padding:                     0em;
     columns:                     1;
-    lines:                       8;
+    lines:                       10;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
@@ -65,12 +75,8 @@ listview {
     fixed-height:                true;
     fixed-columns:               true;
     cursor:                      "default";
-    background-color:            transparent;
+    background-color:            @main-bg;
     text-color:                  @main-fg;
-}
-dummy {
-    background-color:            transparent;
-    expand:                      true;
 }
 
 
@@ -78,7 +84,7 @@ dummy {
 element {
     enabled:                     true;
     spacing:                     1em;
-    padding:                     0.5em;
+    padding:                     0.2em 0.2em 0.2em 1.5em;
     cursor:                      pointer;
     background-color:            transparent;
     text-color:                  @main-fg;
@@ -89,7 +95,8 @@ element selected.normal {
     border-radius:               12px;
 }
 element-icon {
-    size:                        2.2em;
+    enabled:                     false;
+    size:                        2em;
     cursor:                      inherit;
     background-color:            transparent;
     text-color:                  inherit;

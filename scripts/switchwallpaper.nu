@@ -23,7 +23,6 @@ def main [] {
   do -i { pkill -USR2 btop }
   do -i { pkill -USR1 helix }
   do -i {
-    magick $image -strip -resize 120% -gravity center -extent 800 -quality 100 $"($env.XDG_CACHE_HOME)/wall/wall.quad"
     magick $image -strip -resize 1000 -gravity center -extent 1000 -quality 100 $"($env.XDG_CACHE_HOME)/wall/wall.thmb"
     magick $image -strip -thumbnail 500x500^ -gravity center -extent 500x500 $"($env.XDG_CACHE_HOME)/wall/wall.sqre"
     magick $image -strip -scale 10% -blur 0x3 -resize 100% $"($env.XDG_CACHE_HOME)/wall/wall.blur"
