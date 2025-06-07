@@ -15,6 +15,7 @@ window {
     enabled:                     true;
     fullscreen:                  false;
     width:                       96%;
+    height:                      96%;
     transparency:                "real";
     cursor:                      "default";
     spacing:                     0px;
@@ -38,15 +39,15 @@ mainbox {
 listview {
     enabled:                     true;
     columns:                     6;
-    lines:                       1;
-    spacing:                     24px;
-    padding:                     24px 32px;
+    lines:                       3;
+    spacing:                     8px;
+    padding:                     8px;
     cycle:                       true;
     dynamic:                     false;
     scrollbar:                   false;
     layout:                      vertical;
-    reverse:                     true;
-    fixed-height:                true;
+    reverse:                     false;
+    fixed-height:                false;
     fixed-columns:               true;
     cursor:                      "default";
     background-color:            transparent;
@@ -78,7 +79,7 @@ element selected.normal {
 }
 
 element-icon {
-    size:                        33%;
+    size:                        20em;
     cursor:                      inherit;
     border-radius:               0px;
     background-color:            transparent;
@@ -86,6 +87,7 @@ element-icon {
 }
 
 element-text {
+    enabled:                     false;
     vertical-align:              0.5;
     horizontal-align:            0.5;
     padding:                     24px;
