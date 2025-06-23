@@ -1,5 +1,7 @@
 #!/usr/bin/env nu
 
+use ~/.config/nushell/bareeq.nu *
+
 let wallpaper_folder = "/usr/share/wallpapers/" #choose wallpaper folder; and don't remove the trailing slash
 let image = (sh -c $'for a in ($wallpaper_folder)*; do printf "%s\0icon\x1f%s\n" "$a" "$a"; done | rofi -dmenu -show-icons -theme selector')
 let is_light = (gsettings get org.gnome.desktop.interface color-scheme | str contains "light")
@@ -18,7 +20,7 @@ def main [] {
   }
   open /etc/greetd/regreet.toml | upsert background.path $"($image)" | save -f /etc/greetd/regreet.toml
   swaync-client --reload-css -sw
-  sh $"($env.HOME)/.local/bin/shell-colors"
+  switch-shell-theme | ignore
   do -i { pkill -USR2 btop }
   do -i { pkill -USR1 helix }
   do -i {

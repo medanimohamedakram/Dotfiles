@@ -1,5 +1,7 @@
 #!/usr/bin/env nu
 
+use ~/.config/nushell/bareeq.nu *
+
 let image = (swww query | str replace "image: " "\nimage: " | lines | last | parse "image: {image}" | get image)
 let is_dark = (gsettings get org.gnome.desktop.interface color-scheme | str contains "dark")
 
@@ -22,7 +24,7 @@ def main [] {
     # "exec-once = hyprctl setcursor Bibata-Modern-Ice 24" | save -a $"($env.XDG_CACHE_HOME)/colors/hyprland/colors.conf" 
   }
   swaync-client --reload-css -sw
-  sh $"($env.HOME)/.local/bin/shell-colors"
+  switch-shell-theme | ignore
   do -i { pkill -USR2 btop }
   do -i { pkill -USR1 helix }
   do -i { pkill -USR2 sherlock }
