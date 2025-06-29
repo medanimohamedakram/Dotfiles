@@ -3,9 +3,7 @@
 use ~/.config/nushell/bareeq.nu *
 
 let wallpaper_folder = "/usr/share/wallpapers/" #choose wallpaper folder; and don't remove the trailing slash
-let image_name = (sh -c $'for a in ($wallpaper_folder)*; do printf "img:%s\n" "$a"; done | wofi -dmenu -W 90% -w 6 -L 2 -D image_size=264 -D hide_search=true -D orientation=horizontal -I -s wall.css')
-let image = $image_name | parse "img:{image}" | get image.0
-print $image
+let image = (sh -c $'for a in ($wallpaper_folder)*; do printf "%s\0icon\x1f%s\n" "$a" "$a"; done | rofi -dmenu -show-icons -theme selector')
 let is_light = (gsettings get org.gnome.desktop.interface color-scheme | str contains "light")
 
 def main [] {
@@ -25,4 +23,9 @@ def main [] {
   switch-shell-theme | ignore
   do -i { pkill -USR2 btop }
   do -i { pkill -USR1 helix }
+  do -i {
+    magick $image -strip -resize 1000 -gravity center -extent 1000 -quality 100 $"($env.XDG_CACHE_HOME)/wall/wall.thmb"
+    magick $image -strip -thumbnail 500x500^ -gravity center -extent 500x500 $"($env.XDG_CACHE_HOME)/wall/wall.sqre"
+    magick $image -strip -scale 10% -blur 0x3 -resize 100% $"($env.XDG_CACHE_HOME)/wall/wall.blur"
+  }
 }
