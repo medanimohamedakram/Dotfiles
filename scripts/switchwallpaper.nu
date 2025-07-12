@@ -2,7 +2,7 @@
 
 use ~/.config/nushell/bareeq.nu *
 
-let wallpaper_folder = "/usr/share/wallpapers/" #choose wallpaper folder; and don't remove the trailing slash
+let wallpaper_folder = $"($env.HOME)/Pictures/Wallpapers/" #choose wallpaper folder; and don't remove the trailing slash
 let image = (sh -c $'for a in ($wallpaper_folder)*; do printf "%s\0icon\x1f%s\n" "$a" "$a"; done | rofi -dmenu -show-icons -theme selector')
 let is_light = (gsettings get org.gnome.desktop.interface color-scheme | str contains "light")
 
@@ -18,7 +18,8 @@ def main [] {
     gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-dark
     # "exec-once = hyprctl setcursor Bibata-Modern-Ice 24" | save -a $"($env.XDG_CACHE_HOME)/colors/hyprland/colors.conf" 
   }
-  open /etc/greetd/regreet.toml | upsert background.path $"($image)" | save -f /etc/greetd/regreet.toml
+  # open /etc/greetd/regreet.toml | upsert background.path $"($image)" | save -f /etc/greetd/regreet.toml
+  cp $image /etc/greetd/wall.jpeg
   swaync-client --reload-css -sw
   switch-shell-theme | ignore
   do -i { pkill -USR2 btop }
