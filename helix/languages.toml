@@ -12,3 +12,7 @@ config = { procMacro = { ignored = { leptos_macro = [
     # "server"
 ] } } }
 
+[[language]]
+name = "slint"
+file-types = ["slint"]
+language-servers =  [ "slint-lsp" ]
